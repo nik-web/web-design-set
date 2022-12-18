@@ -1,5 +1,12 @@
 // This file is part of web design set.
 // Overwrite the basic data here
 
+$is-enabled-font-audiowide-v6-latin: true;
+
+$is-enabled-fonts-open-sans-v15-latin_cyrillic-normal-normal: true;
+$is-enabled-fonts-open-sans-v15-latin_cyrillic-normal-light: true;
+
+$is-elements-sections-address: false;
+
 // Import basis-data
-@import "./basis/index.scss";
+@import "./basis/index";

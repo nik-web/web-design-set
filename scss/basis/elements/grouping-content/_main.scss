@@ -1,0 +1,21 @@
+// This file is part of web design set.
+// 
+// The main element
+// <main> element represents the dominant contents of the document.
+// A document must not have more than one main element that does not have the hidden attribute specified.
+// 
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+// 
+// Typical default display properties
+// 
+// main {
+//  display: block;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element
+// 
+
+main {
+    display:block;
+}

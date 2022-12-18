@@ -1,0 +1,47 @@
+// This file is part of web design set.
+// 
+// The address element
+// <address> element represents contact information.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-address-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/address.html
+
+// The HTML <address> element indicates that the enclosed HTML provides contact
+// information for a person or people, or for an organization.
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address
+// 
+// Typical default display propertie
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/address.html#address-display
+// 
+// address {
+//  display: block;
+//  font-style: italic;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-address-element
+//
+// 1. Eric Meyer’s “Reset CSS” 2.0
+// https://gist.github.com/DevelopSmith/14b5f610b091c22f79ba
+// 2. Bootstrap reboot
+// 3. Change from `box-sizing: content-box` so that `width` is not affected
+//
+// Is default enabled: true
+//
+
+@if $is-elements-sections-address {
+    /*
+    The <address> html element
+    */
+    address {
+        display: block;
+        margin: 0;
+        margin-bottom: 1rem; // 2
+        border: 0; // 1
+        padding: 0; // 1
+        //vertical-align: baseline; // 1 Not by used with display: block;
+        font-style: normal; // 2
+        line-height: inherit; // 2
+        @include set-box-sizing-border-box; // 3
+    }
+}

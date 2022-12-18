@@ -1,0 +1,57 @@
+// This file is part of web design set.
+//
+// The html element
+// <html> element represents the root of a document.
+//
+// https://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-html-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/html.html#html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html
+//
+// The Living Standard (Edition for Web Developers)
+// https://html.spec.whatwg.org/dev/semantics.html#the-html-element
+//
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/html.html#html-display
+// 
+// html {
+//  display: block;
+// }
+// html:focus {
+//  outline: none;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/semantics.html
+//
+// 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+// 2. Layout with responsive sticky footer
+// 3. Font size with calc()
+//
+
+/*
+The document element
+*/
+html {
+    display: block;
+    margin: 0;
+    padding: 0;
+    @include set-box-sizing-border-box; // 1
+    padding: 0;
+    height: 100%; // 2
+    width: 100%;
+    font-size: $elements-root-html-font-size; // fallback for old web browser
+    @include fluid-font-size($elements-root-html-min-screen-width, $elements-root-html-max-screen-width, $elements-root-html-min-font-size, $elements-root-html-max-font-size);// 3
+}
+
+html:focus {
+    outline: none;
+}
+
+//
+// IE10+ doesn't honor `<meta name="viewport">` in some cases.
+//
+@at-root {
+    @-ms-viewport {
+        width: device-width;
+    }
+}

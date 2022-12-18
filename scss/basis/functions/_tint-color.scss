@@ -1,0 +1,6 @@
+// This file is part of web design set.
+
+// Tint a color: mix a color with white
+@function tint-color($color, $weight) {
+    @return mix(white, $color, $weight);
+}

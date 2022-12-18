@@ -1,0 +1,23 @@
+// This file is part of web design set.
+// https://www.w3.org/TR/2011/WD-html5-20110525/forms.html
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/forms.html
+//
+// Import files from scss/basis/elements/forms/ folder
+
+@import "./forms/form", // has standard
+    "./forms/label", // has standard
+    "./forms/input", // has standard
+    "./forms/button", // has standard
+    "./forms/select", // has standard
+    "./forms/datalist", // has standard
+    "./forms/optgroup", // has standard
+    "./forms/option", // has standard
+    "./forms/textarea", // has standard
+    "./forms/output", // has standard
+    "./forms/progress", // has standard
+    "./forms/meter", // has standard
+    "./forms/fieldset", // has standard
+    "./forms/legend", // has standard
+    "./forms/keygen";

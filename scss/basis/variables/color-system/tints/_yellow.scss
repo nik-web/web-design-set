@@ -1,0 +1,29 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+//yellow-color-variables by html
+$yellow:#ffff00;
+$yellow-100: tint-color($yellow, 80%);
+$yellow-200: tint-color($yellow, 60%);
+$yellow-300: tint-color($yellow, 40%);
+$yellow-400: tint-color($yellow, 20%);
+$yellow-500: $yellow;
+$yellow-600: shade-color($yellow, 20%);
+$yellow-700: shade-color($yellow, 40%);
+$yellow-800: shade-color($yellow, 60%);
+$yellow-900: shade-color($yellow, 80%);
+//end yellow-color-variables by html
+
+// yellow-color-variables by bootstrap(bost)
+$yellow-bost:#ffc107;
+$yellow-100-bost: tint-color($yellow-bost, 80%);
+$yellow-200-bost: tint-color($yellow-bost, 60%);
+$yellow-300-bost: tint-color($yellow-bost, 40%);
+$yellow-400-bost: tint-color($yellow-bost, 20%);
+$yellow-500-bost: $yellow-bost;
+$yellow-600-bost: shade-color($yellow-bost, 20%);
+$yellow-700-bost: shade-color($yellow-bost, 40%);
+$yellow-800-bost: shade-color($yellow-bost, 60%);
+$yellow-900-bost: shade-color($yellow-bost, 80%);
+// end yellow-color-variables by bootstrap(bost)

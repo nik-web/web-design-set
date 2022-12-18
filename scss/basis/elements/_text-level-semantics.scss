@@ -1,0 +1,38 @@
+// This file is part of web design set.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html
+//
+// Import files from scss/basis/elements/text-level-semantics/ folder
+
+@import "./text-level-semantics/a", // has standard
+    "./text-level-semantics/em", // has standard
+    "./text-level-semantics/strong", // has standard
+    "./text-level-semantics/small", // has standard
+    "./text-level-semantics/s", // has standard
+    "./text-level-semantics/cite", // has standard
+    "./text-level-semantics/q", // has standard
+    "./text-level-semantics/dfn", // has standard
+    "./text-level-semantics/abbr", // has standard
+    "./text-level-semantics/ruby", // has standard
+    "./text-level-semantics/rt", // has standard
+    "./text-level-semantics/rp", // has standard
+    "./text-level-semantics/data", // has standard
+    "./text-level-semantics/time", // has standard
+    "./text-level-semantics/code", // has standard
+    "./text-level-semantics/var", // has standard
+    "./text-level-semantics/samp", // has standard
+    "./text-level-semantics/kbd", // has standard
+    "./text-level-semantics/sub", // has standard
+    "./text-level-semantics/sup", // has standard
+    "./text-level-semantics/i", // has standard
+    "./text-level-semantics/b", // has standard
+    "./text-level-semantics/u", // has standard
+    "./text-level-semantics/mark", // has standard
+    "./text-level-semantics/bdi", // has standard
+    "./text-level-semantics/bdo", // has standard
+    "./text-level-semantics/span", // has standard
+    "./text-level-semantics/br", // has standard
+    "./text-level-semantics/wbr"; // has standard

@@ -1,0 +1,24 @@
+// This file is part of web design set.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/embedded-content-1.html
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/embedded-content.html
+// 
+// Import files from scss/basis/elements/embededded-content/ folder
+//
+
+@import "./embedded-content/picture",// has standard    
+    "./embedded-content/source", // has standard
+    "./embedded-content/img", // has standard
+    "./embedded-content/iframe", // has standard
+    "./embedded-content/embed", // has standard
+    "./embedded-content/object", // has standard
+    "./embedded-content/video", // has standard
+    "./embedded-content/audio", // has standard
+    "./embedded-content/track", // has standard   
+    "./embedded-content/map", // has standard
+    "./embedded-content/area", // has standard
+    "./embedded-content/math", // has standard, has low browser support!
+    "./embedded-content/svg"; // has standard,    
+    // "./embedded-content/param"; // is deprecated

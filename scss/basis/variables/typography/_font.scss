@@ -1,0 +1,30 @@
+//
+// This file is part of web design set.
+//
+//
+// Set default values for the font
+//
+
+// Font families by web font name
+// 
+// Initial: depends on user agent
+// Inherited: 	yes 
+//
+$font-family-audiowide: Audiowide, fantasy;
+$font-family-open-sans: "Open Sans", sans-serif;
+$font-family-courier-prime: "Courier Prime", monospace;
+
+// Font weights by name
+//
+// If the font family doesn't provide the requested weight, it will use the closest 
+// available one.
+//
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-ultra-bold: 900;

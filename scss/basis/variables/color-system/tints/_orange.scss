@@ -1,0 +1,29 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+//orange-color-variables by html
+$orange:#ffa500;
+$orange-100: tint-color($orange, 80%);
+$orange-200: tint-color($orange, 60%);
+$orange-300: tint-color($orange, 40%);
+$orange-400: tint-color($orange, 20%);
+$orange-500:$orange;
+$orange-600: shade-color($orange, 20%);
+$orange-700: shade-color($orange, 40%);
+$orange-800: shade-color($orange, 60%);
+$orange-900: shade-color($orange, 80%);
+//end orange-color-variables by html
+
+// orange-color-variables by bootstrap(bost)
+$orange-bost:  #fd7e14;
+$orange-100-bost: tint-color($orange-bost, 80%);
+$orange-200-bost: tint-color($orange-bost, 60%);
+$orange-300-bost: tint-color($orange-bost, 40%);
+$orange-400-bost: tint-color($orange-bost, 20%);
+$orange-500-bost: $orange-bost;
+$orange-600-bost: shade-color($orange-bost, 20%);
+$orange-700-bost: shade-color($orange-bost, 40%);
+$orange-800-bost: shade-color($orange-bost, 60%);
+$orange-900-bost: shade-color($orange-bost, 80%);
+// end orange-color-variables by bootstrap(bost)

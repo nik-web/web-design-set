@@ -1,0 +1,18 @@
+// This file is part of web design set.
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html
+//
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/tables.html
+// 
+// Import files from scss/basis/elements/tabular-data/ folder
+
+@import "./tabular-data/table", // has standard
+    "./tabular-data/caption", // has standard
+    "./tabular-data/colgroup", // has standard
+    "./tabular-data/col", // has standard
+    "./tabular-data/tbody", // has standard
+    "./tabular-data/thead", // has standard
+    "./tabular-data/tfoot", // has standard
+    "./tabular-data/tr", // has standard
+    "./tabular-data/td", // has standard
+    "./tabular-data/th"; // has standard

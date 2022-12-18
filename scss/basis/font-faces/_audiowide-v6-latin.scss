@@ -1,0 +1,29 @@
+// This file is part of web design set.
+//
+// Audiowide display
+//
+// Archive for Audiowide with charsets [latin] and styles [regular] includes
+// the formats [eot,ttf,svg,woff,woff2].
+//
+// Best Support if old browsers still need to be supported.
+// Formats in this snippet: [eot,woff,woff2,ttf,svg]
+//
+// https://google-webfonts-helper.herokuapp.com/fonts/audiowide?subsets=latin
+// https://github.com/majodev/google-webfonts-helper/
+//
+
+// audiowide-regular - latin
+@if $is-enabled-font-audiowide-v6-latin {
+    @font-face {
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/audiowide-v6-latin/audiowide-v6-latin-regular.eot'); /* IE9 Compat Modes */
+        src: local('Audiowide Regular'), local('Audiowide-Regular'),
+             url('../fonts/audiowide-v6-latin/audiowide-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('../fonts/audiowide-v6-latin/audiowide-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+             url('../fonts/audiowide-v6-latin/audiowide-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+             url('../fonts/audiowide-v6-latin/audiowide-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+             url('../fonts/audiowide-v6-latin/audiowide-v6-latin-regular.svg#Audiowide') format('svg'); /* Legacy iOS */
+    }
+}

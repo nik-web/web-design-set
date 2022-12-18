@@ -1,0 +1,16 @@
+//
+// This file is part of web design set.
+//
+// Declare the variables for this html element
+//
+
+// Fallback for old web browser
+$elements-root-html-font-size: 16px;
+
+// Screen widths for fluid font-size
+$elements-root-html-min-screen-width: 320px;
+$elements-root-html-max-screen-width: 1140px;
+
+// Font sizes for fluid font-size
+$elements-root-html-min-font-size: 16px;
+$elements-root-html-max-font-size: 18px;

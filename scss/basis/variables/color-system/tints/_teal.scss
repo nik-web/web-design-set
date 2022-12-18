@@ -1,0 +1,29 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+//teal-color-variables by html
+$teal:#008080;
+$teal-100: tint-color($teal, 80%);
+$teal-200: tint-color($teal, 60%);
+$teal-300: tint-color($teal, 40%);
+$teal-400: tint-color($teal, 20%);
+$teal-500:$teal;
+$teal-600: shade-color($teal, 20%);
+$teal-700: shade-color($teal, 40%);
+$teal-800: shade-color($teal, 60%);
+$teal-900: shade-color($teal, 80%);
+//end teal-color-variables by html
+
+// teal-color-variables by bootstrap(bost)
+$teal-bost:  #20c997;
+$teal-100-bost: tint-color($teal-bost, 80%);
+$teal-200-bost: tint-color($teal-bost, 60%);
+$teal-300-bost: tint-color($teal-bost, 40%);
+$teal-400-bost: tint-color($teal-bost, 20%);
+$teal-500-bost: $teal-bost;
+$teal-600-bost: shade-color($teal-bost, 20%);
+$teal-700-bost: shade-color($teal-bost, 40%);
+$teal-800-bost: shade-color($teal-bost, 60%);
+$teal-900-bost: shade-color($teal-bost, 80%);
+// end teal-color-variables by bootstrap(bost)

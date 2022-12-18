@@ -1,0 +1,62 @@
+// This file is part of web design set.
+// 
+// The body element
+// <body> element represents the body of a document (as opposed to the document’s metadata).
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-body-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/body.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/body.html#body-display
+// 
+// body {
+//  display: block;
+//  margin: 8px;
+// }
+// body:focus {
+//  outline: none;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-body-element
+// 
+// 1. Eric Meyer’s “Reset CSS” 2.0
+// https://gist.github.com/DevelopSmith/14b5f610b091c22f79ba
+//
+//
+// 1. Change from `box-sizing: content-box` so that `width` is not affected by
+// `padding` or `border`.
+// 
+// 2. Layout with responsive sticky footer
+//
+// 3. Set the primary properties for the font
+//
+
+/*
+The <body> html element
+*/
+body {
+    display: flex; // 2
+    flex-direction: column; // 2
+    margin: 0; // 1
+    border: 0; // 1
+    padding: 0; // 1
+    width: 100%;
+    min-height: 100%; // 2
+    @include set-box-sizing-border-box; // 1
+    color: $elements-sections-body-color; // 3
+    background-color: $elements-sections-body-bg-color;
+    font-family: $elements-sections-body-font-family; // 3
+    font-style: $elements-sections-body-font-style; // 3
+    font-variant: $elements-sections-body-font-variant; // 3
+    font-weight: $elements-sections-body-font-weight; // 3
+    line-height: $elements-sections-body-line-height; // 3
+    word-spacing: $elements-sections-body-word-spacing; // 3
+    letter-spacing: $elements-sections-body-letter-spacing; // 3
+    text-align: $elements-sections-body-text-align;
+}
+
+body:focus {
+    outline: none;
+}

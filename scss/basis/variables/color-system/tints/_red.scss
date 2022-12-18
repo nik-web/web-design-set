@@ -1,0 +1,29 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+//red-color-variables by html
+$red:#ff0000;
+$red-100: tint-color($red, 80%);
+$red-200: tint-color($red, 60%);
+$red-300: tint-color($red, 40%);
+$red-400: tint-color($red, 20%);
+$red-500:$red;
+$red-600: shade-color($red, 20%);
+$red-700: shade-color($red, 40%);
+$red-800: shade-color($red, 60%);
+$red-900: shade-color($red, 80%);
+//end red-color-variables by html
+
+// red-color-variables by bootstrap(bost)
+$red-bost:  #dc3545;
+$red-100-bost: tint-color($red-bost, 80%);
+$red-200-bost: tint-color($red-bost, 60%);
+$red-300-bost: tint-color($red-bost, 40%);
+$red-400-bost: tint-color($red-bost, 20%);
+$red-500-bost: $red-bost;
+$red-600-bost: shade-color($red-bost, 20%);
+$red-700-bost: shade-color($red-bost, 40%);
+$red-800-bost: shade-color($red-bost, 60%);
+$red-900-bost: shade-color($red-bost, 80%);
+// end red-color-variables by bootstrap(bost)

@@ -1,0 +1,14 @@
+// This file is part of web design set.
+//
+// Import files from scss/basis/variables/elements/tabular-data/ folder
+
+@import "./tabular-data/table",
+    "./tabular-data/caption",
+    "./tabular-data/colgroup",
+    "./tabular-data/col",
+    "./tabular-data/tbody",
+    "./tabular-data/thead",
+    "./tabular-data/tfoot", 
+    "./tabular-data/tr",
+    "./tabular-data/td",
+    "./tabular-data/th";

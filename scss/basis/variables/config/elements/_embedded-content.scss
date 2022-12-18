@@ -1,0 +1,22 @@
+// This file is part of web design set.
+//
+// Declare the variables for the configuration of the HTML elements,
+// the embedded-content area, here.
+//
+// These variables can be overwritten by customer!
+
+$is-elements-embedded-content-picture: true !default;
+$is-elements-embedded-content-source: true !default;
+$is-elements-embedded-content-img: true !default;
+$is-elements-embedded-content-iframe: true !default;
+$is-elements-embedded-content-embeded: true !default;
+$is-elements-embedded-content-object: true !default;
+$is-elements-embedded-content-video: true !default;
+$is-elements-embedded-content-audio: true !default;
+$is-elements-embedded-content-track: true !default;
+$is-elements-embedded-content-map: true !default;
+$is-elements-embedded-content-area: true !default;
+$is-elements-embedded-content-math: true !default;
+$is-elements-embedded-content-svg: true !default;
+
+// $is-elements-embedded-content-param: true !default; // is deprecated

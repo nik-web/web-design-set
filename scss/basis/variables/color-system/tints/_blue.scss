@@ -1,0 +1,34 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+// blue-color-variables by name
+// https://html-color.codes/blue
+$blue:#0000ff;
+
+//end blue-color-variables by name
+
+// blue-color-variables by bootstrap(bost)
+$blue-bost: #0d6efd;
+$blue-100-bost: tint-color($blue, 80%);
+$blue-200-bost: tint-color($blue, 60%);
+$blue-300-bost: tint-color($blue, 40%);
+$blue-400-bost: tint-color($blue, 20%);
+$blue-500-bost: $blue-bost;
+$blue-600-bost: shade-color($blue, 20%);
+$blue-700-bost: shade-color($blue, 40%);
+$blue-800-bost: shade-color($blue, 60%);
+$blue-900-bost: shade-color($blue, 80%);
+// end blue-color-variables by bootstrap(bost)
+
+// blue-color-variables mix from $gray with $white or $black
+$blue-100: tint-color($blue, 80%);
+$blue-200: tint-color($blue, 60%);
+$blue-300: tint-color($blue, 40%);
+$blue-400: tint-color($blue, 20%);
+$blue-500: $blue;
+$blue-600: shade-color($blue, 20%);
+$blue-700: shade-color($blue, 40%);
+$blue-800: shade-color($blue, 60%);
+$blue-900: shade-color($blue, 80%);
+// end blue-color-variables mix from $gray with $white or $black

@@ -1,0 +1,14 @@
+// This file is part of web design set.
+
+// Import files from scss/basis/variables/elements/ folder
+
+@import "./elements/root",
+    "./elements/sections",
+    "./elements/grouping-content",
+    "./elements/text-level-semantics",
+    "./elements/edits",
+    "./elements/embedded-content",
+    "./elements/tabular-data",
+    "./elements/forms",
+    "./elements/interactive",
+    "./elements/scripting";

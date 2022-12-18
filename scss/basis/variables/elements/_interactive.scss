@@ -1,0 +1,8 @@
+// This file is part of web design set.
+// https://www.w3.org/TR/2011/WD-html5-20110525/interactive-elements.html
+//
+// Import files from scss/basis/variables/elements/interactive/ folder
+
+@import "./interactive/details",
+    "./interactive/summary",
+    "./interactive/command";

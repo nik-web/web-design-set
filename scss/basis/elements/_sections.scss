@@ -1,0 +1,18 @@
+// This file is part of web design set.
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html 
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html
+//
+// Import files from scss/basis/elements/sections/ folder
+
+@import "./sections/body", // has standard, reboot and styled 
+    "./sections/article", // has standard,
+    "./sections/section", // has standard,
+    "./sections/nav", // has standard,
+    "./sections/aside", // has standard,
+    "./sections/headings", // has standard,   
+    "./sections/hgroup", // has standard,
+    "./sections/header", // has standard,
+    "./sections/footer", // has standard,
+    "./sections/address"; // has standard, is config, reboot and styled

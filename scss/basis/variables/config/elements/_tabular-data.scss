@@ -1,0 +1,16 @@
+// This file is part of web design set.
+//
+// Declare the variables for the configuration of the HTML elements, the tabular-data area, here.
+//
+// These variables can be overwritten by customer!
+
+$is-elements-tabular-data-table: true !default;
+$is-elements-tabular-data-caption: true !default;
+$is-elements-tabular-data-colgroup: true !default;
+$is-elements-tabular-data-col: true !default;
+$is-elements-tabular-data-tbody: true !default;
+$is-elements-tabular-data-thead: true !default;
+$is-elements-tabular-data-tfoot: true !default;
+$is-elements-tabular-data-tr: true !default;
+$is-elements-tabular-data-td: true !default;
+$is-elements-tabular-data-th: true !default;
