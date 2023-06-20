@@ -1,9 +1,37 @@
 # Create your own web design set.
 
 ## Introduction
-Create your own web design set use SASS and Js.
+Create a Laminas MVC project and add your own web design set use SASS and Js.
 
-## Install on Debian 11
+## Install
+
+### Check if git is installed
+
+```bash
+$ git --version
+git version 2.30.2
+```
+
+### Clone from GitHub
+
+```bash
+$ cd <directory to install>
+$ git clone https://github.com/nik-web/web-design-set.git
+```
+
+### Check if composer is installed
+
+```bash
+$ composer
+Composer version...
+```
+
+### Run Composer
+
+```bash
+$ cd <directory to install>/web-design-set
+$ composer install
+```
 
 ### Check if node is installed
 
@@ -22,42 +50,15 @@ $ man npm
 npm - javascript package manager ...
 ```
 
-### Create a package.json file
-https://docs.npmjs.com/cli/v9/commands/npm-init
+### Run npm
+https://docs.npmjs.com/cli/v9/commands/npm-install
 ```bash
-$ npm init
+$ cd <directory to install>/web-design-set
+$ npm install
 ```
-
-### Install sass
+This install dart-sass
 https://sass-lang.com/dart-sass   
 https://www.npmjs.com/package/sass
-```bash
-$ npm install sass --save-dev
-```
-
-## SASS Setup
-https://sass-lang.com/guide
-
-### Create this folders and files
-```bash
-$ mkdir scss/
-$ touch scss/styles.scss
-$ mkdir -p public/css/
-$ mkdir scss/basis/
-$ touch scss/basis/_index.scss
-```
-
-### Add the scripts
-```bash
-$ vim package.json
-```
-Add this line, to watch and output to directories by using folder paths as your input and output, and separating them with a colon.
-```vim
-"compile:sass": "sass --watch scss:public/css"
-```
-Add this line, to compile min. css
-```vim
-"compile-min:sass": "sass scss/styles.scss:public/css/styles.min.css --style compressed"
 ```
 
 ### Run sass scripts
@@ -70,34 +71,48 @@ $ npm run compile-min:sass
 ```bash
 $ vim scss/_custom.scss
 ```
-Add this to import basis
-```vim
-// Import basis-data
-@import "./basis/index.scss";
-``` 
-```bash
-$ vim scss/style.scss
-```
-Add this  
-```vim
-@use 'custom';
-```  
-The @use rule loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together.   
-Stylesheets loaded by @use are called "modules".
-
-## Create basic data
-
-### Create directory structure
-
-
 
 ## Create or update basic-copy
 Run this script from project folder
 
 ```bash
-    $ cd path/to/install
+    $ cd <directory to install>/web-design-set
     $ ./bin/update-basis-copy
-```  
+```
+
+## Add the provider data
+
+```bash
+    $ cd <directory to install>/web-design-set/module/Application/src/ValueObject/
+    $ cp Provider.php.dist Provider.php
+```
+Enter your data into the constants in this file.
+
+## Running Unit Tests
+The testing support is present, you can run the tests using:
+
+```bash
+$ cd path/to/install
+$ ./vendor/bin/phpunit
+```
+
+## Run on web server
+
+Once installed, you can test it out immediately using PHP's built-in web server:
+
+```bash
+$ cd path/to/install
+$ php -S 0.0.0.0:8080 -t public
+```
+OR use the composer alias:
+
+```bash
+$ composer serve
+```
+
+Visit the site at:
+
+http://localhost:8080/
 
 ## Use in other projects in the same directory.
 
@@ -119,20 +134,3 @@ Run this script from project folder
 $ ./vendor/bin/laminas-development-mode enable  # enable development mode
 $ ./vendor/bin/laminas-development-mode disable # disable development mode
 ```
-
-## Running Unit Tests
-
-To run the unit tests, you need to do one of the following:
-
-- Install the MVC test support with [laminas-test](https://docs.laminas.dev/laminas-test/)
-
-```bash
-$ cd path/to/install
-$ composer require --dev laminas/laminas-test
-```
-
-Once testing support is present, you can run the tests using:
-
-```bash
-$ cd path/to/install
-$ ./vendor/bin/phpunit
