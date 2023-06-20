@@ -75,34 +75,6 @@ return [
                 'route' => 'home',
                 'order' => 10,
             ],
-            
-            'info' => [
-                'label' => 'Info',
-                'id'    => 'info',
-                'uri'   => '#',
-                'order' => 11,
-                'pages' => [
-                    'imprint' => [
-                        'label' => 'Impressum',
-                        'route' => 'imprint',
-                        'target' => '_self',
-                    ],
-                    'privacy-policy' => [
-                        'label' => 'Datenschutz',
-                        'route' => 'privacy-policy',
-                    ],
-                ],
-            ],            
-            [
-                'label' => 'Impressum',
-                'route' => 'imprint',
-                'order' => 12,
-            ],
-            [
-                'label' => 'Datenschutz',
-                'route' => 'privacy-policy',
-                'order' => 15,
-            ],
         ],
         'footer_nav'  => [
             [
