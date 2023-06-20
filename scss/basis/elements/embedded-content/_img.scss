@@ -1,0 +1,29 @@
+// This file is part of web design set.
+// 
+// The img element
+// <img> element represents an image.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/embedded-content-1.html#the-img-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/img.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/img.html#img-display
+// 
+// img {
+//  display: inline-block;
+// }
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-img {
+    img {
+        display: inline-block;
+        @include margin($img-margin-top, $img-margin-right, $img-margin-bottom, $img-margin-left);
+        @include set-box-sizing-border-box;
+        @include padding($img-padding-top, $img-padding-right, $img-padding-bottom, $img-padding-left);
+    }
+}

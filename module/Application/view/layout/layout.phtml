@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * This is the default layout (layout/layout) template of this web application
+ * 
+ * @package    Application
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+?>
+<?= $this->doctype() ?>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle()->setAutoEscape(false) . PHP_EOL ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?= $this->headMeta() . PHP_EOL ?>
+        <?=
+        $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+            ->prependStylesheet($this->basePath('css/styles.css'));
+        ?>
+    </head>
+    <body>
+        <header id="site-header">
+            <div id="brand-position" class="site-width-container">
+                <?= $this->navigation('brand_nav')->menu()->setPartial('partial/nav-bar/brand-base') . PHP_EOL  ?>
+            </div>
+        </header>
+        <nav id="site-nav">
+            <div id="is-no-script" class="site-width-container">
+                <?= $this->navigation('main_nav')->menu()
+                //    ->setPartial('partial/nav-bar/main-base') . PHP_EOL
+                //->setPartial('partial/nav-bar/main-base-dynamic') . PHP_EOL
+                ->setPartial('partial/nav-bar/main-no-script') . PHP_EOL
+                ?>
+            </div>
+            <div id="is-script" class="site-width-container disable-site-nav">
+                <?= $this->navigation('main_nav')->menu()
+                    ->setPartial('partial/nav-bar/main-base') . PHP_EOL
+                //->setPartial('partial/nav-bar/main-base-dynamic') . PHP_EOL
+                //->setPartial('partial/nav-bar/main-no-script') . PHP_EOL
+                ?>
+            </div>
+        </nav>
+        <?php
+        /*
+            // Laminas\View\Helper\FlashMessenger
+            $flash = $this->flashMessenger();
+            echo $flash->render('default', ['alert', 'alert-default',], false) . PHP_EOL;
+            echo $flash->render('error', ['alert', 'alert-danger',], false) . PHP_EOL;
+            echo $flash->render('info', ['alert', 'alert-info',], false) . PHP_EOL;
+            echo $flash->render('warning', ['alert', 'alert-warning'], false) . PHP_EOL;
+            echo $flash->render('success', ['alert', 'alert-success',], false) . PHP_EOL;
+         * 
+         */
+        ?>
+        <div id="create-sticky-footer" class="site-width-container">
+            <main id="site-main">        
+                <?= $this->content ?>
+            </main>
+        </div>
+        <footer id="site-footer">
+            <div class="site-width-container">
+                <?= $this->navigation('footer_nav')->menu()->setPartial('partial/nav-bar/footer-base') . PHP_EOL  ?>
+            </div>
+                <?= $this->copyright_notice()->render() . PHP_EOL; ?>
+        </footer>
+        <!-- Scripts -->
+        <?= $this->inlineScript()
+            ->prependFile($this->basePath('js/main-base.js'), '') . PHP_EOL;
+        ?>
+    </body>
+</html>

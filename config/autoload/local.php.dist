@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Local Configuration Override
+ * This configuration override file is for overriding environment-specific and
+ * security-sensitive configuration information. Copy this file without the
+ * .dist extension at the end and populate values as needed.
+ * NOTE: This file is ignored from Git by default with the .gitignore file.
+ * This is a good practice, as it prevents sensitive credentials from 
+ * accidentally being committed into version control.
+ * 
+ * @see        https://docs.laminas.dev/laminas-mvc/services/#default-configuration-options
+ * @package    web-design-set
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+return [
+    // ...
+];

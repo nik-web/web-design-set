@@ -1,0 +1,19 @@
+// This file is part of web design set.
+// 
+// The video element
+// <video> element represents a video or movie.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-video-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/video.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/media.html#the-video-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-video {
+    video {
+        @include set-box-sizing-border-box;
+    }
+}

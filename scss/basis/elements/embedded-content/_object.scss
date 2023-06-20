@@ -1,0 +1,32 @@
+// This file is part of web design set.
+// 
+// The object element
+// <object> element represents external content.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-object-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/object.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/object.html#object-display
+// 
+// object:focus {
+//  outline: none;
+// }
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-object {
+    /*
+    The <object> html element
+    */
+    object {
+        @include set-box-sizing-border-box;
+    }
+    object:focus {
+        outline: none;
+    }
+}

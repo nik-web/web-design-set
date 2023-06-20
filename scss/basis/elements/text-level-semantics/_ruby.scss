@@ -1,0 +1,19 @@
+// This file is part of web design set.
+// 
+// The ruby element
+// <ruby> element allows spans of phrasing content to be marked with ruby annotations.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-ruby-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/ruby.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-ruby {
+    ruby {
+        @include set-box-sizing-border-box;
+    }
+} 

@@ -1,0 +1,56 @@
+// This file is part of web design set.
+//
+// Declare the variables for this html element
+//
+$input-margin-top: 0 !default;
+$input-margin-right: 0 !default;
+$input-margin-bottom: 0 !default;
+$input-margin-left: 0 !default;
+
+$input-border-width: $default-border-width !default;
+$input-border-style: $default-border-style !default;
+$input-border-color: $default-border-color !default;
+
+$input-padding-top: 1px !default;
+$input-padding-right: 0 !default;
+$input-padding-bottom: 1px !default;
+$input-padding-left: 0 !default;
+
+$input-color: $gray-800-bost !default;
+$input-background-color: $gray-100-bost !default;
+
+$input-font-size: 1rem;
+$input-font-family: $font-family-open-sans !default;
+$input-font-style: normal !default;
+$input-font-variant: normal !default;
+$input-font-weight: $font-weight-medium !default;
+
+// Start for text this input types: datetime, text, search, password, tel, url, email, file, submit
+$input-for-text-margin-top: $small-distance!default;
+$input-for-text-margin-right: auto !default;
+$input-for-text-margin-bottom: $very-small-distance !default;
+$input-for-text-margin-left: auto !default;
+
+$input-for-text-padding-top: .175rem !default;
+$input-for-text-padding-right: $small-distance !default;
+$input-for-text-padding-bottom: .175rem !default;
+$input-for-text-padding-left: $small-distance !default;
+// End for text this input types: datetime, text, search, password, tel, url, email, file, submit
+
+$input-checkbox-width: $distance !default;
+$input-checkbox-height: $distance !default;
+
+$input-submit-min-width: 300px !default;
+$input-submit-max-width: 400px !default;
+
+$input-submit-margin-top: $large-distance !default;
+$input-submit-margin-right: auto !default;
+$input-submit-margin-bottom: $smaller-distance !default;
+$input-submit-margin-left: auto !default;
+
+$input-submit-padding-top: .375rem !default;
+$input-submit-padding-right: 0 !default;
+$input-submit-padding-bottom: .375rem !default;
+$input-submit-padding-left: 0 !default;
+
+$input-radio-margin-right: $smaller-distance !default;

@@ -1,0 +1,37 @@
+{
+    "name": "nik-web/web-design-set",
+    "description": "Laminas MVC web design examples Application\u001b[D",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Niklaus Höpfner",
+            "email": "editor@nik-web.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {            
+            "Application\\": "module/Application/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApplicationTest\\": "module/Application/test/"
+        }
+    },
+    "require": {
+        "laminas/laminas-development-mode": "^3.10",
+        "laminas/laminas-mvc": "^3.6",
+        "laminas/laminas-navigation": "^2.18"
+    },
+    "require-dev": {
+        "laminas/laminas-component-installer": "^3.2",
+        "laminas/laminas-test": "^4.8",
+        "phpunit/phpunit": "^10.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "laminas/laminas-component-installer": true
+        }
+    }
+}

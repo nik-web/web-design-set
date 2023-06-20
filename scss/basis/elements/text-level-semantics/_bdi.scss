@@ -1,0 +1,20 @@
+// This file is part of web design set.
+// 
+// The bdi element
+// <bdi> element represents a span of text that is isolated from its surroundings for
+// the purposes of bidirectional text formatting.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-bdi-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/bdi.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element
+//
+// Is default enabled: false 
+
+@if $is-elements_text-level-semantics-bdi {
+    bdi {
+        @include set-box-sizing-border-box;
+    }
+}

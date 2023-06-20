@@ -1,0 +1,171 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * NOTE: Copy this file without the .dist extension and change the values of 
+ * the constants.
+ *
+ * @package    Application\ValueObject  
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+namespace Application\ValueObject;
+
+/**
+ * Provider class
+ *
+ * @package Application\ValueObject
+ */
+class Provider {
+    
+    /**
+     * The title of the provider of this web application
+     * 
+     * @var string
+     */
+    const TITLE = '';
+    
+    /**
+     * The last name of the provider of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const LAST_NAME = 'Musterman';
+    
+    /**
+     * The first name of the provider of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const FIRST_NAME = 'Muster';
+    
+    /**
+     * The company form of the provider of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string 
+     */
+    const COMPANY_FORM = 'Einzelunternehmen';
+    
+    /**
+     * The type of business of the provider of this web application
+     * 
+     * @var string
+     */
+    const BUSINESS_TYPE = 'Bezeichnung der Geschäftsart';
+    
+    /**
+     * The street address of the provider of this web application
+     * 
+     * An address without a street is possible!
+     * 
+     * @var string-
+     */
+    const STREET = 'Musterweg';
+    
+    /**
+     * The house number of the provider address of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const HOUSE_NUMBER = '00';
+    
+    /**
+     * The postcode of the provider address of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const POSTCODE = '00000';
+    
+    /**
+     * The city of the provider address of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const CITY = 'Musterort';
+    
+    /** 
+     * The country of the provider address of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const COUNTRY = 'Deutschland';
+    
+    /**
+     * The state of the provider address of this web application
+     * 
+     * @var string
+     */
+    const STATE = 'Muster-Bundesland';
+    
+    /**
+     * The phone number of the provider of this web application
+     * 
+     * @var string
+     */
+    const PHONE_NUMBER = '';
+    
+    /**
+     * The fax number of the provider of this web application
+     * 
+     * @var string
+     */
+    const FAX_NUMBER = '';
+    
+    /**
+     * The mobile phone number of the provider of this web application
+     * 
+     * @var string
+     */
+    const MOBILE_PHONE_NUMBER = '+49 123 445566';
+    
+    /**
+     * The contact e-mail address of the provider of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const CONTACT_EMAIL = 'kontakt@musterfirma.de';
+    
+    /**
+     * The sales tax identification number of the provider of this web application
+     * 
+     * @var string
+     */
+    const TAX_ID_NUMBER = 'DE999 999 999';
+    
+    /**
+     * Provider hostname
+     * 
+     * @const string
+     */
+    const HOSTNAME = 'nik-test.de';
+    
+    /**
+     * The year of publication of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const YEAR_OF_PUBLICATION = '2022';
+}

@@ -1,0 +1,26 @@
+// This file is part of web design set.
+// 
+// The datalist element
+// <datalist> element represents a set of option elements that represent predefined options for other controls.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-datalist-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/datalist.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/datalist.html#datalist-display
+// 
+// datalist {
+//  display: none;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element
+//
+// Is default enabled: false
+
+@if $is-elements-forms-datalist {
+    datalist {
+        display: none;
+    }
+}

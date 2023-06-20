@@ -1,0 +1,33 @@
+// This file is part of web design set.
+// 
+// The footer element
+// <footer> element represents the footer for the section it applies to.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-footer-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/footer.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/footer.html#footer-display
+// 
+// footer {
+//  display: block;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-footer-element
+//
+// Is default enabled: true
+
+@if $is-elements-sections-footer {
+/*
+The <footer> html element
+*/
+    footer{
+        display: block;
+        @include margin($footer-margin-top, $footer-margin-right, $footer-margin-bottom, $footer-margin-left);
+        border: 0;
+        @include padding($footer-padding-top, $footer-padding-right, $footer-padding-bottom, $footer-padding-left);
+        @include set-box-sizing-border-box;
+    }
+}

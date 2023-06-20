@@ -1,0 +1,22 @@
+// This file is part of web design set.
+// 
+// The MathML math element
+// <math> element falls into the embedded content, phrasing content, flow content,
+// and palpable content categories for the purposes of the content models in this specification.
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/embedded-content-other.html
+// 
+// 
+// Has low browser compatibility!
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-math {
+    /*
+    The <math> html element
+    */
+    math {
+        @include set-box-sizing-border-box;
+    }
+}

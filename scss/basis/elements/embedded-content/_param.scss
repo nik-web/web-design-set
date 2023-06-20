@@ -1,0 +1,28 @@
+// This file is part of web design set.
+// 
+// The param element
+// <param> element defines parameters for plugins invoked by object elements.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-param-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/param.html
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/param.html#param-display
+// 
+// param {
+//  display: none;
+// }
+// 
+// *** Deprecated!!! ***
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-param {
+    /*
+    The <param> html element
+    */
+    param {
+        display: none;
+    }
+}

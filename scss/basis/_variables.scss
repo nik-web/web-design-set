@@ -1,0 +1,14 @@
+// This file is part of web design set.
+//
+// Import files from scss/basis/variables/ folder
+//
+
+@import "./variables/config",
+    "./variables/default-settings",
+    "./variables/color-system",
+    "./variables/typography",
+    "./variables/segments",
+    "./variables/partials",
+    "./variables/view-helpers",
+    "./variables/content-components",
+    "./variables/elements";

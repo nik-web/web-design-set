@@ -1,0 +1,22 @@
+// This file is part of web design set.
+// 
+// The source element
+// <source> element enables multiple media sources to be specified for audio and video elements.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-source-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/source.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-source {
+    /*
+    The <source> html element
+    */
+    source {
+        @include set-box-sizing-border-box;
+    }
+}

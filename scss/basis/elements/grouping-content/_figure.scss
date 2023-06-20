@@ -1,0 +1,56 @@
+// This file is part of web design set.
+// 
+// The figure element
+// <figure element> represents a unit of content, optionally with a caption,
+// that is self-contained, that is typically referenced as a single unit from the
+// main flow of the document, and that can be moved away from the main flow of the
+// document without affecting the document’s meaning.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-figure-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/figure.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/figure.html#figure-display
+// 
+// figure {
+//  display: block;
+//  margin-before: 1em;
+//  margin-after: 1em;
+//  margin-start: 40px;
+//  margin-end: 40px;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element
+//
+// Is default enabled: false
+
+@if $is-elements-grouping-content-figure {
+    figure {
+        display: block;
+        @include margin($figure-margin-top, $figure-margin-right, $figure-margin-bottom, $figure-margin-left);
+        @include set-box-sizing-border-box;
+        
+        border: $figure-border-width $figure-border-style $figure-border-color;
+        border-radius: $figure-border-radius;
+        box-shadow: .25rem .5rem 1rem $figure-box-shadow-color;
+        
+        @include padding($figure-padding-top, $figure-padding-right, $figure-padding-bottom, $figure-padding-left);
+        
+        background-color: $figure-background-color;
+        color: $figure-color;  
+    }
+}
+
+@if $is-elements-grouping-content-figure-class-card {
+    figure.card {
+        flex: 1;
+        width: 100%;
+        max-width: 460px;
+           
+        @include margin($figure-card-margin-top, $figure-card-margin-right, $figure-card-margin-bottom, $figure-card-margin-left);
+        
+        
+    }
+}

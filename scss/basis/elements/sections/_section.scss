@@ -1,0 +1,33 @@
+// This file is part of web design set.
+// 
+// The section element
+// <section> element represents a section of a document, typically with a title or heading.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-section-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/section.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/section.html#section-display
+// 
+// section {
+//  display: block;
+// }
+//
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-section-element
+//
+// Is default enabled: true
+
+@if $is-elements-sections-section {
+/*
+The <section> html element
+*/
+    section{
+        display: block;
+        @include margin($section-margin-top, $section-margin-right, $section-margin-bottom, $section-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($section-padding-top, $section-padding-right, $section-padding-bottom, $section-padding-left);
+    }
+}

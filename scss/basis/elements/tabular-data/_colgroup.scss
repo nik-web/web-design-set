@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The colgroup element
+// <colgroup> element represents a group of one or more columns in the table that is its parent.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-colgroup-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/colgroup.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/colgroup.html
+// 
+// colgroup {
+//  display: table-column-group;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-colgroup {
+    colgroup {
+        display: table-column-group;
+        @include set-box-sizing-border-box;
+    }
+}

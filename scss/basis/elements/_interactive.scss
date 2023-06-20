@@ -1,0 +1,12 @@
+// This file is part of web design set.
+// https://www.w3.org/TR/2011/WD-html5-20110525/interactive-elements.html
+//
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/interactive-elements.html
+// 
+// Import files from scss/basis/elements/interactive/ folder
+
+@import "./interactive/details", // has standard
+    "./interactive/summary", // has standard
+    "./interactive/dialog", // has standard
+    "./interactive/command";

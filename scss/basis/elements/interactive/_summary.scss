@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The summary element
+// <summary> element represents a summary, caption, or legend for a details element.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/interactive-elements.html#the-summary-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/summary.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/summary.html#summary-display
+// 
+// summary {
+//  display: block;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element
+//    
+// Is default enabled: false
+
+@if $is-elements-interactive-summary {
+    summary {
+        display: block;
+        @include set-box-sizing-border-box;
+    }
+}

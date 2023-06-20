@@ -1,0 +1,35 @@
+// This file is part of web design set.
+// 
+// The nav element
+// <nav> element represents a section of a document that links to other documents or to parts
+// within the document itself; that is, a section of navigation links.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-nav-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/nav.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/nav.html
+// 
+// nav {
+//  display: block;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-nav-element
+//
+// Is default enabled: true
+
+@if $is-elements-sections-nav {
+    /*
+    The <nav> html element
+    */
+    nav {
+        display: block;
+        @include margin($nav-margin-top, $nav-margin-right, $nav-margin-bottom, $nav-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($nav-padding-top, $nav-padding-right, $nav-padding-bottom, $nav-padding-left);
+        font: inherit;
+    }
+}

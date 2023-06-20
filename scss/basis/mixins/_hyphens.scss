@@ -1,0 +1,21 @@
+//
+// A mixin to define hyphenation
+//
+// https://www.w3.org/TR/css3-text/#hyphenation
+//
+// $value - The hyphenation property value. none | manual | auto
+// use &shy; for manual
+//
+// Example .scss:
+//
+// @include hyphens(auto);
+//
+// Created on : 27.02.2020, 14:08:02
+// Author     : nik
+
+@mixin hyphens($value: manual) {
+    hyphens: manual; // Fallback by Nik
+    @each $prefix in -webkit-, -moz-, -o-, "" {
+        #{$prefix}hyphens: $value;
+    }
+}

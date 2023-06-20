@@ -1,0 +1,25 @@
+// This file is part of web design set.
+//
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html
+// 
+// Import files from scss/basis/elements/grouping-content/ folder
+//
+
+@import "./grouping-content/blockquote",
+    "./grouping-content/dd",
+    "./grouping-content/div",
+    "./grouping-content/dl",
+    "./grouping-content/dt",
+    "./grouping-content/figcaption",
+    "./grouping-content/figure",
+    "./grouping-content/hr",
+    "./grouping-content/li",
+    "./grouping-content/main",
+    "./grouping-content/menu",
+    "./grouping-content/ol",
+    "./grouping-content/p",    
+    "./grouping-content/pre",
+    "./grouping-content/ul";

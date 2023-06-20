@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The small element
+// <small> element represents so-called “fine print” or “small print”, such as legal disclaimers and caveats.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-small-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/small.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/small.html#small-display
+// 
+// small {
+//  font-size: smaller;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element
+//
+// Is default enabled: true
+
+@if $is-elements_text-level-semantics-small {
+    small {
+        @include set-box-sizing-border-box;
+        font-size: $small-font-size;
+    }
+}

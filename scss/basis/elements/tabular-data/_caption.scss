@@ -1,0 +1,29 @@
+// This file is part of web design set.
+// 
+// The caption element
+// <caption> element represents the title of the table that is its parent.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-caption-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/caption.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/caption.html#caption-display
+// 
+// caption {
+//  display: table-caption;
+//  text-align: center;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-caption-element
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-caption {
+    caption {
+        display: table-caption;
+        @include set-box-sizing-border-box;
+        text-align: center;
+    }
+} 

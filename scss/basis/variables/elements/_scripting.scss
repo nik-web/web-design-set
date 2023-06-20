@@ -1,0 +1,9 @@
+// This file is part of web design set.
+
+// Import files from scss/basis/variables/elements/scripting/ folder
+
+@import "./scripting/script",
+    "./scripting/noscript",
+    "./scripting/template",
+    "./scripting/slot",
+    "./scripting/canvas";

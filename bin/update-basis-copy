@@ -1,0 +1,91 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+error_reporting(0);
+
+function deleteDirectory($directory) {
+    if (is_dir($directory)) {
+
+        $files = array_diff(scandir($directory), array('.', '..'));
+
+        foreach ($files as $file) {
+            $path = $directory . '/' . $file;
+
+            if (is_dir($path)) {
+                deleteDirectory($path);
+            } else {
+                unlink($path);
+            }
+        }
+
+        rmdir($directory);
+    }
+}
+
+//This script will copy all entries in source diretory to destin directory recursively, including other directories.
+
+function copyDirectory($source, $destination) {
+    
+    if(!is_dir($source)) {
+        echo 'Source directory not found!';
+        return FALSE;
+    }
+    
+    // Create destination directory if it doesn't exist
+    if (!is_dir($destination)) {
+        mkdir($destination, 0755, true);
+    }
+
+    // Open source directory
+    $dir = opendir($source);
+
+    // Iterate over each entry in the source directory
+    while (($file = readdir($dir)) !== false) {
+        // Skip ".", "..", and hidden files/directories starting with "."
+        if ($file == '.' || $file == '..' || strpos($file, '.') === 0) {
+            continue;
+        }
+
+        // Build full paths for the current entry
+        $sourcePath = $source . '/' . $file;
+        $destinationPath = $destination . '/' . $file;
+
+        if (is_file($sourcePath)) {
+            // Copy file from source to destination
+            //copy($sourcePath, $destinationPath);
+            
+            // Create the symbolic links
+            if (symlink($sourcePath, $destinationPath)) {
+                echo $sourcePath . " Symbolic link created successfully!\n";
+            } else {
+                if (file_exists($destinationPath) && is_link($destinationPath)) {
+                    echo $sourcePath . " Symbolic link already exists, check it!\n";
+                } else {
+                    echo $sourcePath . " Failed to create symbolic link!\n";
+                }
+            }
+            
+        } elseif (is_dir($sourcePath)) {
+            // Recursively copy directory from source to destination
+            copyDirectory($sourcePath, $destinationPath);
+        }
+    }
+
+    // Close the source directory handle
+    closedir($dir);
+}
+
+// Usage in web-design-set-project
+//$sourceDirectory = __DIR__ . '/../scss/basis';
+// Usage in other projekts in the same folder
+$sourceDirectory = realpath(__DIR__ . '/../../web-design-set/scss/basis');
+
+
+$destinationDirectory = __DIR__ . '/../scss/basis-copy';
+
+// Remove destination directory if exist
+deleteDirectory($destinationDirectory);
+// Create directory with sym-links
+copyDirectory($sourceDirectory, $destinationDirectory);

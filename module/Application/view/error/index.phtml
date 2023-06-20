@@ -1,0 +1,127 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * This is the error/index template of this web application
+ * 
+ * @package    Application
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+declare(strict_types=1);
+
+$this->headTitle('Ein Fehler ist aufgetreten');
+$description = 'Das ist die Meta-Beschreibung für die Fehlerseite dieser Webanwendung';
+$keywords = 'Webanwendung, Fehler, aufgetreten, Fehlerseite';
+$this->headMeta()->appendName('description', $description)
+    ->appendName('keywords', $keywords);
+
+if (!$this->display_exceptions) {
+?>
+<header id="main-header">
+    <h1>
+        Ein Fehler ist aufgetreten
+    </h1>
+    <p class="main-header-p">
+        Bei der Ausführung ist ein Fehler aufgetreten; Bitte versuchen Sie es später noch einmal.
+    </p>
+</header>
+<figure style="text-align: center;">
+    <pre role="img" aria-label="ASCII CAT">
+
+   &lt; Is a error in my project. &gt;    
+           ,-""""""-.
+        /\j__/\  (  \`--.
+        \`@_@'/  _)  &gt;--.`.
+       _{.:Y:_}_{{_,'    ) )
+      {_}`-^{_} ```     (_/
+    </pre>
+</figure>
+<?php
+} else {
+?>
+<h1>
+    An error occurred
+</h1>
+<h2>
+    <?= $this->message ?>
+</h2>
+<?php
+    if (isset($this->exception) && $this->exception instanceof \Throwable) {
+?>
+<hr>
+<h2>
+    Additional information:
+</h2>
+<h3>
+    <?= get_class($this->exception) ?>
+</h3>
+<dl>
+    <dt>File:</dt>
+    <dd>
+        <pre><?= $this->exception->getFile() ?>:<?= $this->exception->getLine() ?></pre>
+    </dd>
+    <dt>Message:</dt>
+    <dd>
+        <pre><?= $this->escapeHtml($this->exception->getMessage()) ?></pre>
+    </dd>
+    <dt>Stack trace:</dt>
+    <dd>
+        <pre><?= $this->escapeHtml($this->exception->getTraceAsString()) ?></pre>
+    </dd>
+</dl>
+<?php 
+        if ($ex = $this->exception->getPrevious()) {
+?>
+<hr/>
+<h2>
+    Previous exceptions:
+</h2>
+<ul class="list-unstyled">
+<?php
+    $icount = 0;
+    while ($ex) {
+?>
+    <li>
+        <h3>
+            <?= get_class($ex) ?>
+        </h3>
+        <dl>
+            <dt>File:</dt>
+            <dd>
+                <pre><?= $ex->getFile() ?>:<?= $ex->getLine() ?></pre>
+            </dd>
+            <dt>Message:</dt>
+            <dd>
+                <pre><?= $this->escapeHtml($ex->getMessage()) ?></pre>
+            </dd>
+            <dt>Stack trace:</dt>
+            <dd>
+                <pre><?= $this->escapeHtml($ex->getTraceAsString()) ?></pre>
+            </dd>
+        </dl>
+    </li>
+<?php
+        $ex = $ex->getPrevious();
+        if (++$icount >= 50) {
+            echo '<li>There may be more exceptions, but we do not have enough memory to process it.</li>';
+            break;
+        }
+    }
+?>
+</ul>
+<?php
+        }
+    } else {
+?>
+<h3>No Exception available</h3>
+<?php
+    }
+}
+?>

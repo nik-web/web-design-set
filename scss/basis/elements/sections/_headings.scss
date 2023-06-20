@@ -1,0 +1,49 @@
+// This file is part of web design set.
+// 
+// The h1 through h6 elements
+// <h1>, <h2>, <h3>, <h4>, <h5> and <h6> elements are headings for the sections with which they are associated.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/h1.html
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/h2.html
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/h3.html
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/h4.html
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/h5.html
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/h6.html
+// 
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+//
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements
+//
+// Is default enabled: true;
+
+@if $is-elements-sections-headings {
+/*
+The <h1>, <h2>, <h3> html elements
+*/
+    h1, h2, h3 {
+        display: block;
+        @include margin($headings-margin-top, $headings-margin-right, $headings-margin-bottom, $headings-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($headings-padding-top, $headings-padding-right, $headings-padding-bottom, $headings-padding-left);
+        font-weight: $headings-font-weight;
+        line-height: $headings-line-height;
+        vertical-align: baseline; // 1
+        color: $headings-color;
+        //@include hyphens(auto);
+    }
+
+    h1 {
+        font-size: $first-heading-font-size;
+    }
+
+    h2 {
+        font-size: $second-heading-font-size;
+    }
+
+    h3 {
+        font-size: $third-heading-font-size;
+    }
+}

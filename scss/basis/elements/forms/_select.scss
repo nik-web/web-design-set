@@ -1,0 +1,44 @@
+// This file is part of web design set.
+// 
+// The select element
+// <select> element represents a control for selecting among a list of options.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-select-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/select.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element
+//    
+// Is default enabled: false
+
+@if $is-elements-forms-select {
+    select {
+        display: block;
+        min-width: 200px;
+        margin: 0;
+        outline: none;
+        border-width: $select-border-width;
+        border-style: $select-border-style;
+        border-color: $select-border-color;
+        @include set-box-sizing-border-box;
+        padding-top: $select-padding-top;
+        padding-right: $select-padding-right;
+        padding-bottom: $select-padding-bottom;
+        padding-left: $select-padding-left;
+        @include padding($select-padding-top, $select-padding-right, $select-padding-bottom, $select-padding-left);
+        color: $select-color;
+        background-color: $select-background-color; 
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-shadow: none;
+        text-align: start;
+        cursor: pointer;
+        font-size: $select-font-size;
+        font-family: $select-font-family;
+        font-style: $select-font-style;
+        font-variant: $select-font-variant;
+        font-weight: $select-font-weight;
+    }
+}

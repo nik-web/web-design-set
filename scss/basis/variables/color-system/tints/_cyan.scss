@@ -1,0 +1,29 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+//cyan-color-variables by html
+$cyan:#00ffff;
+$cyan-100: tint-color($cyan, 80%);
+$cyan-200: tint-color($cyan, 60%);
+$cyan-300: tint-color($cyan, 40%);
+$cyan-400: tint-color($cyan, 20%);
+$cyan-500:$cyan;
+$cyan-600: shade-color($cyan, 20%);
+$cyan-700: shade-color($cyan, 40%);
+$cyan-800: shade-color($cyan, 60%);
+$cyan-900: shade-color($cyan, 80%);
+//end cyan-color-variables by html
+
+// cyan-color-variables by bootstrap(bost)
+$cyan-bost:  #0dcaf0;
+$cyan-100-bost: tint-color($cyan-bost, 80%);
+$cyan-200-bost: tint-color($cyan-bost, 60%);
+$cyan-300-bost: tint-color($cyan-bost, 40%);
+$cyan-400-bost: tint-color($cyan-bost, 20%);
+$cyan-500-bost: $cyan-bost;
+$cyan-600-bost: shade-color($cyan-bost, 20%);
+$cyan-700-bost: shade-color($cyan-bost, 40%);
+$cyan-800-bost: shade-color($cyan-bost, 60%);
+$cyan-900-bost: shade-color($cyan-bost, 80%);
+// end cyan-color-variables by bootstrap(bost)

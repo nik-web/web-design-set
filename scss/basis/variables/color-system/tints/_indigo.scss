@@ -1,0 +1,29 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+//indigo-color-variables by html
+$indigo:#4b0082;
+$indigo-100: tint-color($indigo, 80%);
+$indigo-200: tint-color($indigo, 60%);
+$indigo-300: tint-color($indigo, 40%);
+$indigo-400: tint-color($indigo, 20%);
+$indigo-500:$indigo;
+$indigo-600: shade-color($indigo, 20%);
+$indigo-700: shade-color($indigo, 40%);
+$indigo-800: shade-color($indigo, 60%);
+$indigo-900: shade-color($indigo, 80%);
+//endindigo-color-variables by html
+
+// indigo-color-variables by bootstrap(bost)
+$indigo-bost:  #6610f2;
+$indigo-100-bost: tint-color($indigo-bost, 80%);
+$indigo-200-bost: tint-color($indigo-bost, 60%);
+$indigo-300-bost: tint-color($indigo-bost, 40%);
+$indigo-400-bost: tint-color($indigo-bost, 20%);
+$indigo-500-bost: $indigo-bost;
+$indigo-600-bost: shade-color($indigo-bost, 20%);
+$indigo-700-bost: shade-color($indigo-bost, 40%);
+$indigo-800-bost: shade-color($indigo-bost, 60%);
+$indigo-900-bost: shade-color($indigo-bost, 80%);
+// end indigo-color-variables by bootstrap(bost)

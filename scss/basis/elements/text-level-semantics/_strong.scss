@@ -1,0 +1,28 @@
+// This file is part of web design set.
+// 
+// The strong element
+// <strong> element represents a span of text with strong importance.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-strong-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/strong.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/strong.html#strong-display
+// 
+// strong {
+//  font-weight: bold;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element
+//
+// Is default enabled: true
+
+@if $is-elements_text-level-semantics-strong {
+    strong {
+        @include set-box-sizing-border-box;
+        color: $strong-color;
+        font-weight: $strong-font-weight;
+    }
+}

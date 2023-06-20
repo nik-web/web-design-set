@@ -1,0 +1,41 @@
+// This file is part of web design set.
+// 
+// The q element (inline quotationinline quotation)
+// <q> element represents phrasing content quoted from another source.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-q-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/q.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/q.html#q-display
+// 
+// q {
+//  display: inline;
+// }
+// q:before {
+//  content: open-quote;
+// }
+// q:after {
+//  content: close-quote;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element
+//
+// Is default enabled: false 
+
+@if $is-elements_text-level-semantics-q {
+    q {
+        display: inline;
+        //@include set-box-sizing-border-box; // 1
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+}

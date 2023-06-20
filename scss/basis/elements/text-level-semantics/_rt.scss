@@ -1,0 +1,26 @@
+// This file is part of web design set.
+// 
+// The rt element
+// <rt> element marks the ruby text component of a ruby annotation.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-rt-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/rt.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/rt.html#rt-display
+// 
+// rt {
+//  line-height: normal;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rt-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-rt {
+    rt {
+        @include set-box-sizing-border-box;
+    }
+}

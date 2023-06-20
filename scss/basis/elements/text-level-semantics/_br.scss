@@ -1,0 +1,19 @@
+// This file is part of web design set.
+// 
+// The br element
+// <br> element represents a line break.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-br-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/br.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element
+//
+// Is default enabled: true
+
+@if $is-elements_text-level-semantics-br {
+    br {
+        @include set-box-sizing-border-box;
+    }
+}

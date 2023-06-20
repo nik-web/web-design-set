@@ -1,0 +1,6 @@
+// This file is part of web design set.
+
+// Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+    @return mix(black, $color, $weight);
+}

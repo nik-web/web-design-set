@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The em element
+// <em> element represents a span of text with emphatic stress.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-em-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/em.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/em.html#em-display
+// 
+// em {
+//  font-style: italic;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-em {
+    em {
+        @include set-box-sizing-border-box;
+        font-style: $em-font-style;
+    }
+}

@@ -1,0 +1,45 @@
+// This file is part of web design set.
+// 
+//
+//  Created on : 28.05.2023, 17:32:29
+//  Author     : nik
+//
+
+@if $is-segments-containers-class-site-width-container {
+    /*
+    The site-width-container class
+    Container with fluid width and max. width
+    */
+    .site-width-container {
+        position: $class-site-width-container-position; // for buttons
+        width: $class-site-width-container-width;
+        max-width: $class-site-width-container-max-width;
+        height: $class-site-width-container-height;
+        margin-left: $class-site-width-container-margin-left;
+        margin-right: $class-site-width-container-margin-right;
+    }
+}
+
+@if $is-segments-containers-id-create-sticky-footer {
+/*
+This ID for main wrapper to create a sticky footer.
+*/
+    #create-sticky-footer {
+        flex: 1;
+    }
+}
+
+@if $is-segments-containers-id-brand-position {
+/*
+This ID for site header wrapper to set brand position
+*/
+    #brand-position {
+        text-align: center;
+    }
+
+    @media screen and (min-width: $brand-position-breakpoint) {
+        #brand-position {
+            text-align: left;
+        }
+    }
+}

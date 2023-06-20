@@ -1,0 +1,20 @@
+// This file is part of web design set.
+// 
+// The rp element
+// <rp> element can be used to provide parentheses around a ruby text component of a ruby annotation,
+// to be shown by UAs that don’t support ruby annotations.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-rp-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/rp.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-rp {
+    rp {
+        @include set-box-sizing-border-box;
+    }
+}

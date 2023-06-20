@@ -1,0 +1,43 @@
+// This file is part of web design set.
+// 
+// The fieldset element
+// <fieldset> element represents a set of form controls grouped under a common name.
+//
+// https://www.w3.org/TR/2011/WD-html5-20110525/forms.html#the-form-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/fieldset.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/fieldset.html#fieldset-display
+// 
+// fieldset {
+//  display: block;
+//  margin-start: 2px;
+//  margin-end: 2px;
+//  padding-before: 0.35em;
+//  padding-start: 0.75em;
+//  padding-end: 0.75em;
+//  padding-after: 0.625em;
+//  border: 2px groove (internal value);
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
+//
+// Is default enabled: false
+
+@if $is-elements-forms-fieldset {
+    /*
+    The <fieldset> html element
+    */
+    fieldset {
+        display: block;
+        @include margin($fieldset-margin-top, $fieldset-margin-right, $fieldset-margin-bottom, $fieldset-margin-left);        
+        border-width: $fieldset-border-width;
+        border-style: $fieldset-border-style;
+        border-color: $fieldset-border-color;
+        border-image: none;
+        @include set-box-sizing-border-box;
+        @include padding($fieldset-padding-top, $fieldset-padding-right, $fieldset-padding-bottom, $fieldset-padding-left);
+    }
+}

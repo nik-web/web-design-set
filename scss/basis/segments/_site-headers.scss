@@ -1,0 +1,19 @@
+// This file is part of web design set.
+//
+//  Layout segment header
+//
+//  Created on : 28.05.2023, 17:15:08
+//  Author     : nik
+//
+
+@if $is-segments-site-headers-id-site-header {
+    /*
+    Layout segment site header <header> html element
+    */
+        #site-header {
+            padding-top: $id-site-header-padding-top;
+            padding-bottom: $id-site-header-padding-bottom;
+            color: $id-site-header-color;
+            background-color: $id-site-header-background-color;
+        }
+    }

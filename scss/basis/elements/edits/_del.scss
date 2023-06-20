@@ -1,0 +1,30 @@
+// This file is part of web design set.
+// 
+// The del element
+// <del> element represents a range of text that has been deleted from a document.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/edits.html#the-del-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/del.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
+//
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/del.html#del-display
+// 
+// del {
+//  text-decoration: line-through;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/edits.html#the-del-element
+//
+// Is default enabled: false
+
+@if $is-elements-edits-del {
+    /*
+    The <del> html element
+    */
+    del {
+        text-decoration: line-through;
+        @include set-box-sizing-border-box;
+    }
+}

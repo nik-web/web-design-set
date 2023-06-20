@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The samp element
+// <samp> element represents (sample) output from a program or computing system.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-samp-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/samp.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/samp.html#samp-display
+// 
+// samp {
+//  font-family: monospace;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-samp-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-samp {
+    samp {
+        font-family: $samp-font-family;
+        @include set-box-sizing-border-box;
+    }
+}

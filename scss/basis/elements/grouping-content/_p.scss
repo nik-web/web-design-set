@@ -1,0 +1,35 @@
+// This file is part of web design set.
+// 
+// The p element
+// <p> element represents a paragraph.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-p-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/p.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/p.html#p-display
+// 
+// p {
+//  display: block;
+//  margin-before: 1em;
+//  margin-after: 1em;
+//  margin-start: 0;
+//  margin-end: 0;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element
+//
+// Is default enabled: true
+
+@if $is-elements-grouping-content-p {
+    p {
+        display: block;
+        @include margin($p-margin-top, $p-margin-right, $p-margin-bottom, $p-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($p-padding-top, $p-padding-right, $p-padding-bottom, $p-padding-left);
+        vertical-align: baseline;
+    }
+}

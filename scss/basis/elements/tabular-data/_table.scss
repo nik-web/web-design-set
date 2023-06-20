@@ -1,0 +1,33 @@
+// This file is part of web design set.
+// 
+// The table element
+// <table> element represents a table; that is, data with more than one dimension.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-table-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/table.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/table.html
+// 
+// table {
+//  display: table;
+//  border-collapse: separate;
+//  border-spacing: 2px;
+//  border-color: gray;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-table-element
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-table {
+    table {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: gray;
+        @include set-box-sizing-border-box;
+    }
+}

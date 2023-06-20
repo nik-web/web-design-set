@@ -1,0 +1,28 @@
+// This file is part of web design set.
+// 
+// The s element
+// <s> element represents contents that are no longer accurate or no longer relevant 
+// and that therefore has been “struck” from the document.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-s-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/s.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/s.html#s-display
+// 
+// s {
+//  text-decoration: line-through;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-s {
+    s {
+        @include set-box-sizing-border-box;        
+        text-decoration: $s-text-decoration;
+    }
+}

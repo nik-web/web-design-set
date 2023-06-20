@@ -1,0 +1,63 @@
+// This file is part of web design set.
+//
+//This file contains the standard color scheme, this can be overwritten with any other color scheme with the configuration.
+//
+// These variables can be overwritten by customer!
+
+
+$default-border-color: silver !default;// !!! Change this variable in elements
+
+// base color combination
+$base-bg-color: $white !default; // For default <body>
+$base-color: $dim-gray !default; // For default <body>
+
+$base-higlight-bg-color:  $white-smoke !default;
+$base-higlight-color:  $gray-700-bost !default; // For <b> and <strong>
+
+$base-border-color: $silver !default;
+$base-box-shadow-color: $gainsboro !default;
+
+$base-a-background-color: transparent !default;
+
+$base-a-color: #2070bb !default; // blue
+$base-a-visited-color: #800080 !default; // purple
+$base-a-focus-color: #00008b !default; // darkblue
+$base-a-focus-outline-color: invert !default; 
+$base-a-hover-color: #00008b !default; // darkblue
+$base-a-active-color: #f00 !default; // red
+
+$base-outline-color: invert !default;
+
+// primary color combination
+$primary-bg-color: $dim-gray !default;
+$primary-color: $white-smoke !default;
+
+$primary-higlight-bg-color:  $white-smoke !default;
+$primary-higlight-color:  $dim-gray !default;
+
+$primary-border-color: $silver !default;
+$primary-box-shadow-color: $gainsboro;
+$primary-outline-color: invert !default;
+
+// secondary color combination
+$secondary-bg-color: $gainsboro  !default;
+$secondary-color: $dim-gray !default;
+
+$secondary-higlight-bg-color: $white-smoke !default;
+$secondary-higlight-color: $gray-900-bost !default;
+
+$secondary-border-color: $gray !default;
+$secondary-box-shadow-color: $gray-800-bost !default;
+$secondary-outline-color: invert !default;
+
+// Tertiary
+$tertiary-bg-color: $gainsboro !default;
+$tertiary-color:  $black !default;
+
+// Quaternary
+$quaternary-bg-color: $white-smoke !default; // very light
+$quaternary-color: $gray !default; // medium
+
+// Quinary
+$quinary-bg-color: $dim-gray !default;
+$quinary-color: $white-smoke !default;

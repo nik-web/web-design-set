@@ -1,0 +1,19 @@
+// This file is part of web design set.
+
+// Import files from scss/basis/variables/elements/forms/ folder
+
+    @import "./forms/form",
+    "./forms/label",
+    "./forms/input",
+    "./forms/button",
+    "./forms/select",
+    "./forms/datalist",
+    "./forms/optgroup",
+    "./forms/option",
+    "./forms/textarea",
+    "./forms/output",
+    "./forms/progress",
+    "./forms/meter",
+    "./forms/fieldset",
+    "./forms/legend",
+    "./forms/keygen";

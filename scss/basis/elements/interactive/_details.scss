@@ -1,0 +1,26 @@
+// This file is part of web design set.
+// 
+// The details element
+// <details> element represents a control from which the user can obtain additional information or controls on-demand.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/interactive-elements.html#the-details-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/details.html
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/details.html#details-display
+// 
+// details {
+//  display: block;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element
+//    
+// Is default enabled: false
+
+@if $is-elements-interactive-details {
+    details {
+        display: block;
+        @include set-box-sizing-border-box;
+    }
+}

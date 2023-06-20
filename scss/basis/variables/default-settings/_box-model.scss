@@ -1,0 +1,24 @@
+//
+// Variables for border widths, padding and the actual content width and 
+// content height.
+//
+// Created on : 28.02.2020, 12:24:06
+// Author     : nik
+
+$very-small-distance: .25rem;
+$small-distance: .5rem;
+$smaller-distance: .75rem;
+$distance: 1rem;
+$large-distance: 1.25rem;
+$very-large-distance: 1.5rem;
+$max-distance: 2rem;
+
+// Layout segments
+$site-content-width: calc(100vw - 6vw) !default;
+$site-content-max-width: 1140px !default;
+$site-content-min-width: 320px !default;
+
+// Default border
+$default-border-width: 1px !default;
+$default-border-style: solid !default;
+$default-border-radius: .5rem !default;

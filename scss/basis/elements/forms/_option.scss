@@ -1,0 +1,20 @@
+// This file is part of web design set.
+// 
+// The option element
+// <option> element represents an option in a select control, or an option in a labelled
+// set of options grouped together in an optgroup, or an option among the list of suggestions in a datalist.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-option-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/option.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element
+//    
+// Is default enabled: false
+
+@if $is-elements-forms-option {
+    option {
+        @include set-box-sizing-border-box;
+    }
+}

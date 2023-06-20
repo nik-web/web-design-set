@@ -1,0 +1,22 @@
+// This file is part of web design set.
+// 
+// The meter element
+// <meter> element represents a scalar gauge providing a measurement within a known range, or a fractional value.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-meter-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/meter.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element
+//    
+// Is default enabled: false
+
+@if $is-elements-forms-meter {
+    /*
+    The <meter> html element
+    */
+    meter {
+        @include set-box-sizing-border-box;
+    }
+}

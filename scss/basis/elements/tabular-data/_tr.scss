@@ -1,0 +1,31 @@
+// This file is part of web design set.
+// 
+// The tr element
+// <tr> element represents a row of cells in a table.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-tr-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/tr.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/tr.html#tr-display
+// 
+// tr {
+//  display: table-row;
+//  vertical-align: inherit;
+//  border-color: inherit;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-tr-element 
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-tr {
+    tr {
+        display: table-row;
+        border-color: inherit;
+        @include set-box-sizing-border-box;        
+        vertical-align: inherit;
+    }
+}

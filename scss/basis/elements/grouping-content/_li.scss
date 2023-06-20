@@ -1,0 +1,31 @@
+// This file is part of web design set.
+// 
+// The li element represents a list item.
+// <li> element represents a list item.
+//
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-li-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/li.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/li.html#li-display
+// 
+// li {
+//  display: list-item;
+//  text-align: -webkit-match-parent;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element
+//
+// Is default enabled: true
+
+@if $is-elements-grouping-content-li {
+    li {
+        display: list-item;
+        @include margin($li-margin-top, $li-margin-right, $li-margin-bottom, $li-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($li-padding-top, $li-padding-right, $li-padding-bottom, $li-padding-left);
+    }
+}

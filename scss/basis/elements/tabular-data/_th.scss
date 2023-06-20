@@ -1,0 +1,33 @@
+// This file is part of web design set.
+// 
+// The th element
+// <th> element represents a header cell in a table.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-th-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/th.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/th.html#th-display
+// 
+// th {
+//  display: table-cell;
+//  vertical-align: inherit;
+//  font-weight: bold;
+//  text-align: center;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-th-element
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-th {
+    th {
+        display: table-cell;
+        @include set-box-sizing-border-box;
+        vertical-align: inherit;
+        font-weight: bold;
+        text-align: center;
+    }
+}

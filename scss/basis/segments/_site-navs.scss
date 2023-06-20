@@ -1,0 +1,21 @@
+//
+//
+//
+//  Created on : 28.05.2023, 18:05:53
+//  Author     : nik
+//
+
+@if $is-segments-site-navs-id-site-nav {
+/*
+Layout segment site nav html <nav> element
+*/
+    #site-nav {
+        position: $id-site-nav-position-webkit;
+        position: $id-site-nav-position;
+        top: $id-site-nav-top;
+        z-index: $id-site-nav-z-index;
+        width: 100%;
+        background-color: $id-site-nav-background-color;
+        color: $id-site-nav-color;
+    }
+}

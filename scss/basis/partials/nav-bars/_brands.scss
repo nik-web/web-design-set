@@ -1,0 +1,48 @@
+//
+// Various templates for the brand
+//
+//  Created on : 29.05.2023, 12:40:32
+//  Author     : nik
+//
+
+// Start brand-base partial
+@if $is-partials-nav-bar-brands-brand-base {
+    
+    #brand-wrapper {
+        display: inline-block;
+        margin: 0 auto;
+        border: .1rem solid $brand-border-color;
+        border-radius: 46%;        
+        box-shadow: 0 .2rem .5rem $brand-box-shadow-color;
+        padding: .42rem 1.1rem;
+        background-color: $brand-background-color;                
+    }
+    
+    #brand-home,
+    #brand,
+    #brand:link,
+    #brand:visited,
+    #brand:focus,
+    #brand:hover,
+    #brand:active {
+        display: inline-block;
+        font-size: $brand-font-size;
+        font-weight: $brand-font-weight;
+        font-family: $brand-font-family;
+        color: $brand-color;
+    }
+    
+    #brand-home {
+        cursor: default;
+    }
+    
+    #brand,
+    #brand:link,
+    #brand:visited,
+    #brand:focus,
+    #brand:hover,
+    #brand:active {
+        text-decoration: none;
+    }
+}
+// End brand base partial

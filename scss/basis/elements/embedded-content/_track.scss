@@ -1,0 +1,20 @@
+// This file is part of web design set.
+// 
+// The track element
+// <track> element enables supplementary media tracks such as subtitle tracks and caption
+// tracks to be specified for audio and video elements.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-track-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/track.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/media.html#the-track-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-track {
+    track {
+        @include set-box-sizing-border-box;
+    }
+}

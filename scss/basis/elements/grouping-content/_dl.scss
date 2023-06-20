@@ -1,0 +1,33 @@
+// This file is part of web design set.
+// 
+// The dl element
+// <dl> element represents a description list.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-dl-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/dl.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/dl.html#dl-display
+// 
+// dl {
+//  display: block;
+//  margin-before: 1em;
+//  margin-after: 1em;
+//  margin-start: 0;
+//  margin-end: 0;
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element
+//
+// Is default enabled: false
+
+@if $is-elements-grouping-content-dl {    
+    dl {
+        display: block;
+        @include margin($dl-margin-top, $dl-margin-right, $dl-margin-bottom, $dl-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($dl-padding-top, $dl-padding-right, $dl-padding-bottom, $dl-padding-left);
+    }
+}

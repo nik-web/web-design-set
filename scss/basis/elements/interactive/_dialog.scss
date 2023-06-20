@@ -1,0 +1,18 @@
+// This file is part of web design set.
+// 
+// The dialog element
+// <dialog> element represents a part of an application that a user interacts with
+// to perform a task, for example a dialog box, inspector, or window.
+// 
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element
+//    
+// Is default enabled: false
+
+@if $is-elements-interactive-dialog {
+    dialog {
+        @include set-box-sizing-border-box;
+    }
+}

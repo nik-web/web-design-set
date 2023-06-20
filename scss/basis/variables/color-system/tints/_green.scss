@@ -1,0 +1,29 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+//green-color-variables by html
+$green:#008000;
+$green-100: tint-color($green, 80%);
+$green-200: tint-color($green, 60%);
+$green-300: tint-color($green, 40%);
+$green-400: tint-color($green, 20%);
+$green-500: $green;
+$green-600: shade-color($green, 20%);
+$green-700: shade-color($green, 40%);
+$green-800: shade-color($green, 60%);
+$green-900: shade-color($green, 80%);
+//end green-color-variables by html
+
+// green-color-variables by bootstrap(bost)
+$green-bost:#198754;
+$green-100-bost: tint-color($green-bost, 80%);
+$green-200-bost: tint-color($green-bost, 60%);
+$green-300-bost: tint-color($green-bost, 40%);
+$green-400-bost: tint-color($green-bost, 20%);
+$green-500-bost: $green-bost;
+$green-600-bost: shade-color($green-bost, 20%);
+$green-700-bost: shade-color($green-bost, 40%);
+$green-800-bost: shade-color($green-bost, 60%);
+$green-900-bost: shade-color($green-bost, 80%);
+// end green-color-variables by bootstrap(bost)

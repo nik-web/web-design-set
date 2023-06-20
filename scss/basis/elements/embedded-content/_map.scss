@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The map element
+// <map>> element, in conjunction with any area element descendants, defines an image map.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-map-element.html#the-map-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/map.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/map.html#map-display
+// 
+// map {
+//  display: inline;
+// }
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-map {
+    map {
+        display: inline;
+        @include set-box-sizing-border-box;
+    }
+}

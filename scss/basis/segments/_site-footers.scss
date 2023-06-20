@@ -1,0 +1,19 @@
+// This file is part of web design set.
+//
+//  Layout segment footer
+//
+//  Created on : 28.05.2023, 18:12:20
+//  Author     : nik
+//
+
+
+@if $is-segments-site-footers-id-site-footer {
+/**
+Layout segment site footer
+**/
+    #site-footer {
+        @include padding($id-site-footer-padding-top, $id-site-footer-padding-right, $id-site-footer-padding-bottom, $id-site-footer-padding-left);
+        color: $id-site-footer-color;
+        background-color: $id-site-footer-background-color;
+    }
+}

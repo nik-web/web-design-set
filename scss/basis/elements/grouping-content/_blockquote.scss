@@ -1,0 +1,30 @@
+// This file is part of web design set.
+// 
+// The blockquote element
+// <blockquote> element represents a section that is quoted from another source.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-blockquote-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/blockquote.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/blockquote.html#blockquote-display
+// 
+// blockquote {
+//  display: block;
+//  margin-before: 1em;
+//  margin-after: 1em;
+//  margin-start: 40px;
+//  margin-end: 40px;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element
+//    
+// Is default enabled: false
+
+@if $is-elements-grouping-content-blockquote {
+    blockquote {
+        @include set-box-sizing-border-box;
+    }
+}

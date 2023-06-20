@@ -1,0 +1,38 @@
+// This file is part of web design set.
+// 
+// The menu element
+// <menu> element represents a list of commands.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/interactive-elements.html#the-menu-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/menu.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/menu.html#menu-display
+// 
+// menu {
+//  display: block;
+//  list-style-type: disc;
+//  margin-before: 1em;
+//  margin-after: 1em;
+//  margin-start: 0;
+//  margin-end: 0;
+//  padding-start: 40px;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-menu-element
+//
+// Is default enabled: false
+
+@if $is-elements-grouping-content-menu {
+    menu {
+        display: block;
+        //@include margin($menu-margin-top, $menu-margin-right, $menu-margin-bottom, $menu-margin-left);
+        margin: 0;
+        border: 0;
+        @include set-box-sizing-border-box;
+        //@include padding($menu-padding-top, $menu-padding-right, $menu-padding-bottom, $menu-padding-left);
+        padding: 0;
+    }
+}

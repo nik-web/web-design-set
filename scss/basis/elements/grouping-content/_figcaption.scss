@@ -1,0 +1,29 @@
+// This file is part of web design set.
+// 
+// The figcaption element
+// <figcaption> element represents a caption or legend for a figure.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-figcaption-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/figcaption.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption
+//
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/figcaption.html#figcaption-display
+// 
+// figcaption {
+//  display: block;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element
+//
+// Is default enabled: false
+
+@if $is-elements-grouping-content-figcaption {
+    figcaption {
+        display: block;
+        @include set-box-sizing-border-box;
+        @include padding($figcaption-padding-top, $figcaption-padding-right, $figcaption-padding-bottom, $figcaption-padding-left);
+        font-size: $figcaption-font-size;
+    }
+}

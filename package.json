@@ -1,0 +1,26 @@
+{
+  "name": "web-design-set-v1",
+  "version": "1.0.0",
+  "description": "Create your own web design kit use SASS and Js.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:public/css",
+    "compile-min:sass": "sass scss/styles.scss:public/css/styles.min.css --style compressed"
+  },
+  "keywords": [
+    "webdesign",
+    "sass",
+    "js",
+    "css",
+    "html"
+  ],
+  "author": "Niklaus Höpfner",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nik-web/web-design-set.git"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}

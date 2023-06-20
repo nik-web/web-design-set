@@ -1,0 +1,29 @@
+// This file is part of web design set.
+// 
+// The sup element
+// <sup> element represents superscript.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-sub-and-sup-elements
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/sup.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/sup.html#sup-display
+// 
+// sup {
+//  vertical-align: super;
+//  font-size: smaller;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-sup {
+    sup {
+        @include set-box-sizing-border-box;
+        vertical-align: $sup-vertical-align;
+        font-size: smaller;
+    }
+}

@@ -1,0 +1,46 @@
+// This file is part of web design set.
+// 
+// The textarea element
+// <textarea> element represents a multi-line plain-text edit control for the element’s raw value.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-textarea-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/textarea.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element
+//    
+// Is default enabled: false
+
+@if $is-elements-forms-textarea {
+    textarea {
+        display: block;
+        @include margin($textarea-margin-top, $textarea-margin-right, $textarea-margin-bottom, $textarea-margin-left);
+        outline: none;
+        width: 100%;
+        border: $textarea-border-width $textarea-border-style $textarea-border-color;
+        @include set-box-sizing-border-box;
+        @include padding($textarea-padding-top, $textarea-padding-right, $textarea-padding-bottom, $textarea-padding-left);
+        color: $textarea-color;
+        background-color: $textarea-background-color;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0; // legt den Einzug vor der ersten Zeile eines Textes fest
+        text-shadow: none;
+        text-align: start;
+        cursor: text;
+        font-size: 1rem;
+        font-family: $textarea-font-family;
+        font-style: $textarea-font-style;
+        font-variant: $textarea-font-variant;
+        font-weight: $textarea-font-weight;
+    }
+    
+    textarea:focus {
+        /* first need to set "outline" */
+        outline: $very-small-distance solid;
+        /* make the outline lightskyblue */
+        outline-color: lightskyblue;
+    }
+}

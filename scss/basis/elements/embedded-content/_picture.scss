@@ -1,0 +1,20 @@
+// This file is part of web design set.
+// 
+// The picture element
+// <picture> element is a container which provides multiple sources to its contained
+// img element to allow authors to declaratively control or give hints to the user agent 
+// about which image resource to use, based on the screen pixel density, viewport size, 
+// image format, and other factors. It represents its children.
+// 
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-picture {
+    picture {
+        @include set-box-sizing-border-box;
+    }
+}

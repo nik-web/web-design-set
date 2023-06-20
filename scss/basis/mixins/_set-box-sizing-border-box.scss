@@ -1,0 +1,22 @@
+// This file is part of web design set.
+//
+// Set box sizing border box
+//
+// The width and height properties (and min/max properties) includes content, 
+// padding and border.
+// Change from `box-sizing: content-box` so that `width` is not affected to
+// box-sizing: border-box
+//
+// https://developer.mozilla.org/de/docs/Web/CSS/box-sizing
+//
+
+@mixin set-box-sizing-border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &::before, &::after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}

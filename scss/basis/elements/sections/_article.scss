@@ -1,0 +1,35 @@
+// This file is part of web design set.
+// 
+// The article element
+// <article> element represents a section of content that forms an independent part of a document or site;
+// for example, a magazine or newspaper article, or a blog entry.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-article-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/article.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/article.html#article-display
+// 
+//
+// article {
+//  display: block;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-article-element
+//
+// Is default enabled: false
+
+@if $is-elements-sections-article {
+    /*
+    The <article> html element
+    */
+    article {
+        display: block;
+        @include margin($article-margin-top, $article-margin-right, $article-margin-bottom, $article-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($article-padding-top, $article-padding-right, $article-padding-bottom, $article-padding-left);
+    }
+}

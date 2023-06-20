@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * This file is a partial view script for the brand.
+ * Use this partial with Laminas\View\Helper\Navigation\Menu.
+ * 
+ * @package    Application
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+// Get the Laminas\Navigation\Page\Mvc from Laminas\Navigation\Navigation
+$homePage = $container->findOneBy('route', 'home');
+$brand = $homePage->getLabel();
+?>
+<div id="brand-wrapper">
+    <?php
+    if ($homePage->isActive()) {
+    ?> 
+    <strong id="brand-home">
+        <?= $brand . PHP_EOL ?>
+    </strong>
+    <?php
+    } else {
+    ?>
+    <a id="brand" href="<?= $homePage->getHref(); ?>">
+        <?= $brand . PHP_EOL?>
+    </a>
+    <?php
+    }
+    ?>
+</div>

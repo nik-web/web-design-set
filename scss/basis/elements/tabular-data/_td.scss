@@ -1,0 +1,29 @@
+// This file is part of web design set.
+// 
+// The td element
+// <td> element represents a data cell in a table.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-td-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/td.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/td.html#td-display
+// 
+// td {
+//  display: table-cell;
+//  vertical-align: inherit;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-td-element
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-td {
+    td {
+        display: table-cell;
+        @include set-box-sizing-border-box;
+        vertical-align: inherit;
+    }
+}

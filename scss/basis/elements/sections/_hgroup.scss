@@ -1,0 +1,32 @@
+// This file is part of web design set.
+// 
+// The hgroup element
+// <hgroup> element represents a group of headings.
+// By developer.mozilla.org
+// <hgroup> HTML element represents a heading and related content.
+// It groups a single <h1>–<h6> element with one or more <p>.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-hgroup-element
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/hgroup.html#hgroup-display
+// 
+// hgroup {
+//  display: block;
+// } 
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element
+//
+// Is default enabled: false
+
+@if $is-elements-sections-hgroup {
+    /*
+    The <hgroup> html element
+    */
+    hgroup {
+        display: block;
+        @include set-box-sizing-border-box;
+    }
+}

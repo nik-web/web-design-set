@@ -1,0 +1,40 @@
+// This file is part of web design set.
+// 
+// The legend element
+// <legend> element represents a title or explanatory caption for the rest of
+// the contents of the legend element’s parent element.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/forms.html#the-legend-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/legend.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/legend.html#legend-display
+// 
+// legend {
+//  display: block;
+//  padding-start: 2px;
+//  padding-end: 2px;
+//  border: none;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element
+//    
+// Is default enabled: false
+
+@if $is-elements-forms-legend {
+    /*
+    The <legend> html element
+    */
+    legend {
+        display: block;
+        border: none;
+        @include set-box-sizing-border-box;        
+        @include padding($legend-padding-top, $form-padding-right, $form-padding-bottom, $form-padding-left);
+        font-size: $legend-font-size;
+        font-weight: $legend-font-weight;
+        line-height: $legend-line-height;
+        color: $legend-color;
+    }
+}

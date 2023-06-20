@@ -1,0 +1,29 @@
+// This file is part of web design set.
+// 
+// The sub
+// <sub> element represents subscript.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-sub-and-sup-elements
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/sub.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/sub.html#sub-display
+// 
+// sub {
+//  vertical-align: sub;
+//  font-size: smaller;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-sub {
+    sub {
+        @include set-box-sizing-border-box;
+        vertical-align: $sub-vertical-align;
+        font-size: $sub-font-size;
+    }
+}

@@ -1,0 +1,40 @@
+// This file is part of web design set.
+// 
+// The address element
+// <address> element represents contact information.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-address-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/address.html
+
+// The HTML <address> element indicates that the enclosed HTML provides contact
+// information for a person or people, or for an organization.
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address
+// 
+// Typical default display propertie
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/address.html#address-display
+// 
+// address {
+//  display: block;
+//  font-style: italic;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-address-element
+//
+// Is default enabled: false
+
+@if $is-elements-sections-address {
+    /*
+    The <address> html element
+    */
+    address {
+        display: block; 
+        @include margin($address-margin-top, $address-margin-right, $address-margin-bottom, $address-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($address-padding-top, $address-padding-right, $address-padding-bottom, $address-padding-left);
+        vertical-align: baseline;
+        font-style: $address-font-style;
+        line-height: $address-line-height;
+    }
+}

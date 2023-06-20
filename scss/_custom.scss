@@ -1,0 +1,32 @@
+// This file is part of nik-test using web design set.
+//
+// Overwrite the basic data here
+
+// Set variables for the used web fonts to true.
+// The existing variables are in this directory: 
+// scss/basis/font-faces/
+
+$is-enabled-font-audiowide-v6-latin: true;
+
+//$is-enabled-space-mono-latin-normal-normal: true;
+
+$is-enabled-fonts-open-sans-v15-latin_cyrillic-normal-normal: true;
+$is-enabled-fonts-open-sans-v15-latin_cyrillic-normal-light: true;
+
+
+$is-partials-nav-bar-mains-main-no-script: true;
+
+
+$is-elements-grouping-content-figure: true;
+$is-elements-grouping-content-figure-class-card: true;
+
+$is-elements-grouping-content-figcaption: true;
+$is-elements-embedded-content-svg: true;
+
+$is-elements-grouping-content-hr: true;
+
+
+$is-elements-grouping-content-pre: true;
+
+// Import basis-data
+@import "./basis-copy/index";

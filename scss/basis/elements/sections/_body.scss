@@ -1,0 +1,53 @@
+// This file is part of web design set.
+// 
+// The body element
+// <body> element represents the body of a document (as opposed to the document’s metadata).
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-body-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/body.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/body.html#body-display
+// 
+// body {
+//  display: block;
+//  margin: 8px;
+// }
+// body:focus {
+//  outline: none;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-body-element
+// 
+
+/*
+The <body> html element
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    @include margin($body-margin-top, $body-margin-right, $body-margin-bottom, $body-margin-left);
+    border: 0;
+    width: 100%;
+    min-height: 100%;
+    @include set-box-sizing-border-box;
+    @include padding($body-padding-top, $body-padding-right, $body-padding-bottom, $body-padding-left);
+    color: $body-color;
+    background-color: $body-bg-color;
+    font-family: $body-font-family;
+    font-style: $body-font-style;
+    font-variant: $body-font-variant;
+    font-size:  $body-font-size;
+    font-weight: $body-font-weight;
+    line-height: $body-line-height;
+    word-spacing: $body-word-spacing;
+    letter-spacing: $body-letter-spacing;
+    text-align: $body-text-align;
+    @include hyphens(auto);
+}
+
+body:focus {
+    outline: none;
+}

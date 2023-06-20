@@ -1,0 +1,39 @@
+// This file is part of web design set.
+// 
+// The hr element
+// <hr> element represents a paragraph-level thematic break.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-hr-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/hr.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/hr.html#hr-display
+// 
+// hr {
+//  display: block;
+//  margin-before: 0.5em; // unknown property name
+//  margin-after: 0.5em; // unknown property name
+//  margin-start: auto; // unknown property name
+//  margin-end: auto; // unknown property name
+//  border-style: inset;
+//  border-width: 1px;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element
+//
+// Is default enabled: false
+
+@if $is-elements-grouping-content-hr {
+    hr {
+        display: block;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 1px;
+        border-top-color: silver;
+    }
+}

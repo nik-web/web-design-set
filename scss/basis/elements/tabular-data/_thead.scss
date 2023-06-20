@@ -1,0 +1,32 @@
+// This file is part of web design set.
+// 
+// The thead element
+// <thead> element represents the block of rows that consist of the column labels
+// (headings) for its parent table element.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-thead-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/thead.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/thead.html#thead-display
+// 
+// thead {
+//  display: table-header-group;
+//  vertical-align: middle;
+//  border-color: inherit;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-thead-element
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-thead {
+    thead {
+        display: table-header-group;
+        border-color: inherit;
+        @include set-box-sizing-border-box;        
+        vertical-align: middle;
+    }
+}

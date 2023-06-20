@@ -1,0 +1,32 @@
+// This file is part of web design set.
+// 
+// The form element
+// <form> element represents a user-submittable form.
+//
+// https://www.w3.org/TR/2011/WD-html5-20110525/forms.html#the-form-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/form.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+// 
+// Typical default display properties
+// 
+// form {
+//  display: block;
+//  margin-top: 0em;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/forms.html#the-form-element
+//
+// Is default enabled: false
+
+@if $is-elements-forms-form {
+    /*
+    The <form> html element
+    */
+    form {
+        display: block;
+        @include margin($form-margin-top, $form-margin-right, $form-margin-bottom, $form-margin-left);
+        @include set-box-sizing-border-box;
+        @include padding($form-padding-top, $form-padding-right, $form-padding-bottom, $form-padding-left);
+    }
+}

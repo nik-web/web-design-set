@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * This is the imprit (application/imprint/index) template of this web application
+ * 
+ * @package    Application
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+$this->headTitle('Das ist das Impressum unserer Webanwendung');
+$description = 'Das ist die Meta-Beschreibung für das Impressum dieser Webanwendung';
+$keywords = 'Webanwendung, Impressum,';
+$this->headMeta()->appendName('description', $description)
+    ->appendName('keywords', $keywords);
+?>
+<header id="main-header">
+    <h1>
+        Impressum
+    </h1>
+    <p class="main-header-p">
+        Anbieterkennzeichnung gemäß §&nbsp;5&nbsp;TMG
+    </p>
+</header>
+<section>
+    <h2>
+        Anbieter
+    </h2>
+    <p>
+        <?= $this->provider_name()->render(); ?>
+    </p>
+    <p>
+        <?= $this->provider_address()->render(); ?>
+    </p>
+    <p>
+        <?= $this->provider_contact()->render(false); ?>
+    </p>
+</section>
+<section>
+    <h2>
+        Umsatzsteuer-ID
+    </h2>
+    <p>
+        Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect;&nbsp;27&nbsp;a&nbsp;Umsatzsteuergesetz:<br />
+        <?= $taxIdNumber; ?>
+    </p>
+</section>
+<section>
+    <h2>
+        Verantwortlich f&uuml;r den Inhalt nach &sect;&nbsp;18&nbsp;Abs.&nbsp;2&nbsp;MStV
+    </h2>
+    <p>
+        <?= $this->provider_name()->render(false); ?> (Anschrift wie oben)
+    </p>
+</section>

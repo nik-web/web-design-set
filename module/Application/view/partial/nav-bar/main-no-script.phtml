@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * This file is part of web-design-examples, an application with Laminas MVC framework.
+ * 
+ * Template: 'partial/nav-bar/main-no-script'
+ * 
+ * This file is a view partial script for the main-no-script main navigationbar.
+ * This nav use the CSS checkbox hack technique
+ * 
+ * @package    Application
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+?>
+
+<input type="checkbox" id="hamburg-nj">
+<label for="hamburg-nj" class="hamburg-label-nj">
+    <span class="hamburg-line-nj"></span>
+    <span class="hamburg-line-nj"></span>
+    <span class="hamburg-line-nj"></span>
+</label>
+<ul id="main-nav-bar-nj">
+<?php
+foreach ($container as $page) {
+    if (!$this->navigation('main_nav')->accept($page)) {
+        continue;  
+    }
+?>
+    <li class="main-nav-item-nj">
+<?php
+    if (!$page->hasPages()) {
+        if ($page->isActive()) {
+    ?>    
+        <strong class="main-nav-strong-nj">
+            <?=  $page ?>
+        </strong>
+    <?php
+        } else {
+    ?>
+        <a class="main-nav-link-nj" href="<?= $page->getHref() ?>">
+            <?=  $page ?>
+        </a>
+<?php
+        }
+    } else {
+        $classValueLabelForCheckbox = 'check-sub-nav-label-nj';
+        foreach ($page->getPages() as $child) {
+            if (!$this->navigation()->accept($child)) {
+                continue;
+            }
+            if ($child->isActive()) {
+                $classValueLabelForCheckbox = 'check-sub-nav-label-current-nj';
+            }
+        }
+?>  
+        <input type="checkbox" id="<?=  $page->getId() ?>" class="sub-nav-check-nj">
+        <label for="<?=  $page->getId() ?>" class="<?= $classValueLabelForCheckbox ?>">                
+            <?=  $page ?>
+        </label>
+        <ul class="main-sub-nav-nj">
+        <?php
+        foreach ($page->getPages() as $child) {
+            if (!$this->navigation()->accept($child)) {
+                continue;
+            }
+        ?>
+            <li class="main-nav-item-nj">
+        <?php
+            if ($child->isActive()) {
+        ?>
+                <strong class="main-sub-nav-strong-nj">
+                    <?= $child ?>
+                </strong>
+        <?php
+            } else {
+        ?>
+                <a class="main-sub-nav-link-nj" href="<?= $child->getHref() ?>">
+                    <?= $child ?>
+                </a>                    
+        <?php            
+            }
+        ?>
+            </li>
+    <?php
+        }
+    ?>
+        </ul>
+<?php        
+    }
+?>
+    </li>
+<?php
+}
+?>
+</ul>

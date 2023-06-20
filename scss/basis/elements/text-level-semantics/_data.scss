@@ -1,0 +1,18 @@
+// This file is part of web design set.
+// 
+// The data element
+// <data> element represents its contents, along with a machine-readable form of
+// those contents in the value attribute.
+// 
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-data {
+    data {
+        @include set-box-sizing-border-box;
+    }
+}

@@ -1,0 +1,26 @@
+// This file is part of web design set.
+// 
+// The b element
+// <b> element represents a span of text offset from its surrounding content without conveying
+// any extra emphasis or importance, and for which the conventional typographic presentation is bold text;
+// for example, keywords in a document abstract, or product names in a review.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-b-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/b.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/b.html#b-display
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-b {
+    b {
+        @include set-box-sizing-border-box;
+        color: $b-color;
+        font-weight: $b-font-weight;
+    }
+}

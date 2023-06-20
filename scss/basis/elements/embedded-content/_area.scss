@@ -1,0 +1,22 @@
+// This file is part of web design set.
+// 
+// The area element
+// <area> element represents either a hyperlink with some text and a corresponding area on an image map, or a dead area on an image map.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-map-element.html#the-area-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/area.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/area.html#area-display
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-area {
+    area {
+        display: none;
+    }
+}

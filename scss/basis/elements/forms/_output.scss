@@ -1,0 +1,28 @@
+// This file is part of web design set.
+// 
+// The output element
+// <output> element represents the result of a calculation.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-output-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/output.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/output.html#output-display
+// 
+// output {
+//  display: inline;
+//  unicode-bidi: -webkit-isolate;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element
+//    
+// Is default enabled: false
+
+@if $is-elements-forms-output {
+    output {
+        display: inline;
+        @include set-box-sizing-border-box;
+    }
+}

@@ -1,0 +1,49 @@
+// This file is part of web design set.
+//
+// The a element
+// <a> element represents a hyperlink.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-a-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/a.html#a
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element
+//
+// Is default enabled: true
+
+@if $is-elements_text-level-semantics-a {
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        @include margin($a-margin-top, $a-margin-right, $a-margin-bottom, $a-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($a-padding-top, $a-padding-right, $a-padding-bottom, $a-padding-left);
+        outline: $a-outline;
+        background-color: $a-background-color;
+        cursor: pointer;
+        text-decoration: $a-text-decoration;
+    }
+    
+    a, a:link {
+        color: $a-color;
+    }
+
+    a:visited {
+        color: $a-visited-color;
+    }
+
+    a:focus {
+        color: $a-focus-color;
+        outline-color: $a-focus-outline-color;
+        outline-width: 1px;
+        outline-style: dotted;
+    }
+    
+    a:hover {
+        color: $a-hover-color;
+    }
+
+    a:active {
+        color: $a-active-color;
+    }
+}

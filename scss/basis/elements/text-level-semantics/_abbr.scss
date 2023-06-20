@@ -1,0 +1,21 @@
+// This file is part of web design set.
+// 
+// The abbr element
+// <abbr> element represents an abbreviation or acronym.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-abbr-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/abbr.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-abbr {
+    abbr {
+        display: inline;
+        @include set-box-sizing-border-box;
+        text-decoration: none;
+    }
+}

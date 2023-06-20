@@ -1,0 +1,16 @@
+// This file is part of web design set.
+// 
+// <svg> element is a container for SVG graphics.
+//
+// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/embedded-content-other.html#svg-0
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-svg {
+    svg {
+        @include set-box-sizing-border-box;
+    }
+}

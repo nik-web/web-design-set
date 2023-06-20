@@ -1,0 +1,15 @@
+// This file is part of web design set.
+//
+// Declare the variables for the configuration of the HTML elements, the sections area, here.
+//
+// These variables can be overwritten by customer!
+
+$is-elements-sections-address: false !default;
+$is-elements-sections-article: true !default;
+$is-elements-sections-aside: true !default;
+$is-elements-sections-footer: true !default;
+$is-elements-sections-header: true !default;
+$is-elements-sections-headings: true !default;
+$is-elements-sections-hgroup: false !default;
+$is-elements-sections-nav: true !default;
+$is-elements-sections-section: true !default;

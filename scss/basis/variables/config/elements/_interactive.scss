@@ -1,0 +1,11 @@
+// This file is part of web design set.
+//
+// Declare the variables for the configuration of the HTML elements,
+// the interactive area, here.
+//
+// These variables can be overwritten by customer!
+
+//$is-elements-interactive-command: false !default; // obsolete
+$is-elements-interactive-details: false !default;
+$is-elements-interactive-dialog: false !default;
+$is-elements-interactive-summary: false !default;

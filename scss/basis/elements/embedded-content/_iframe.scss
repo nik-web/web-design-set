@@ -1,0 +1,36 @@
+// This file is part of web design set.
+// 
+// The iframe element
+// <iframe> element introduces a new nested browsing context.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-iframe-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/iframe.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/iframe.html#iframe-display
+// 
+// iframe:focus {
+//  outline: none;
+// }
+// iframe[seamless] {
+//  display: block;
+// }
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-iframe {
+    /*
+    The <iframe> html element
+    */
+    iframe {
+        @include set-box-sizing-border-box;
+    }
+    
+    iframe:focus {
+        outline: none;
+    }
+}

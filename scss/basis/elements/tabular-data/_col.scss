@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The col element
+// <col> element represents one or more columns in the column group represented by its colgroup parent.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-col-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/col.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/col.html#col-display
+// 
+// col {
+//  display: table-column;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-col-element
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-col {
+    col {
+        display: table-column;
+        @include set-box-sizing-border-box;
+    }
+}

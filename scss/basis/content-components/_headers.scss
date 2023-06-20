@@ -1,0 +1,38 @@
+//
+// This file is part of web design set.
+// 
+// Content main headers
+//
+//  Created on : 03.06.2023, 12:28:59
+//  Author     : nik
+//
+
+// Start Content main header by default with a main heading and paragraphs.
+@if $is-content-components-headers-id-main-header {   
+/*
+Content main header default <header> html element
+*/
+    #main-header {
+        margin-top: $main-header-margin-top;
+        border: $main-header-border-width $main-header-border-style $main-header-border-color;
+        
+        border-radius: $main-header-border-radius;
+        box-shadow: .25rem .5rem 1rem $main-header-box-shadow-color;
+        
+        @include padding($main-header-padding-top, $main-header-padding-right, $main-header-padding-bottom, $main-header-padding-left);
+        background-color: $main-header-background-color;
+        color: $main-header-color;
+        
+    }
+    
+}
+@if $is-content-components-headers-class-main-heaer-p {
+/*
+Content main header default <p> html element
+*/
+    .main-header-p {
+        font-size: $main-heaer-p-font-size;
+        font-style: $main-heaer-p-font-style;
+    }
+}
+// End Content main header by default with a main heading and paragraphs.

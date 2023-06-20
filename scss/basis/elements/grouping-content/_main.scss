@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The main element
+// <main> element represents the dominant contents of the document.
+// A document must not have more than one main element that does not have the hidden attribute specified.
+// 
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+// 
+// Typical default display properties
+// 
+// main {
+//  display: block;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element
+//
+// Is default enabled: true
+
+@if $is-elements-grouping-content-main {
+    main {
+        display:block;
+        @include margin($main-margin-top, $main-margin-right, $main-margin-bottom, $main-margin-left);
+        @include set-box-sizing-border-box;
+        @include padding($main-padding-top, $main-padding-right, $main-padding-bottom, $main-padding-left);
+    }
+}

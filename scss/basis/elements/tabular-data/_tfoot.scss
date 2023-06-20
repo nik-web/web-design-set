@@ -1,0 +1,32 @@
+// This file is part of web design set.
+// 
+// The tfoot element
+// <tfoot> element represents the block of rows that consist of the column summaries
+// (footers) for its parent table element.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/tabular-data.html#the-tfoot-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/tfoot.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/tfoot.html#tfoot-display
+// 
+// tfoot {
+//  display: table-footer-group;
+//  vertical-align: middle;
+//  border-color: inherit;
+// }
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element
+//
+// Is default enabled: false
+
+@if $is-elements-tabular-data-tfoot {
+    tfoot {
+        display: table-footer-group;
+        border-color: inherit;
+        @include set-box-sizing-border-box;
+        vertical-align: middle;
+    }
+}

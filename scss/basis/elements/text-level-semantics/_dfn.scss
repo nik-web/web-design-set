@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The dfn element
+// <dfn> element represents the defining instance of a term.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-dfn-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/dfn.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/dfn.html#dfn-display
+// 
+// dfn {
+//  font-style: italic;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-dfn-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-dfn {
+    dfn {
+        @include set-box-sizing-border-box;
+        font-style: $dfn-font-style;
+    }
+}

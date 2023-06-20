@@ -1,0 +1,12 @@
+// This file is part of web design set.
+//
+// Declare the variables for the configuration of the HTML elements,
+// the scripting area, here.
+//
+// These variables can be overwritten by customer!
+
+$is-elements-scripting-canvas: false !default;
+$is-elements-scripting-noscript: false !default;
+$is-elements-scripting-script: false !default;
+$is-elements-scripting-slot: false !default;
+$is-elements-scripting-template: false !default;

@@ -1,0 +1,11 @@
+# This file is part of web design set.
+# ignore this folders
+
+/.phpunit.cache/
+/.sass-cache/
+data/cache/*
+!data/cache/.gitkeep
+/node_modules/
+/nbproject/
+/scss/basis-copy/
+/vendor/

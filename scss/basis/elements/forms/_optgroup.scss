@@ -1,0 +1,22 @@
+// This file is part of web design set.
+// 
+// The optgroup element
+// <optgroup> element represents a group of option elements with a common label.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-optgroup-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/optgroup.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element
+//    
+// Is default enabled: false
+
+@if $is-elements-forms-optgroup {
+    /*
+    The <optgroup> html element
+    */
+    optgroup {
+        @include set-box-sizing-border-box;
+    }
+}

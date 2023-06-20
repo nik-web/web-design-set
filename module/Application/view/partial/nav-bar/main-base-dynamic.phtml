@@ -1,0 +1,95 @@
+<?php
+/**
+ * This file is part of web-design-set, an application with Laminas MVC framework.
+ * 
+ * Template: "partial/nav-bar/main-base-dynamic"
+ * This file is a view partial script for the main navigationbar.
+ * Use this partial with Laminas\View\Helper\Navigation\Menu.
+ * 
+ * @package    Application
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+?>
+<button type = "button" id="hamburg-main-nav" class="hamburg">
+    <span class="hamburg-line"></span>
+    <span class="hamburg-line"></span>
+    <span class="hamburg-line"></span>
+</button>
+<ul id="main-nav-bar" class="main-nav-bar">
+<?php
+    foreach ($container as $page) {
+        if (!$this->navigation('main_nav')->accept($page)) {
+            continue;  
+        }
+        if (!$page->hasPages()) {
+            if ($page->isActive()) {
+?>
+    <li class="main-nav-item main-nav-item-current" aria-current='page'>
+        <strong class="main-nav-strong">
+            <?=  $page ?>
+        </strong>
+    </li>
+<?php
+            } else {
+?>
+    <li class="main-nav-item">
+        <a class="main-nav-link" href="<?= $page->getHref() ?>">
+            <?=  $page ?>
+        </a>
+    </li>
+<?php
+            }
+        } else {
+            $classValue = 'main-nav-button';
+            $aria='';
+            foreach ($page->getPages() as $child) {
+                if (!$this->navigation()->accept($child)) {
+                    continue;
+                }
+                if ($child->isActive()) {
+                    $classValue = 'main-nav-button main-nav-button-active';
+                    $aria = "aria-current='page'";
+                }
+            }
+?>
+    <li class="main-nav-item main-nav-item-dropdown" <?= $aria ?> >
+        <button id="<?= $page->getId(); ?>" class="<?= $classValue; ?>">
+            <?= $page ?>
+        </button>
+        <ul class="main-nav-bar-dropdown">
+        <?php
+            foreach ($page->getPages() as $child) {
+                if (!$this->navigation()->accept($child)) {
+                    continue;
+                }
+                if ($child->isActive()) {
+        ?>
+            <li class="main-nav-dropdown-item main-nav-dropdown-item-current" <?= $aria ?> >
+                <strong class="main-nav-strong">
+                    <?= $child ?>
+                </strong>
+            </li>
+            <?php
+                } else {
+            ?>
+            <li class="main-nav-dropdown-item">
+                <a class="main-nav-link" href="<?= $child->getHref() ?>">
+                    <?= $child ?>
+                </a>
+            </li>
+            <?php
+                }      
+            }
+        ?>
+        </ul>
+    </li>
+<?php
+        }
+    }
+?>
+</ul>

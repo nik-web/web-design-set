@@ -1,0 +1,20 @@
+//
+//
+//
+//  Created on : 30.05.2023, 12:08:26
+//  Author     : nik
+//
+
+@if $is-view-helpers-copyright-notice-id-copyright-notice {
+    
+    #copyright-notice {
+        display: block;
+        margin-top: .5rem;
+        text-align: center;
+        color: $id-copyright-notice-color;
+        background-color: $id-copyright-notice-background-color;
+        font-size: $id-copyright-notice-font-size;
+        font-weight: $id-copyright-notice-font-weight;
+        font-style: $id-copyright-notice-font-style;
+    }
+}

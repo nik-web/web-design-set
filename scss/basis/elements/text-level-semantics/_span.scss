@@ -1,0 +1,19 @@
+// This file is part of web design set.
+// 
+// The span element
+// <span> element is a generic wrapper for phrasing content that by itself does not represent anything.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-span-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/span.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span
+//   
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element
+//
+// Is default enabled: true
+
+@if $is-elements_text-level-semantics-span {
+    span {
+        @include set-box-sizing-border-box;
+    }
+}

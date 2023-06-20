@@ -1,0 +1,83 @@
+//
+//
+//  Created on : 29.05.2023, 12:51:58
+//  Author     : nik
+//
+
+// Start partial nav-bar footer-base
+@if $is-partials-nav-bar-footers-footer-base {
+    // Partial nav-bar footer-base <ul> element    
+    #footer-nav-bar {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        font-weight: $id-footer-nav-bar-font-weight;
+        overflow: hidden;
+        list-style: none;
+    }
+    // Partial nav-bar footer-base <li> element (list item)
+    .footer-nav-item,
+    .footer-nav-item-current {
+        display: block;
+        border-top: $class-footer-nav-item-border-width $class-footer-nav-item-border-style $class-footer-nav-item-border-color;
+        @include padding($class-footer-nav-item-padding-top, $class-footer-nav-item-padding-right, $class-footer-nav-item-padding-bottom, $class-footer-nav-item-padding-left);
+        text-align: center;
+    }
+    
+    .footer-nav-item-current {
+        background-color: $class-footer-nav-item-current-background-color;
+        color: $class-footer-nav-item-current-color;
+    }
+    
+    .footer-nav-item:hover {
+        background-color: $class-footer-nav-link-hover-bg-color;
+    }
+
+    #footer-nav-bar li:first-child {
+        border-top: none;
+    }
+        
+    .footer-nav-strong {
+        font-weight: inherit;
+    }
+    
+    .footer-nav-link,
+    .footer-nav-link:link,
+    .footer-nav-link:visited,
+    .footer-nav-link:hover,
+    .footer-nav-link:focus,
+    .footer-nav-link:active {
+        display: block;
+        color: $class-footer-nav-link-color;
+        text-decoration: none;
+    }
+
+    .footer-nav-link:hover {
+        color: $secondary-color;
+    }
+
+    @media screen and (min-width: $footer-nav-breakpoint) {
+        // Partial nav-bar footer-base <ul> element
+        #footer-nav-bar {
+            flex-direction: row;
+            justify-content: center;
+        }
+        // Partial nav-bar footer-base <li> element (list item)
+        .footer-nav-item,
+        .footer-nav-item-current {
+            border-top: none;
+            border-left: $class-footer-nav-item-border-width $class-footer-nav-item-border-style $class-footer-nav-item-border-color;
+            padding: $very-small-distance $small-distance;
+        }
+
+        .footer-nav-item-current {
+            color: white;
+            background-color: inherit;
+        }
+
+        #footer-nav-bar li:first-child {
+            border-left: none;
+        }
+    }
+}
+// End partial nav-bar footer-base

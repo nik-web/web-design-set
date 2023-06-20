@@ -1,0 +1,36 @@
+// This file is part of web design set.
+// 
+// The div element
+// <div> element is a generic container for flow content that by itself does not represent anything.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-div-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/div.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/div.html#div-display
+// 
+// div {
+//  display: block;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element
+//
+// Is default enabled: true
+
+@if $is-elements-grouping-content-div {
+    div {
+        margin: 0;
+        border: 0;
+        @include set-box-sizing-border-box;
+        padding: 0;
+        outline: 0;
+        font-size: 100%;
+        background: transparent;
+    }
+}
+
+.disable-site-nav {
+    display: none;
+}

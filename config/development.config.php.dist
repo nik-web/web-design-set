@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * If you need an environment-specific system or application configuration.
+ * The .dist files are copied to versions removing the suffix; doing so ensures 
+ * they will then be used when invoking the application.
+ * 
+ * @see https://docs.laminas.dev/tutorials/advanced-config/#environment-specific-system-configuration
+ * @package    web-design-set
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+declare(strict_types=1);
+
+return [
+    // Development time modules
+    'modules' => [
+    ],
+
+    'module_listener_options' => [
+        'config_glob_paths'        => [realpath(__DIR__) . '/autoload/{,*.}{global,local}-development.php',],
+        // Turn off caching
+        'config_cache_enabled'     => false,
+        'module_map_cache_enabled' => false,
+    ],
+];

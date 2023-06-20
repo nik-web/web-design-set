@@ -1,0 +1,27 @@
+// This file is part of web design set.
+// 
+// The kbd element
+// <kbd> element represents user input.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-kbd-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/kbd.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/kbd.html#kbd-display
+// 
+// kbd {
+//  font-family: monospace;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-kbd-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-kbd {
+    kbd {
+        @include set-box-sizing-border-box;
+        font-family: $kbd-font-family;
+    }
+}

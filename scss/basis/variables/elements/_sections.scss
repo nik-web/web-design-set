@@ -1,0 +1,14 @@
+// This file is part of web design set.
+
+// Import files from scss/basis/variables/elements/sections/ folder
+
+@import "./sections/body",
+    "./sections/article",
+    "./sections/section",
+    "./sections/nav",
+    "./sections/aside",
+    "./sections/headings",
+    "./sections/hgroup",
+    "./sections/header",
+    "./sections/footer",
+    "./sections/address";

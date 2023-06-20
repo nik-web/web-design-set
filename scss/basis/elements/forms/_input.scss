@@ -1,0 +1,112 @@
+// This file is part of web design set.
+// 
+// The input element
+// <input> element is a multipurpose element for representing input controls.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-input-element.html
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/input.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/input.html
+//
+
+
+@if $is-elements-forms-input {
+    /*
+    The <input> html element
+    Is default enabled: false
+    */
+    input {
+        @include margin($input-margin-top, $input-margin-right, $input-margin-bottom, $input-margin-left);
+        outline: none;
+        border-width: $input-border-width;
+        border-style: $input-border-style;
+        border-color: $input-border-color;
+        @include set-box-sizing-border-box;
+        @include padding($input-padding-top, $input-padding-right, $input-padding-bottom, $input-padding-left);
+        color: $input-color;
+        background-color: $input-background-color;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0;
+        text-shadow: none;
+        text-align: start;
+        cursor: text;
+        font-size: $input-font-size;
+        font-family: $input-font-family;
+        font-style: $input-font-style;
+        font-variant: $input-font-variant;
+        font-weight: $input-font-weight;
+    }
+    
+    input:focus {
+        /* first need to set "outline" */
+        outline: $very-small-distance solid;
+        /* make the outline lightskyblue */
+        outline-color: lightskyblue;
+    }
+    
+    input::-moz-focus-inner {
+        border: 0;
+    }
+    
+}
+
+@if $is-elements-forms-input-for-text {    
+    // Is default enabled: false    
+    input[type=datetime],
+    input[type=text],
+    input[type=search],
+    input[type=password],
+    input[type=tel],
+    input[type=url],
+    input[type=email],
+    input[type=file],
+    input[type=submit] {
+        display: block;
+        width: 100%;
+        @include margin($input-for-text-margin-top, $input-for-text-margin-right, $input-for-text-margin-bottom, $input-for-text-margin-left);
+        border-radius: 0;
+        @include padding($input-for-text-padding-top, $input-for-text-padding-right, $input-for-text-padding-bottom, $input-for-text-padding-left);
+    }
+    
+    input[type=file] {
+        cursor: pointer;
+    }
+}
+
+@if $is-elements-forms-input-checkbox {    
+    // Is default enabled: true
+    input[type=checkbox] {
+        display: inline-block;
+        width: $input-checkbox-width;
+        height: $input-checkbox-height;
+        cursor: pointer;
+    }
+    
+}
+
+@if $is-elements-forms-input-submit {    
+    // Is default enabled: false     
+    input[type=submit] {
+        min-width: $input-submit-min-width;
+        max-width: $input-submit-max-width;
+        @include margin($input-submit-margin-top, $input-submit-margin-right, $input-submit-margin-bottom, $input-submit-margin-left);
+        @include padding($input-submit-padding-top, $input-submit-padding-right, $input-submit-padding-bottom, $input-submit-padding-left);        
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    
+}
+
+@if $is-elements-forms-input-radio {    
+    // Is default enabled: false 
+    input[type="radio"] {
+        margin-right: $input-radio-margin-right;
+        cursor: pointer;
+        //outline: 1px solid #ced4da;
+    }
+}

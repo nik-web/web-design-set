@@ -1,0 +1,409 @@
+// 
+//
+//
+//  Created on : 29.05.2023, 12:52:10
+//  Author     : nik
+//
+
+// Start partial nav-bar main-no-script
+@if $is-partials-nav-bar-mains-main-no-script {
+    // input type checkbox
+    #hamburg-nj {
+        display: none;
+    }
+//Start Hamburg-button for main nav <label> element        
+    .hamburg-label-nj {
+        display: block;
+        width: 41px;
+        height: 27px; 
+        position: relative;
+        @include margin($hamburg-margin-top, $hamburg-margin-right, $hamburg-margin-bottom, $hamburg-margin-left);
+        border: $hamburg-border-width $hamburg-border-style $hamburg-border-color;
+        border-radius: $hamburg-border-radius;      
+        background-color: $hamburg-background-color;
+        cursor: pointer;
+    }   
+    // Hamburg button for main-base nav <span> element   
+    .hamburg-line-nj {
+        display: block;
+        position: absolute;
+        left: 9px;
+        z-index: 1000;
+        height: 2px;
+        width: 20px;
+        background-color: $hamburg-line-background-color;
+        border-radius: 3px;
+        transition: 0.5s;
+        transform-origin: center;
+    }
+    .hamburg-line-nj:nth-child(1) {
+        top: 5px;
+    }
+    .hamburg-line-nj:nth-child(2) {
+        top: 11px;
+    }
+    .hamburg-line-nj:nth-child(3) {
+        top: 17px;
+    }
+    #hamburg-nj:checked ~ .hamburg-label-nj .hamburg-line-nj:nth-child(1) {
+        transform: translateY(6px) rotate(-45deg);
+    }
+    #hamburg-nj:checked ~ .hamburg-label-nj .hamburg-line-nj:nth-child(2) {
+        display: none;
+    }    
+    #hamburg-nj:checked ~ .hamburg-label-nj .hamburg-line-nj:nth-child(3) {
+        transform: translateY(-6px) rotate(45deg);
+    }
+// End Hamburg-button for main nav <label> element 
+// Start main nav bars <ul> elements
+    #main-nav-bar-nj {      
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s ease-out;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-weight: $id-main-nav-bar-font-weight;
+        list-style: none;
+    }    
+    #hamburg-nj:checked ~ #main-nav-bar-nj {
+        max-height: 800px;
+    }
+    .main-sub-nav-nj {       
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s ease-out;
+        margin: 0;
+        border: 0;
+        padding: 0 .25rem;
+        background-color: $main-nav-bar-dropdown-background-color;
+        color: $main-nav-bar-dropdown-color;
+        list-style: none;
+    }    
+    input[type="checkbox"]:checked ~ .main-sub-nav-nj {
+        max-height: 500px;
+    }        
+    .main-nav-item-nj {
+        display: block;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        text-align: center;    
+    }
+    
+    #hamburg-nj:checked ~ #main-nav-bar-nj:last-child {
+        margin-bottom: .5rem;
+    }
+    // input type checkbox <input> element
+    .sub-nav-check-nj {
+        display: none !important; // override the type selector
+    }
+    // label for checkbox <label> element
+    .check-sub-nav-label-nj,
+    .check-sub-nav-label-current-nj {
+        display: block;
+        margin: .25rem 0 0 0;
+        border: 1px solid $primary-border-color;
+        padding: .25rem 0;
+        cursor: pointer;
+    }
+    .check-sub-nav-label-current-nj {
+        background-color: $primary-higlight-bg-color;
+        color: $primary-higlight-color;        
+    }    
+    .check-sub-nav-label-nj:hover {
+        background-color: $primary-higlight-bg-color;
+        color: $primary-higlight-color
+    }   
+    .check-sub-nav-label-current-nj:hover {
+        background-color: $primary-bg-color;
+        color: $primary-color
+    }    
+    .check-sub-nav-label-nj::after,
+    .check-sub-nav-label-current-nj::after {
+        content: "⇓";
+    }    
+    input[type="checkbox"]:checked ~ .check-sub-nav-label-nj::after,
+    input[type="checkbox"]:checked ~ .check-sub-nav-label-current-nj::after {
+        content: "⇑";
+    }    
+    .main-nav-strong-nj,
+    .main-sub-nav-strong-nj {
+        display: block;
+        margin: .25rem 0;                
+        border: 1px solid $primary-border-color;
+        padding: .25rem 0;
+        font-weight: inherit;
+        background-color: $primary-higlight-bg-color;
+        color: $primary-higlight-color;
+    }
+    
+    .main-nav-link-nj,
+    .main-nav-link-nj:link,
+    .main-nav-link-nj:visited,
+    .main-nav-link-nj:hover,
+    .main-nav-link-nj:focus,
+    .main-nav-link-nj:active,
+    .main-sub-nav-link-nj,
+    .main-sub-nav-link-nj:link,
+    .main-sub-nav-link-nj:visited,
+    .main-sub-nav-link-nj:hover,
+    .main-sub-nav-link-nj:focus,
+    .main-sub-nav-link-nj:active {
+        display: block;
+        margin: .25rem 0;                
+        border: 1px solid silver;
+        padding: .25rem 0;
+        color: inherit;
+        text-decoration: none;
+    }
+    .main-nav-link-nj:hover {        
+        background-color: $primary-higlight-bg-color;
+        color: $primary-higlight-color         
+    }
+    .main-sub-nav-link-nj:hover {
+        background-color: initial;
+        color: initial;
+    }
+}
+// End partial nav-bar main-no-script
+// Start partial nav-bar main-base
+@if $is-partials-nav-bar-mains-main-base {
+    //Start Hamburg-button for main nav <button> element        
+    .hamburg {
+        display: block;
+        width: 41px;
+        height: 27px; 
+        position: relative;
+        @include margin($hamburg-margin-top, $hamburg-margin-right, $hamburg-margin-bottom, $hamburg-margin-left);
+        border: $hamburg-border-width $hamburg-border-style $hamburg-border-color;
+        border-radius: $hamburg-border-radius;      
+        background-color: $hamburg-background-color;
+    }   
+    // Hamburg button for main-base nav <span> element   
+    .hamburg-line {
+        display: block;
+        position: absolute;
+        left: 9px;
+        z-index: 1000;
+        height: 2px;
+        width: 20px;
+        background-color: $hamburg-line-background-color;
+        border-radius: 3px;
+        transition: 0.5s;
+        transform-origin: center;
+    }
+    .hamburg-line:nth-child(1) {
+        top: 5px;
+    }
+    .hamburg-line:nth-child(2) {
+        top: 11px;
+    }
+    .hamburg-line:nth-child(3) {
+        top: 17px;
+    }
+
+    .open-hamburg .hamburg-line:nth-child(1) {
+        transform: translateY(6px) rotate(-45deg);
+    }
+
+    .open-hamburg .hamburg-line:nth-child(2) {
+        display: none;
+    }
+    
+    .open-hamburg .hamburg-line:nth-child(3) {
+        transform: translateY(-6px) rotate(45deg);
+    }
+    
+    @media screen and (min-width: $main-nav-breakpoint) {
+        .hamburg {
+            display: none;
+        }
+    }
+    // End Hamburg-button for main nav <button> element
+    // Start partial nav-bar main-base
+    // <ul> elements
+    #main-nav-bar {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .4s ease-in; // This timing applies on the way OUT
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-weight: $id-main-nav-bar-font-weight;
+        list-style: none;
+    }
+    // Add or remove this class by js
+    .open-main-nav-bar {
+        max-height: 800px !important;
+        transition: max-height .5s ease-out !important; // This timing applies on the way IN
+    }
+
+    .main-nav-bar-dropdown {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .4s ease-in; // This timing applies on the way OUT
+        min-width: 200px;
+        padding: 0;
+        background-color: $main-nav-bar-dropdown-background-color;
+        color: $main-nav-bar-dropdown-color;
+        list-style: none;
+    }
+    // Add or remove this class by js
+    .main-nav-bar-dropdown-show {
+        max-height: 500px;
+        transition: max-height .4s ease-in; // This timing applies on the way OUT
+    }        
+    // Partial nav-bar main-base <li> element (list item)    
+    .main-nav-item,
+    .main-nav-dropdown-item {
+        display: block;
+        margin: 0;
+        border: 0;
+        //border-top: $main-nav-item-border-width $main-nav-item-border-style $main-nav-item-border-color;
+        //@include padding($main-nav-item-padding-top, $main-nav-item-padding-right, $main-nav-item-padding-bottom, $main-nav-item-padding-left);
+        padding: 0 .25rem;
+        text-align: center;
+    }
+    
+    // Partial nav-bar main-base(items) <button> elements   
+    .main-nav-button {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: .25rem 0 0 0;
+        border: 1px solid $primary-border-color;
+        padding: .25rem 0;
+    }
+    // Add or remove this class by js
+    .main-nav-button-active {        
+        background-color: $primary-higlight-bg-color;
+        color: $primary-higlight-color;
+    }
+    
+    .main-nav-button:hover {
+        background-color: $primary-higlight-bg-color;
+        color: $primary-higlight-color
+    }
+    
+    .main-nav-button-active:hover {
+        background-color: $primary-bg-color;
+        color: $primary-color    
+    }
+    
+    .main-nav-button::after {
+        content: "⇓";
+    }
+    
+    .main-nav-button-open::after {
+        content: "⇑";
+    }
+    
+    // Partial nav-bar main-base <strong> element
+    .main-nav-strong,
+    .main-nav-dropdown-strong {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: .25rem 0;        
+        border-width: 1px;
+        border-style: solid;
+        padding: .25rem 0;
+        font-weight: inherit;
+        background-color: $primary-higlight-bg-color;
+        color: $primary-higlight-color;
+    }
+    .main-nav-strong {
+        border-color: $primary-border-color;
+    }
+    .main-nav-dropdown-strong {
+        border-color: $secondary-border-color;
+    }
+    // Partial nav-bar main-base <a> element
+    .main-nav-link,
+    .main-nav-link:link,
+    .main-nav-link:visited,
+    .main-nav-link:hover,
+    .main-nav-link:focus,
+    .main-nav-link:active,
+    .main-nav-dropdown-link,
+    .main-nav-dropdown-link:link,
+    .main-nav-dropdown-link:visited,
+    .main-nav-dropdown-link:hover,
+    .main-nav-dropdown-link:focus,
+    .main-nav-dropdown-link:active {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: .25rem 0;        
+        border-width: 1px;
+        border-style: solid;        
+        padding: .25rem 0;
+        color: inherit;
+        text-decoration: none;
+    }    
+    .main-nav-link,
+    .main-nav-link:link,
+    .main-nav-link:visited,
+    .main-nav-link:hover,
+    .main-nav-link:focus,
+    .main-nav-link:active {
+        border-color: $primary-border-color;
+    }    
+    .main-nav-dropdown-link,
+    .main-nav-dropdown-link:link,
+    .main-nav-dropdown-link:visited,
+    .main-nav-dropdown-link:hover,
+    .main-nav-dropdown-link:focus,
+    .main-nav-dropdown-link:active {
+        border-color: $secondary-border-color;
+    }    
+    .main-nav-link:hover {
+        background-color: $primary-higlight-bg-color;
+        color: $primary-higlight-color
+    }    
+    .main-nav-dropdown-link:hover {
+        background-color: $secondary-higlight-bg-color;
+        color: $secondary-higlight-color;         
+    }
+
+    @media screen and (min-width: $main-nav-breakpoint) {
+        #main-nav-bar {
+            display: flex;
+            flex-direction: row;
+            max-height: 500px;
+            transition: none;
+            overflow: visible;
+            padding: 0 $distance 0 0;
+            border: 0;
+            justify-content: flex-end;
+        }
+        .main-nav-bar-dropdown {
+            position: absolute;
+            right: 0;
+        }
+        .main-nav-item {
+            position: relative;
+            padding: 0;
+            border-right: 1px solid $primary-border-color;
+            
+        }        
+        .main-nav-item:first-child {
+            border-left: 1px solid  $primary-border-color;
+        }        
+        .main-nav-strong,
+        .main-nav-link,
+        .main-nav-link:link,
+        .main-nav-link:visited,
+        .main-nav-link:hover,
+        .main-nav-link:focus,
+        .main-nav-link:active,
+        .main-nav-button {
+            margin: 0;
+            border: 0;
+            border-bottom: 0;
+            padding: .25rem 1rem;
+        }        
+    }
+}
+// End partial nav-bar main-base

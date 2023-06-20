@@ -1,0 +1,9 @@
+//
+// Fluid-font-size mixin
+//
+// Use function scss/funktions/_strip-unit.scss
+//
+
+@mixin fluid-font-size($min-screen-width, $max-screen-width, $min-font-size, $max-font-size) {
+    font-size: calc(#{$min-font-size} + (#{strip-unit($max-font-size - $min-font-size)}) * ((100vw - #{$min-screen-width}) / (#{strip-unit($max-screen-width - $min-screen-width)})));
+}

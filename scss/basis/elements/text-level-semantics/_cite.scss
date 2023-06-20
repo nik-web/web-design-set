@@ -1,0 +1,28 @@
+// This file is part of web design set.
+// 
+// The cite element
+// <cite> element represents the cited title of a work; for example,
+// the title of a book mentioned within the main text flow of a document.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-cite-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/cite.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/cite.html#cite-display
+// 
+// cite {
+//  font-style: italic;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-cite {
+    cite {
+        @include set-box-sizing-border-box;
+        font-style: $cite-font-style;
+    }
+}

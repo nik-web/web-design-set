@@ -1,0 +1,11 @@
+// This file is part of web design set.
+//
+// Import layout segments
+// Import files from scss/basis/variables/segments/ folder
+
+@import "./segments/containers",
+        "./segments/site-headers",
+        "./segments/site-navs",
+        "./segments/mains",
+        "./segments/sidebars",
+        "./segments/site-footers";

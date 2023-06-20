@@ -1,0 +1,22 @@
+//
+// This file is part of web design set.
+//
+// Set margin as single value for all pages, two values for vertical and horizontal margin, 
+// three values for top, horizontal and bottom margin and four values for top, right, bottom and left margin.
+//
+//
+//    Created on : 20.05.2023, 11:59:18
+//    Author     : nik
+
+@mixin margin($top, $right, $bottom, $left) {
+    
+    @if $top == $bottom and $right == $left and $top == $right {
+        margin: $top;
+    } @else if $top == $bottom and $right == $left {
+        margin: $top $right;
+    } @else if $top != $bottom and $right == $left {
+        margin: $top $right $bottom;
+    } @else {
+        margin: $top $right $bottom $left;
+    }
+}

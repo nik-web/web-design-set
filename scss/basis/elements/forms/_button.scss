@@ -1,0 +1,57 @@
+// This file is part of web design set.
+// 
+// The button element
+// <button> element is a multipurpose element for representing buttons.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-button-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/button.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
+//
+// The details of the button element are described in the following sections:
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/button.submit.html
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/button.reset.html
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/button.button.html
+// 
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element
+//
+// Is default enabled: false
+
+@if $is-elements-forms-button {
+    /*
+    The <button> html element
+    */
+    button {
+        display: inline-block;
+        @include margin($button-margin-top, $button-margin-right, $button-margin-bottom, $button-margin-left);     
+        border-width: $button-border-width;
+        border-style: $button-border-style;
+        border-color: $button-border-color;
+        border-image: none;        
+        overflow: visible;
+        @include set-box-sizing-border-box;
+        @include padding($button-padding-top, $button-padding-right, $button-padding-bottom, $button-padding-left);
+        font-size: inherit;
+        font-family: inherit;
+        font-style: inherit;
+        font-variant: inherit;
+        font-weight: $button-font-weight;
+        letter-spacing: inherit;
+        word-spacing: inherit;
+        color: inherit;
+        background: transparent;
+        text-align: center;
+        text-transform: none;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+    // Work around a Firefox/IE bug where the transparent `button` background
+    // results in a loss of the default `button` focus styles.
+    //
+    // Credit: https://github.com/suitcss/base/
+    button:focus {
+        outline: none;
+        //outline: 1px dotted;
+        //outline: 5px auto -webkit-focus-ring-color;
+    }
+}

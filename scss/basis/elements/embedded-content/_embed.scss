@@ -1,0 +1,34 @@
+// This file is part of web design set.
+// 
+// The embed element
+// <embed> element represents an integration point for external content.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-embed-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/embed.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/embed.html#embed-display
+// 
+// embed:focus {
+//  outline: none;
+// }
+//  
+// *** HTML Living Standard ***
+// https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element
+//
+// Is default enabled: false
+
+@if $is-elements-embedded-content-embed {
+    /*
+    The <embed> html element
+    */
+    embed {
+        @include set-box-sizing-border-box;
+    }
+    
+    // Most browsers will display the <embed> element with the following default values:
+    embed:focus {
+        outline: none;
+    }
+}

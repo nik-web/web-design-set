@@ -1,0 +1,32 @@
+// This file is part of web design set.
+// 
+// The dd element
+// <dd> element represents a description or value.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-dd-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/dd.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/dd.html#dd-display
+// 
+// dd {
+//  display: block;
+//  margin-start: 40px;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element
+//
+// Is default enabled: false
+
+@if $is-elements-grouping-content-dd {
+    dd {
+        display: list-item;
+        @include margin($dd-margin-top, $dd-margin-right, $dd-margin-bottom, $dd-margin-left);// For responsiv first
+        @include set-box-sizing-border-box;
+        @include padding($dd-padding-top, $dd-padding-right, $dd-padding-bottom, $dd-padding-left);        
+        list-style-type: $dd-list-style-type; 
+        list-style-position: $dd-list-style-position;
+    }
+}

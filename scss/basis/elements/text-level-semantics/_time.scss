@@ -1,0 +1,19 @@
+// This file is part of web design set.
+// 
+// The time element
+// <time> element represents a date and/or time.
+//  
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-time-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/time.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-time {
+    time {
+        @include set-box-sizing-border-box;
+    }
+}

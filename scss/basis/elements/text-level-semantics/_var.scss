@@ -1,0 +1,28 @@
+// This file is part of web design set.
+// 
+// The var element
+// <var> element represents either a variable in a mathematical expression or programming context,
+// or placeholder text that the reader is meant to mentally replace with some other literal value.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-var-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/var.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/var.html#var-display
+// 
+// var {
+//  font-style: italic;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-var-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-var {
+    var {
+        @include set-box-sizing-border-box;
+        font-style: $var-font-style;
+    }
+}

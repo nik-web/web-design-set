@@ -1,0 +1,19 @@
+// This file is part of web design set.
+//
+// Strip unit
+// https://css-tricks.com/snippets/sass/strip-unit-function/
+//
+// Example $value: 100px; return 100
+//
+
+@use 'sass:math';
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return math.div($number, ($number * 0 + 1));
+    }
+    @return $number;
+  }

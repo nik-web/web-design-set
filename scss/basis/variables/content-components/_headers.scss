@@ -1,0 +1,28 @@
+// Content main headers variables
+//
+//  Created on : 03.06.2023, 12:28:59
+//  Author     : nik
+//
+
+// Start Content main header by default with a main heading and paragraphs.
+$main-header-margin-top: $small-distance !default;
+
+$main-header-border-width: $default-border-width !default;
+$main-header-border-style: $default-border-style !default;
+$main-header-border-color: $base-border-color !default;
+$main-header-border-radius: $default-border-radius !default;
+$main-header-box-shadow-color: $base-box-shadow-color !default;
+
+$main-header-padding-top: $small-distance !default;
+$main-header-padding-right: $distance !default;
+$main-header-padding-bottom: $distance !default;
+$main-header-padding-left: $large-distance !default;
+
+$main-header-background-color: $base-higlight-bg-color !default;
+$main-header-color: $base-higlight-color !default;
+
+
+
+$main-heaer-p-font-size: 1.05rem !default;
+$main-heaer-p-font-style: italic !default;
+// End Content main header by default with a main heading and paragraphs.

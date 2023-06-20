@@ -1,0 +1,42 @@
+// This file is part of web design set.
+// 
+// The ul element
+// <ul> element represents an unordered list of items; that is, a list in which changing
+// the order of the items would not change the meaning of list.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-ul-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/ul.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/ul.html#ul-display
+//
+// ul {
+//  display: block;
+//  list-style-type: disc;
+//  margin-before: 1em;
+//  margin-after: 1em;
+//  margin-start: 0;
+//  margin-end: 0;
+//  padding-start: 40px;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element
+//
+// Is default enabled: true
+
+@if $is-elements-grouping-content-ul {
+    ul {
+        display: block;
+        @include margin($ul-margin-top, $ul-margin-right, $ul-margin-bottom, $ul-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($ul-padding-top, $ul-padding-right, $ul-padding-bottom, $ul-padding-left);
+        list-style-type: disc;
+    }
+    
+    ul ul {
+        list-style-type: circle;
+    }
+}

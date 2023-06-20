@@ -1,0 +1,33 @@
+// This file is part of web design set.
+// 
+// The label element
+// <label> element represents a caption for a form control.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/forms.html#the-label-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/label.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/label.html#label-display
+// 
+// label {
+//  cursor: default;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/forms.html#the-label-element
+//    
+// Is default enabled: false
+
+@if $is-elements-forms-label {
+    /*
+    The <label> html element
+    */
+    label {
+        @include margin($label-margin-top, $label-margin-right, $label-margin-bottom, $label-margin-left);
+        border: 0;
+        @include set-box-sizing-border-box;
+        @include padding($label-padding-top, $label-padding-right, $label-padding-bottom, $label-padding-left);
+        cursor: default;
+    }
+}

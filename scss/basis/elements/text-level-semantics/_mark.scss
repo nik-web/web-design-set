@@ -1,0 +1,28 @@
+// This file is part of web design set.
+//
+// The mark element
+// <mark> element represents a run of text in one document marked or highlighted for reference purposes,
+// due to its relevance in another context.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-mark-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/mark.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/mark.html#mark-display
+// 
+// mark {
+//  background-color: yellow;
+//  color: black;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-mark {
+    mark {
+        @include set-box-sizing-border-box;
+    }
+}

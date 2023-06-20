@@ -1,0 +1,29 @@
+//
+// This file is part of web design set.
+//
+// Declare the variables for this html element
+//
+
+$figure-margin-top: $distance !default;
+$figure-margin-right: 0 !default;
+$figure-margin-bottom: $distance !default;
+$figure-margin-left: 0 !default;
+
+$figure-border-width: $default-border-width !default;
+$figure-border-style: $default-border-style !default;
+$figure-border-color: $base-border-color !default;
+$figure-border-radius: $default-border-radius !default;
+$figure-box-shadow-color: $base-box-shadow-color !default;
+
+$figure-padding-top: 0 !default;
+$figure-padding-right: 0 !default;
+$figure-padding-bottom: 0 !default;
+$figure-padding-left: 0 !default;
+
+$figure-background-color: $base-higlight-bg-color !default;
+$figure-color: $base-higlight-color !default;
+// figure.card class
+$figure-card-margin-top: $distance !default;
+$figure-card-margin-right: auto !default;
+$figure-card-margin-bottom: 0 !default;
+$figure-card-margin-left: auto !default;

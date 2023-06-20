@@ -1,0 +1,31 @@
+// This file is part of web design set.
+// 
+// The dt element
+// <dt> element represents a term or name.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-dt-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/dt.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/dt.html#dt-display
+// 
+// dt {
+//  display: block;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element
+// 
+// Is default enabled: false
+
+@if $is-elements-grouping-content-dt {
+    dt {
+        display: block;
+        @include set-box-sizing-border-box;
+        @include padding($dt-padding-top, $dt-padding-right, $dt-padding-bottom, $dt-padding-left);
+        color: $dt-color;
+        font-size: $dt-font-size;
+        font-weight: $dt-font-weight;
+    }
+}

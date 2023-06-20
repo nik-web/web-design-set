@@ -1,0 +1,56 @@
+// This file is part of web design set.
+//
+// The html element
+// <html> element represents the root of a document.
+//
+// https://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-html-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/html.html#html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html
+//
+// The Living Standard (Edition for Web Developers)
+// https://html.spec.whatwg.org/dev/semantics.html#the-html-element
+//
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/html.html#html-display
+// 
+// html {
+//  display: block;
+// }
+// html:focus {
+//  outline: none;
+// }
+// 
+// *** Living Standard *** 
+// https://html.spec.whatwg.org/multipage/semantics.html
+//
+
+/*
+The document element
+*/
+html {
+    display: block;
+    @include margin($html-margin-top, $html-margin-right, $html-margin-bottom, $html-margin-left);
+    @include set-box-sizing-border-box;
+    height: 100%;
+    width: 100%;
+    @include padding($html-padding-top, $html-padding-right, $html-padding-bottom, $html-padding-left);
+    font-size: $html-font-size; // fallback for old web browser
+    @include fluid-font-size($html-min-screen-width, $html-max-screen-width, $html-min-font-size, $html-max-font-size);// Font size with calc()
+    tab-size: 4;
+}
+
+html:focus {
+    outline: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+// IE10+ doesn't honor `<meta name="viewport">` in some cases.
+@at-root {
+    @-ms-viewport {
+        width: device-width;
+    }
+}

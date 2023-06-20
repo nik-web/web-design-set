@@ -1,0 +1,34 @@
+// This file is part of web design set.
+// 
+// The aside element
+// <aside> element represents content that is tangentially related to the content that forms the main textual flow of a document.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-aside-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/aside.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/aside.html#aside-display
+// 
+// aside {
+//  display: block;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/sections.html#the-aside-element
+//
+// Is default enabled: false
+
+@if $is-elements-sections-aside {
+/*
+The <aside> html element
+*/
+aside {
+        display: block;
+        @include margin($aside-margin-top, $aside-margin-right, $aside-margin-bottom, $aside-margin-left);
+        border: 0;
+        @include padding($aside-padding-top, $aside-padding-right, $aside-padding-bottom, $aside-padding-left);
+        vertical-align: baseline;
+        @include set-box-sizing-border-box;
+    }
+}

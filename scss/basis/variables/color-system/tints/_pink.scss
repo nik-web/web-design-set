@@ -1,0 +1,29 @@
+// This file is part of web design set.
+
+// These variables cannot be overwritten by customer!
+
+//pink-color-variables by html
+$pink:#ffc0cb ;
+$pink-100: tint-color($pink, 80%);
+$pink-200: tint-color($pink, 60%);
+$pink-300: tint-color($pink, 40%);
+$pink-400: tint-color($pink, 20%);
+$pink-500:$pink;
+$pink-600: shade-color($pink, 20%);
+$pink-700: shade-color($pink, 40%);
+$pink-800: shade-color($pink, 60%);
+$pink-900: shade-color($pink, 80%);
+//end pink-color-variables by html
+
+// pink-color-variables by bootstrap(bost)
+$pink-bost:  #d63384;
+$pink-100-bost: tint-color($pink-bost, 80%);
+$pink-200-bost: tint-color($pink-bost, 60%);
+$pink-300-bost: tint-color($pink-bost, 40%);
+$pink-400-bost: tint-color($pink-bost, 20%);
+$pink-500-bost: $pink-bost;
+$pink-600-bost: shade-color($pink-bost, 20%);
+$pink-700-bost: shade-color($pink-bost, 40%);
+$pink-800-bost: shade-color($pink-bost, 60%);
+$pink-900-bost: shade-color($pink-bost, 80%);
+// end pink-color-variables by bootstrap(bost)

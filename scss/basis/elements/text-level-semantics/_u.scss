@@ -1,0 +1,30 @@
+// This file is part of web design set.
+// 
+// The u element
+// <u> element represents a span of text offset from its surrounding content without
+// conveying any extra emphasis or importance, and for which the conventional typographic
+// presentation is underlining; for example, a span of text in Chinese that is a proper name
+// (a Chinese proper name mark), or span of text that is known to be misspelled.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-u-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/u.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/u.html#u-display
+// 
+// u {
+//  text-decoration: underline;
+// }
+//  
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element
+//
+// Is default enabled: false
+
+@if $is-elements_text-level-semantics-u {
+    u {
+        @include set-box-sizing-border-box;
+        text-decoration: underline;
+    }
+}

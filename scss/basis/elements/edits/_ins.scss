@@ -1,0 +1,30 @@
+// This file is part of web design set.
+// 
+// The ins element
+// <ins> element represents a range of text that has been inserted (added) to a document.
+// 
+// https://www.w3.org/TR/2011/WD-html5-20110525/edits.html#the-ins-element
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/ins.html
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins
+// 
+// Typical default display properties
+// https://www.w3.org/TR/2012/WD-html-markup-20121025/ins.html#ins-display
+// 
+// ins {
+//  text-decoration: underline;
+// }
+// 
+// *** HTML Living Standard *** 
+// https://html.spec.whatwg.org/multipage/edits.html#the-ins-element
+//
+// Is default enabled: false
+
+@if $is-elements-edits-ins {
+    /*
+    The <ins> html element
+    */
+    ins {
+        text-decoration: underline;
+        @include set-box-sizing-border-box;
+    }
+}
