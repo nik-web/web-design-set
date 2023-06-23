@@ -19,8 +19,17 @@
  */
 
 return [
+    'Laminas\Mvc\I18n',
+    'Laminas\I18n',
+    'Laminas\Mail',
+    'Laminas\Session',
+    'Laminas\Form',
+    'Laminas\Hydrator',
+    'Laminas\InputFilter',
+    'Laminas\Filter',
     'Laminas\Navigation',
     'Laminas\Router',
     'Laminas\Validator',
     'Application',
+    'Contact',
     ];
