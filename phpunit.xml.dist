@@ -5,6 +5,9 @@
     <testsuite name="Application">
       <directory>./module/Application/test</directory>
     </testsuite>
+    <testsuite name="Contact">
+      <directory>./module/Contact/test</directory>
+    </testsuite>
   </testsuites>
   <source>
     <include>

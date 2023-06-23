@@ -11,18 +11,24 @@
     ],
     "autoload": {
         "psr-4": {            
-            "Application\\": "module/Application/src/"
+            "Application\\": "module/Application/src/",
+            "Contact\\": "module/Contact/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/Application/test/"
+            "ApplicationTest\\": "module/Application/test/",
+            "ContactTest\\": "module/Contact/test/"
         }
     },
     "require": {
         "laminas/laminas-development-mode": "^3.10",
         "laminas/laminas-mvc": "^3.6",
-        "laminas/laminas-navigation": "^2.18"
+        "laminas/laminas-navigation": "^2.18",
+        "laminas/laminas-form": "^3.11",
+        "laminas/laminas-captcha": "^2.16",
+        "laminas/laminas-mail": "^2.23",
+        "laminas/laminas-mvc-i18n": "^1.7"
     },
     "require-dev": {
         "laminas/laminas-component-installer": "^3.2",
