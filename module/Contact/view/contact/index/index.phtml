@@ -1,0 +1,213 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Contact module with Laminas MVC framework
+ * 
+ * Template: 'contact/index/index'
+ * 
+ * @package    Contact
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+$this->headTitle('Kontaktaufnahme mit Webentwickler und Webdesigner, Niklaus Höpfner, in Nürnberg');
+$metaDescription = 'Kontaktaufnahme mit Webentwickler und Webdesigner, Niklaus Höpfner, '
+    . 'in Nürnberg Altenfurt. Im Kontaktformular eine Nachricht per E-Mail senden.';
+$metaKeywords = 'Kontaktseite, Kontakt, Kontaktdaten, Kontaktformular'
+    . 'Webentwicklung, Web Development, Webdesign, Fotografie,';
+$this->headMeta()->appendName('description', $metaDescription)
+    ->appendName('keywords', $metaKeywords);
+
+// Contact\Form\ContactForm
+// Form element text "company"
+$company = $form->get('company');
+// Form element text "title" the title of the sender
+$titleSender = $form->get('title');
+// The form element text "forename" the fist name of the sender
+$forename = $form->get('forename');
+$forenameErrorBlock = $this->formElementErrors()
+    ->render($forename, ['class' => 'form-errors-block']);
+// The form element text "surname" the last name of the sender
+$surname = $form->get('surname');
+$surnameErrorBlock = $this->formElementErrors()
+    ->render($surname, ['class' => 'form-errors-block']);
+// The form element text "email" the e-mail address of the sender
+$email = $form->get('email');
+$emailErrorBlock = $this->formElementErrors()
+    ->render($email, ['class' => 'form-errors-block']);
+// The form element text "phone" the phonenumber of the sender
+$phone = $form->get('phone');
+// The form element text "subject" the subject of the contact message
+$subject = $form->get('subject');
+$subjectErrorBlock = $this->formElementErrors()
+    ->render($subject, ['class' => 'form-errors-block']);
+// The form element textarea "body" the content of the contact message
+$message = $form->get('message');
+$messageErrorBlock = $this->formElementErrors()
+    ->render($message, ['class' => 'form-errors-block']);
+// Form element checkbox "accept privacy policy"
+$privacyPolicy = $form->get('accept_privacy_policy');
+$privacyPolicyErrorBlock = $this->formElementErrors()
+    ->render($privacyPolicy, ['class' => 'form-errors-block']);
+// Form element checkbox "data processed accepted"
+$dataProcessedAccepted = $form->get('data_processed_accepted');
+$dataProcessedAcceptedErrorBlock = $this->formElementErrors()
+    ->render($dataProcessedAccepted, ['class' => 'form-errors-block']);
+// The form element captcha
+$captcha = $form->get('contact_captcha');
+$captchaErrorBlock = $this->formElementErrors()
+    ->render($captcha, ['id' => 'captcha-form-errors', 'class' => 'form-errors-block']);
+// The form element csrf "contact_csrf" Cross-site request forgery
+$csrf = $form->get('contact_csrf');
+//The form element submit "contact_submit" the submit button to send the contact message
+$submit = $form->get('contact_submit');
+// Form label <label> tag without the for attribute
+$formLabel = $this->formLabel()->openTag($form->getOption('label_attributes'))
+    . $form->getOption('label') . $this->formLabel()->closeTag() . "\n";
+$form->prepare();
+
+$canonicalURL = $this->url('contact', [], ['force_canonical' => true]);
+$this->headLink(['rel'  => 'canonical', 'href' => $canonicalURL], 'PREPEND');
+
+//$this->inlineScript()->prependFile($this->basePath('js/validate-contact-form.js'), '');
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Kontakt
+        </h1>
+        <p class="main-header-p">
+            Wünschen Sie weitere Informationen oder haben Sie Fragen?<br>
+            Schreiben Sie mir eine E-Mail, nutzen Sie dazu bitte das folgende Kontaktformular!
+        </p>
+    </header>
+    <?= $this->form()->openTag($form) . "\n" ?>
+        <?= $formLabel ?>
+        <?= $this->formLabel($company) . "\n" ?>
+        <?= $this->formElement($company) . "\n" ?>
+        <small class="input-description">
+            Freiwillige Angabe!
+        </small>
+        <?= $this->formLabel($titleSender) . "\n" ?>
+        <?= $this->formElement($titleSender) . "\n" ?>
+        <small class="input-description">
+            Freiwillige Angabe!
+        </small>
+        <?= $this->formLabel()->openTag($forename) . "\n" ?>
+            <?= $forename->getOption('label') . "\n" ?>
+            <abbr class="input-mandatory" title="Eingabe ist erforderlich">*</abbr>
+        <?= $this->formLabel()->closeTag() . "\n" ?>
+        <?= $this->formElement($forename) . "\n" ?>
+        <small id="forename-description" class="input-description">
+            Min. 2 Zeichen und max. 126 Zeichen Eingabe erlaubt!
+        </small>
+        <?php
+            if ($forenameErrorBlock) {
+                echo $forenameErrorBlock . "\n";
+            }
+        ?>
+        <?= $this->formLabel()->openTag($surname) . "\n"  ?>
+            <?= $surname->getOption('label') . "\n" ?>
+            <abbr class="input-mandatory" title="Eingabe ist erforderlich">*</abbr>
+        <?= $this->formLabel()->closeTag() . "\n" ?>
+        <?= $this->formElement($surname) . "\n" ?>
+        <small id="surname-description" class="input-description">
+            Min. 2 Zeichen und max. 126 Zeichen Eingabe erlaubt!
+        </small>
+        <?php
+            if ($surnameErrorBlock) {
+                echo $surnameErrorBlock . "\n";
+            }
+        ?>
+        <?= $this->formLabel()->openTag($email) . "\n" ?>
+            <?= $email->getOption('label') ?>
+            <abbr class="input-mandatory" title="Eingabe ist erforderlich">*</abbr>
+        <?= $this->formLabel()->closeTag() . "\n" ?>
+        <?= $this->formElement($email) . "\n" ?>
+        <small id="email-description" class="input-description">
+            Eine gültige E-Mail Adresse eingeben!
+        </small>
+        <?php
+            if ($emailErrorBlock) {
+                echo $emailErrorBlock . "\n";
+            }
+        ?>
+        <?= $this->formLabel($phone) . "\n" ?>
+        <?= $this->formElement($phone) . "\n" ?>
+        <small class="input-description">
+            Freiwillige Angabe einer Telefonnummer!
+        </small>
+        <?= $this->formLabel()->openTag($subject) . "\n" ?>
+            <?= $subject->getOption('label') . "\n" ?>
+            <abbr class="input-mandatory" title="Eingabe ist erforderlich">*</abbr>
+        <?= $this->formLabel()->closeTag() . "\n" ?>
+        <?= $this->formElement($subject) . "\n" ?>
+        <small id="subject-description" class="input-description">
+            Min. 2 Zeichen und max. 126 Zeichen Eingabe erlaubt!
+        </small>
+        <?php
+            if ($subjectErrorBlock) {
+                echo $subjectErrorBlock . "\n";
+            }
+        ?>
+        <?= $this->formLabel()->openTag($message) . "\n" ?>
+            <?= $message->getOption('label') . "\n" ?>
+            <abbr class="input-mandatory" title="Eingabe ist erforderlich">*</abbr>
+        <?= $this->formLabel()->closeTag() . "\n" ?>
+        <?= $this->formElement($message) . "\n" ?>
+        <small id="contact-message-description" class="input-description">
+            Min. 3 Zeichen und max. 4096 Zeichen Eingabe erlaubt!
+        </small>
+        <?php
+            if ($messageErrorBlock) {
+                echo $messageErrorBlock . "\n";
+            }
+        ?>
+        <div class="checkbox-wrapper">
+            <?= $this->formElement($privacyPolicy) . "\n" ?>
+            <abbr class="input-mandatory" title="Eingabe ist erforderlich">*</abbr>
+            <?= $this->formLabel($privacyPolicy) . "\n" ?>
+            <?php
+                if ($privacyPolicyErrorBlock) {
+                    echo $privacyPolicyErrorBlock . "\n";
+                }
+            ?>
+        </div>
+        <div class="checkbox-wrapper">
+            <?= $this->formElement($dataProcessedAccepted) . "\n" ?>
+            <abbr class="input-mandatory" title="Eingabe ist erforderlich">*</abbr>
+            <?= $this->formLabel($dataProcessedAccepted) . "\n" ?>
+            <?php
+                if ($dataProcessedAcceptedErrorBlock) {
+                    echo $dataProcessedAcceptedErrorBlock . "\n";
+                }
+            ?>
+        </div>
+        <?= $this->formLabel()->openTag($captcha) . "\n" ?>
+            <?= $captcha->getOption('label') . "\n" ?>
+        <abbr class="input-mandatory" title="Eingabe ist erforderlich">*</abbr>
+        <?= $this->formLabel()->closeTag() . "\n" ?>
+        <?= $this->formElement($captcha) . "\n" ?>
+        <small id="contact-captcha-description" class="input-description">
+            Geben Sie die Buchstaben der oberen Anzeige ein!
+        </small>
+        <?php
+            if ($captchaErrorBlock) {
+                echo $captchaErrorBlock . "\n";
+            }
+        ?>
+        <p>
+            <em>
+                * Diese Angaben sind für das Versenden erforderlich.
+            </em>
+        </p>
+        <?= $this->formElement($submit) ?>
+        <?= $this->formElement($csrf) . "\n" ?>
+    <?= $this->form()->closeTag() . "\n"  ?>
+</main>
