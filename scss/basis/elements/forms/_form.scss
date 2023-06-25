@@ -30,3 +30,18 @@
         @include padding($form-padding-top, $form-padding-right, $form-padding-bottom, $form-padding-left);
     }
 }
+
+@if $is-class-stands-alone-form {
+    .stands-alone-form {
+        margin-top: $distance;
+        width: 100%;
+    }
+    
+    @media screen and (min-width: $stands-alone-form-breakpoit) {
+        .stands-alone-form {
+            max-width: 60%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}

@@ -35,4 +35,13 @@
         white-space: pre;
         text-align: left; // 
     }
+    
+    label + pre {
+        display: block;
+        max-width: 340px;
+        margin: 1em auto;
+        font-size: .5rem;
+        font-weight: bold;
+        text-align: center;
+    }
 }

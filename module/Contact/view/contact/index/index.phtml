@@ -25,8 +25,8 @@ $this->headMeta()->appendName('description', $metaDescription)
     ->appendName('keywords', $metaKeywords);
 
 // Contact\Form\ContactForm
-// Form element text "company"
-$company = $form->get('company');
+// Form element text "organization"
+$organization = $form->get('organization');
 // Form element text "title" the title of the sender
 $titleSender = $form->get('title');
 // The form element text "forename" the fist name of the sender
@@ -52,25 +52,21 @@ $message = $form->get('message');
 $messageErrorBlock = $this->formElementErrors()
     ->render($message, ['class' => 'form-errors-block']);
 // Form element checkbox "accept privacy policy"
-$privacyPolicy = $form->get('accept_privacy_policy');
+$privacyPolicy = $form->get('accept-privacy-policy');
 $privacyPolicyErrorBlock = $this->formElementErrors()
     ->render($privacyPolicy, ['class' => 'form-errors-block']);
 // Form element checkbox "data processed accepted"
-$dataProcessedAccepted = $form->get('data_processed_accepted');
+$dataProcessedAccepted = $form->get('data-processed-accepted');
 $dataProcessedAcceptedErrorBlock = $this->formElementErrors()
     ->render($dataProcessedAccepted, ['class' => 'form-errors-block']);
 // The form element captcha
-$captcha = $form->get('contact_captcha');
+$captcha = $form->get('captcha');
 $captchaErrorBlock = $this->formElementErrors()
     ->render($captcha, ['id' => 'captcha-form-errors', 'class' => 'form-errors-block']);
-// The form element csrf "contact_csrf" Cross-site request forgery
-$csrf = $form->get('contact_csrf');
-//The form element submit "contact_submit" the submit button to send the contact message
-$submit = $form->get('contact_submit');
-// Form label <label> tag without the for attribute
-$formLabel = $this->formLabel()->openTag($form->getOption('label_attributes'))
-    . $form->getOption('label') . $this->formLabel()->closeTag() . "\n";
-$form->prepare();
+// The form element csrf "csrf" Cross-site request forgery
+$csrf = $form->get('csrf');
+//The form element submit "submit" the submit button to send the contact message
+$submit = $form->get('submit');
 
 $canonicalURL = $this->url('contact', [], ['force_canonical' => true]);
 $this->headLink(['rel'  => 'canonical', 'href' => $canonicalURL], 'PREPEND');
@@ -87,10 +83,12 @@ $this->headLink(['rel'  => 'canonical', 'href' => $canonicalURL], 'PREPEND');
             Schreiben Sie mir eine E-Mail, nutzen Sie dazu bitte das folgende Kontaktformular!
         </p>
     </header>
+    <h2>
+        Kontaktformular
+    </h2>
     <?= $this->form()->openTag($form) . "\n" ?>
-        <?= $formLabel ?>
-        <?= $this->formLabel($company) . "\n" ?>
-        <?= $this->formElement($company) . "\n" ?>
+        <?= $this->formLabel($organization) . "\n" ?>
+        <?= $this->formElement($organization) . "\n" ?>
         <small class="input-description">
             Freiwillige Angabe!
         </small>

@@ -31,6 +31,14 @@
     }
 }
 
-.disable-site-nav {
-    display: none;
+@if $is-class-disable-site-nav {
+    .disable-site-nav {
+        display: none;
+    }
+}
+
+@if $is-class-checkbox-wrapper {
+    .checkbox-wrapper {
+        
+    }
 }

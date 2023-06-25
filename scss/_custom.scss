@@ -17,6 +17,9 @@ $is-enabled-fonts-open-sans-v15-latin_cyrillic-normal-light: true;
 $is-partials-nav-bar-mains-main-no-script: true;
 
 
+$is-elements-forms-button: true;
+
+
 $is-elements-grouping-content-figure: true;
 $is-elements-grouping-content-figure-class-card: true;
 
@@ -25,8 +28,25 @@ $is-elements-embedded-content-svg: true;
 
 $is-elements-grouping-content-hr: true;
 
-
 $is-elements-grouping-content-pre: true;
+
+
+$is-elements-forms-form: true;
+$is-class-stands-alone-form: true;
+
+$is-elements-forms-label: true;
+$is-class-form-label: false true;
+$is-class-form-control-label: true;
+$is-class-input-checkbox-label: true;
+
+$is-elements-forms-input: true;
+$is-elements-forms-input-for-text: true;
+$is-elements-forms-textarea: true;
+$is-elements-forms-input-checkbox: true;
+$is-elements-forms-input-submit: true;
+//$is-elements-forms-input-radio: true;
+
+$is-class-checkbox-wrapper: true;
 
 // Import basis-data
 @import "./basis-copy/index";

@@ -5,24 +5,30 @@
 //
 // These variables can be overwritten by customer!
 
-$is-elements-forms-button: true !default;
+$is-elements-forms-button: false !default;
 $is-elements-forms-datalist: false !default;
-$is-elements-forms-fieldset: true !default;
+$is-elements-forms-fieldset: false !default;
 $is-elements-forms-form: false !default;
-$is-elements-forms-input: true !default;
+$is-elements-forms-input: false !default;
 // Start types of input
-$is-elements-forms-input-for-text: true !default;
-$is-elements-forms-input-checkbox: true !default;
-$is-elements-forms-input-submit: true !default;
+$is-elements-forms-input-for-text: false !default;
+$is-elements-forms-input-checkbox: false !default;
+$is-elements-forms-input-submit: false !default;
 $is-elements-forms-input-radio: false !default;
 // End types of input
 //$is-elements-forms-keygen: false !default; // bad usage
-$is-elements-forms-label: true !default;
+$is-elements-forms-label: false !default;
 $is-elements-forms-legend: false !default;
 $is-elements-forms-meter: false !default;
 $is-elements-forms-optgroup: false !default;
 $is-elements-forms-option: false !default;
 $is-elements-forms-output: false !default;
 $is-elements-forms-progress: false !default;
-$is-elements-forms-select: true !default;
-$is-elements-forms-textarea: true !default;
+$is-elements-forms-select: false !default;
+$is-elements-forms-textarea: false !default;
+
+$is-class-stands-alone-form: false !default;
+
+$is-class-form-label: false !default;
+$is-class-form-control-label: false !default;
+$is-class-input-checkbox-label: false !default;

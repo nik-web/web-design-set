@@ -58,12 +58,6 @@ class ContactForm extends Form
             'class'          => 'stands-alone-form',
             'accept-charset' => 'utf-8',
         ]);
-        $this->setOptions([
-            'label'            => 'Kontaktformular',
-                'label_attributes' => [
-                    'class' => 'form-label',
-                ],
-        ]);
         // This method adds form elements to this form
         $this->addElements();
         // This method add the filtering/validation rules
@@ -90,12 +84,12 @@ class ContactForm extends Form
     private function addElements() 
     {
         $this->add([
-            'name'       => 'company',
+            'name'       => 'organization',
             'type'       => Text::class,
             'attributes' => [
-                'id'        => 'input-company',
-                'class'     => 'form-control',
-                'autofocus' => true,
+                'id'           => 'organization',
+                'autofocus'    => true,
+                'autocomplete' => 'organization',
             ],
             'options'    => [
                 'label'            => 'Unternehmen / Institution',
@@ -108,8 +102,8 @@ class ContactForm extends Form
             'name'       => 'title',
             'type'       => Text::class,
             'attributes' => [
-                'id'    => 'title',
-                'class' => 'form-control',
+                'id'           => 'title',
+                'autocomplete' => 'off',
             ],
             'options'    => [
                 'label'            => 'Titel',
@@ -122,8 +116,8 @@ class ContactForm extends Form
             'name'       => 'forename',
             'type'       => Text::class,
             'attributes' => [
-                'id'    => 'forename',
-                'class' => 'form-control',
+                'id'           => 'forename',
+                'autocomplete' => 'given-name',
             ],
             'options'    => [
                 'label'            => 'Vorname',
@@ -136,9 +130,9 @@ class ContactForm extends Form
             'name'       => 'surname',
             'type'       => Text::class,
             'attributes' => [
-                'type'  => 'text',
-                'id'    => 'surname',
-                'class' => 'form-control',
+                'type'         => 'text',
+                'id'           => 'surname',
+                'autocomplete' => 'family-name',
             ],
             'options'    => [
                 'label'            => 'Nachname',
@@ -151,8 +145,8 @@ class ContactForm extends Form
             'name'    => 'email',
             'type'    => Text::class,
             'attributes' => [
-                'id'    => 'email',
-                'class' => 'form-control',
+                'id'           => 'email',
+                'autocomplete' => 'email',
             ],
             'options' => [
                 'label'            => 'E-Mail Adresse',
@@ -163,10 +157,10 @@ class ContactForm extends Form
         ]);
         $this->add([
             'name'    => 'phone',
-            'type' => Text::class,
+            'type'    => Text::class,
             'attributes' => [
-                'id'    => 'phone',
-                'class' => 'form-control',
+                'id'           => 'phone',
+                'autocomplete' => 'off',
             ],
             'options' => [
                 'label'            => 'Telefonnummer',
@@ -180,8 +174,8 @@ class ContactForm extends Form
             'type'  => Text::class,
             'attributes' => [
                 'type'  => 'text',
-                'id'    => 'contact-subject',
-                'class' => 'form-control',
+                'id'    => 'subject',
+                'autocomplete' => 'off',
             ],
             'options' => [
                 'label'            => 'Betreff',
@@ -191,12 +185,12 @@ class ContactForm extends Form
             ],
         ]);
         $this->add([
-            'name' => 'message',
+            'name'  => 'message',
             'type'  => Textarea::class,
             'attributes' => [
-                'id'    => 'contact-message',
-                'class' => 'form-control',
+                'id'    => 'message',
                 'rows'  => '4',
+                'autocomplete' => 'off',
             ],
             'options' => [
                 'label'            => 'Nachricht',
@@ -206,8 +200,11 @@ class ContactForm extends Form
             ],
         ]);
         $this->add([            
-            'name'    => 'accept_privacy_policy',
+            'name'    => 'accept-privacy-policy',
             'type'    => Checkbox::class,
+            'attributes' => [
+                'id' => 'accept-privacy-policy',
+            ],
             'options' => [
                 'label'              => 'Bitte akzeptieren Sie unsere Datenschuzbestimmungen!',
                 'use_hidden_element' => false,
@@ -218,8 +215,11 @@ class ContactForm extends Form
             ],
         ]);
         $this->add([            
-            'name'    => 'data_processed_accepted',
+            'name'    => 'data-processed-accepted',
             'type'    => Checkbox::class,
+            'attributes' => [
+                'id' => 'data-processed-accepted',
+            ],
             'options' => [
                 'label'              => 'Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.',
                 'use_hidden_element' => false,
@@ -230,12 +230,12 @@ class ContactForm extends Form
             ],
         ]);
         $this->add([
-            'name'    => 'contact_captcha',
+            'name'    => 'captcha',
             'type'    => Captcha::class,
             'attributes' => [
-                'type'  => 'text',
-                'id'    => 'contact-captcha',
-                'class' => 'form-control',
+                'type'         => 'text',
+                'id'           => 'captcha',
+                'autocomplete' => 'off',
             ],
             'options' => [
                 'label' => 'Sicherheitsabfrage',
@@ -256,8 +256,8 @@ class ContactForm extends Form
             ],            
         ]);
         $this->add([
-            'name' => 'contact_csrf',
-            'type' => Csrf::class,
+            'name'    => 'csrf',
+            'type'    => Csrf::class,
             'options' => [
                 'csrf_options' => [
                     'timeout' => 600
@@ -265,10 +265,10 @@ class ContactForm extends Form
             ],
         ]);
         $this->add([
-            'name' => 'contact_submit',
+            'name' => 'submit',
             'type'  => Submit::class,
             'attributes' => [
-                'id'    => 'contact-submit',
+                'id'    => 'submit',
                 'class' => 'submit-success',
                 'value' => 'Senden',
             ],
@@ -285,7 +285,7 @@ class ContactForm extends Form
         $inputFilter = $this->getInputFilter();
         
         $inputFilter->add([
-            'name'     => 'company',
+            'name'     => 'organization',
             'required' => false,
             'filters'  => [
                 ['name' => 'StringTrim'],
@@ -458,7 +458,7 @@ class ContactForm extends Form
             ],
         ]);
         $inputFilter->add([
-            'name'       => 'accept_privacy_policy',
+            'name'       => 'accept-privacy-policy',
             'required'   => true,
             'filters'    => [],                
             'validators' => [
@@ -479,7 +479,7 @@ class ContactForm extends Form
             ],
         ]);
         $inputFilter->add([
-            'name'       => 'data_processed_accepted',
+            'name'       => 'data-processed-accepted',
             'required'   => true,
             'filters'    => [],                
             'validators' => [
