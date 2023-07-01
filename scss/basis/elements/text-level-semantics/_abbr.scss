@@ -17,5 +17,14 @@
         display: inline;
         @include set-box-sizing-border-box;
         text-decoration: none;
+        text-decoration: dotted underline;
+    }
+}
+
+@if $is-class-input-mandatory {
+    .input-mandatory {
+        text-decoration: none;
+        font-size: smaller;
+        vertical-align: text-top;
     }
 }

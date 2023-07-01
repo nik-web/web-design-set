@@ -261,6 +261,16 @@ div::before, div::after {
   display: none;
 }
 
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+
+.checkbox-input-mandatory-wrapper {
+  min-width: 2.2rem;
+}
+
 figcaption {
   display: block;
   -webkit-box-sizing: border-box;
@@ -405,6 +415,13 @@ ul ul {
   list-style-type: circle;
 }
 
+.form-errors-block {
+  padding: 0.5rem 0;
+  font-size: smaller;
+  list-style: none;
+  color: red;
+}
+
 a, a:link, a:visited, a:focus, a:hover, a:active {
   margin: 0;
   border: 0;
@@ -446,6 +463,18 @@ a:active {
   color: #f00;
 }
 
+em {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-style: italic;
+}
+em::before, em::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 strong {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -469,6 +498,34 @@ small::before, small::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.input-description {
+  font-style: italic;
+}
+
+.not-valid-input-description {
+  color: red;
+}
+
+abbr {
+  display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-decoration: dotted underline;
+}
+abbr::before, abbr::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.input-mandatory {
+  text-decoration: none;
+  font-size: smaller;
+  vertical-align: text-top;
 }
 
 span {
@@ -522,7 +579,6 @@ form::before, form::after {
 }
 
 .stands-alone-form {
-  margin-top: 1rem;
   width: 100%;
 }
 
@@ -571,6 +627,10 @@ label::before, label::after {
   font-size: 1.22rem;
 }
 
+.input-checkbox-label {
+  display: inline-block;
+}
+
 /*
 The <input> html element
 Is default enabled: false
@@ -617,6 +677,11 @@ input::-moz-focus-inner {
   border: 0;
 }
 
+.not-valid-input {
+  background: seashell;
+  border-color: red;
+}
+
 input[type=datetime],
 input[type=text],
 input[type=search],
@@ -641,6 +706,7 @@ input[type=checkbox] {
   display: inline-block;
   width: 1rem;
   height: 1rem;
+  vertical-align: text-bottom;
   cursor: pointer;
 }
 
@@ -652,6 +718,24 @@ input[type=submit] {
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.captcha-input {
+  max-width: 300px;
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+.submit-success {
+  background-color: #28a745;
+  color: #fff;
+  border-color: #d8ff0d;
+}
+
+.submit-success:hover {
+  background-color: #067f22;
+  color: #fff;
+  border-color: #d8ff0d;
 }
 
 /*
@@ -1328,6 +1412,76 @@ input[type=checkbox]:checked ~ .check-sub-nav-label-current-nj::after {
   font-size: smaller;
   font-weight: inherit;
   font-style: inherit;
+}
+
+/*
+Layout segment messages (from flash messenger) <aside> html element
+*/
+.alert {
+  position: relative;
+  height: auto;
+  width: 94vw;
+  max-width: 1140px;
+  margin: 0.5rem auto;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  box-shadow: 0.25rem 0.5rem 1rem #dcdcdc;
+  padding-bottom: 0.5rem;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border-color: #d0e9c6;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-color: #bee5eb;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-color: #ffeeba;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  color: #a94442;
+  border-color: #ebcccc;
+}
+
+.alert-default {
+  background-color: #f5f5f5;
+  color: #212529;
+  border-color: #e9ecef;
+}
+
+.alert-dismissible {
+  display: none !important;
+}
+
+.site-messages-list {
+  list-style: none;
+  font-style: italic;
+}
+
+.site-messages-close {
+  display: none;
+  position: absolute;
+  top: -0.25rem;
+  right: 0.25rem;
+  border: none;
+  font-size: 1.22rem;
+  outline: none;
+  opacity: 0.6;
+}
+
+.site-messages-close-show {
+  display: inline-block;
 }
 
 /*

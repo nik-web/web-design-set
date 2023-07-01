@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * Samples module with Laninas MVC framework
+ * 
+ * Template: 'samples/flash/index'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @package    Samples
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+$headTitle = 'FlashMessenger von Laminas ein Beispiel';
+$this->headTitle($headTitle);
+$metaDescription = 'FlashMessenger von Laminas einsetzen';
+$metaKeywords = 'FlashMessenger, Laminas, MVC, Beispiel';
+$this->headMeta()->appendName('description', $metaDescription)
+    ->appendName('keywords', $metaKeywords)
+    ->appendName('DC.title', $headTitle);
+$form = $this->form;
+$csrf = $form->get('csrf');
+$submit = $form->get('submit');
+$form->prepare();
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            FlashMessenger
+        </h1>
+        <p class="main-header-p">
+            <strong>laminas-mvc-plugin-flashmessenger</strong>
+        </p>
+        <p class="main-header-p">
+            Ein Plugin zum Erstellen und Freigeben von Flash-Nachrichten über den Laminas MVC Controller.
+        </p>
+    </header>
+    <section>
+        <h2>
+            Einführung
+        </h2>
+        <p>
+            Einem Benutzer Feedback zu geben ist ein wichtiger Teil einer guten Anwendung. 
+            Flash-Nachrichten benachrichtigen den Benutzer beispielsweise über erfolgreiche 
+            Formularübermittlungen, Fehler beim Speichern von Daten in der Datenbank und 
+            falsche Authentifizierungsdaten.
+        </p>
+        
+    </section>
+    <?= $this->form()->openTag($form) ?>
+        <fieldset>
+            <legend>
+                Nachrichten anzeigen              
+            </legend>
+            <?= $this->formElement($csrf) ?>
+            <?= $this->formSubmit($submit) ?>
+        </fieldset>
+    <?= $this->form()->closeTag() ?>
+</main>

@@ -209,7 +209,7 @@ class ContactForm extends Form
                 'label'              => 'Bitte akzeptieren Sie unsere Datenschuzbestimmungen!',
                 'use_hidden_element' => false,
                 'label_attributes'   => [
-                    'id'    => 'privacy_policy_label',
+                    'id'    => 'privacy-policy-label',
                     'class' => 'input-checkbox-label',
                 ],
             ],
@@ -224,7 +224,7 @@ class ContactForm extends Form
                 'label'              => 'Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner Anfrage elektronisch erhoben und gespeichert werden.',
                 'use_hidden_element' => false,
                 'label_attributes'   => [
-                    'id'    => 'data_processed_accepted_label',
+                    'id'    => 'data-processed-accepted-label',
                     'class' => 'input-checkbox-label',
                 ],
             ],
@@ -235,6 +235,7 @@ class ContactForm extends Form
             'attributes' => [
                 'type'         => 'text',
                 'id'           => 'captcha',
+                'class'        => 'captcha-input',
                 'autocomplete' => 'off',
             ],
             'options' => [
@@ -383,7 +384,10 @@ class ContactForm extends Form
                     'allow'      => Hostname::ALLOW_DNS,
                     'useMxCheck' => false,
                     'messages'   => [
-                        EmailAddress::INVALID_FORMAT => "Die Eingabe ist keine gültige E-Mail Adresse. Verwenden Sie das Basisformat local-part@hostname.",
+                        EmailAddress::INVALID_FORMAT      => "Die Eingabe ist keine gültige E-Mail Adresse. Verwenden Sie das Basisformat local-part@hostname.",
+                        EmailAddress::INVALID_HOSTNAME    => "'%hostname%' ist kein gültiger Hostname für die E-Mail-Adresse",
+                        Hostname::UNKNOWN_TLD             => "Die Eingabe scheint ein DNS-Hostname zu sein, kann die TLD jedoch nicht mit der bekannten Liste abgleichen.",
+                        Hostname::LOCAL_NAME_NOT_ALLOWED  => "Die Eingabe scheint ein lokaler Netzwerkname zu sein, lokale Netzwerknamen sind jedoch nicht zulässig",
                     ],                          
                 ],
               ],

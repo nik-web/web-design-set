@@ -1,40 +1,36 @@
 # Create your own web design set.
 
 ## Introduction
+
 Create a Laminas MVC project and add your own web design set use SASS and Js.
 
 ## Install
 
 ### Check if git is installed
-
 ```bash
 $ git --version
 git version 2.30.2
 ```
 
 ### Clone from GitHub
-
 ```bash
 $ cd <directory to install>
 $ git clone https://github.com/nik-web/web-design-set.git
 ```
 
 ### Check if composer is installed
-
 ```bash
 $ composer
 Composer version...
 ```
 
 ### Run Composer
-
 ```bash
 $ cd <directory to install>/web-design-set
 $ composer install
 ```
 
 ### Check if node is installed
-
 ```bash
 $ node -v
 v12.22.12
@@ -42,7 +38,6 @@ $ man node
 node — server-side JavaScript runtime ...
 ```
 ### Check if npm is installed
-
 ```bash
 $ npm -v
 7.5.2
@@ -59,7 +54,6 @@ $ npm install
 This install dart-sass
 https://sass-lang.com/dart-sass   
 https://www.npmjs.com/package/sass
-```
 
 ### Run sass scripts
 ```bash
@@ -68,6 +62,7 @@ $ npm run compile-min:sass
 ```
 
 ## Customizing basis data
+
 ```bash
 $ vim scss/_custom.scss
 ```
@@ -89,8 +84,8 @@ Run this script from project folder
 Enter your data into the constants in this file.
 
 ## Running Unit Tests
-The testing support is present, you can run the tests using:
 
+The testing support is present, you can run the tests using:
 ```bash
 $ cd path/to/install
 $ ./vendor/bin/phpunit
@@ -111,7 +106,6 @@ $ composer serve
 ```
 
 Visit the site at:
-
 http://localhost:8080/
 
 ## Use in other projects in the same directory.

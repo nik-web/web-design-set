@@ -12,6 +12,7 @@
  * so do not include passwords or other sensitive information in this file.
  * 
  * @see        https://docs.laminas.dev/laminas-mvc/services/#default-configuration-options
+ * @see        https://docs.laminas.dev/laminas-mvc-plugin-flashmessenger/cookbook/application-wide-layout/#set-formats-individually-for-namespaces
  * @package    web-design-set
  * @author     Niklaus Höpfner <editor@nik-web.net>
  * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
@@ -22,5 +23,12 @@
 
 return [
     'view_manager' => [
+    ],
+    'view_helper_config' => [
+        'flashmessenger' => [
+            'message_open_format'      => '<aside %s><button type="button" class="site-messages-close">&otimes;</button><ul class="site-messages-list"><li>',
+            'message_separator_string' => '</li><li>',
+            'message_close_string'     => '</li></ul></aside>',
+        ],
     ],
 ];

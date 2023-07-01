@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Samples module with Laninas MVC framework
+ * 
+ * Template: 'samples/flash-show/index'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @package    Samples
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+$headTitle = 'FlashMessenger von Laminas kann Meldungen im fogenden Formaten ausgeben.';
+$this->headTitle($headTitle);
+$metaDescription = 'FlashMessenger von Laminas kann Meldungen im fogenden Formaten ausgeben.';
+$metaKeywords = 'FlashMessenger, Laminas, MVC, Beispiel, Meldungen';
+$this->headMeta()->appendName('description', $metaDescription)
+    ->appendName('keywords', $metaKeywords)
+    ->appendName('DC.title', $headTitle);
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Meldungen des FlashMessenger
+        </h1>
+    </header>
+</main>

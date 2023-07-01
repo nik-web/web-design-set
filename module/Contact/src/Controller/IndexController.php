@@ -52,31 +52,6 @@ class IndexController extends AbstractActionController {
         $this->contactForm = $contactForm;
         $this->mailSender = $mailSender;
     }
-    
-    /**
-     * Create and send flash message after sending email
-     * 
-     * @param boolean $result
-     * @return void
-     */
-    private function sendFlashMessage($result)
-    {
-    // Laminas\Mvc\Plugin\FlashMessenger\FlashMessenger
-            $flash = $this->flashMessenger();
-
-            if ($result) {
-                $message = 'Ihre E-Mail wurde gesendet!';
-                $flash->addSuccessMessage($message);
-                
-                return $this->redirect()->toRoute('home');
-            } else {
-                $message = 'Ihre E-Mail konnte nicht gesendet werden, versuchen Sie es bitte noch einmal!';
-                $flash->addErrorMessage($message);
-                
-                return $this->redirect()->toRoute('contact');
-            }
-    }
-
 
     /**
      * This action will display the contact web page.
@@ -84,23 +59,24 @@ class IndexController extends AbstractActionController {
      * @return ViewModel
      */
     public function indexAction()
-    {
-        
-        $form = $this->contactForm;
-        
-        if ($this->getRequest()->isPost()) {
-            
-            $form->setData($this->params()->fromPost());
-            
+    {        
+        $form = $this->contactForm;        
+        if ($this->getRequest()->isPost()) {            
+            $form->setData($this->params()->fromPost());            
             if($form->isValid()) {
                 $cleanData = $form->getData();
-                $result = $this->mailSender->send(
-                    $cleanData['company'], $cleanData['title'],
-                    $cleanData['forename'], $cleanData['surname'],
-                    $cleanData['email'], $cleanData['phone'],
-                    $cleanData['subject'], $cleanData['message']);
-                
-                $this->sendFlashMessage($result);
+                $this->mailSender->setConsignorOrganization($cleanData['organization']);
+                $this->mailSender->setConsignorTitle($cleanData['title']);
+                $this->mailSender->setConsignorForename($cleanData['forename']);
+                $this->mailSender->setConsignorSurname($cleanData['surname']);
+                $this->mailSender->setConsignorEmailAddress($cleanData['email']);
+                $this->mailSender->setConsignorPhoneNumber($cleanData['phone']);
+                $this->mailSender->setConsignorEmailSubject($cleanData['subject']);
+                $this->mailSender->setConsignorEmailMessage($cleanData['message']);
+                $this->mailSender->send();                
+                $message = 'Ihre E-Mail wurde gesendet!';
+                $this->flashMessenger()->addSuccessMessage($message);
+                return $this->redirect()->toRoute('contact');
             }           
         } 
         

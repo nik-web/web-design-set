@@ -40,3 +40,13 @@
         list-style-type: circle;
     }
 }
+
+@if $is-class-form-errors-block {    
+    // Is default enabled: false 
+    .form-errors-block {
+        padding: 0.5rem 0;
+        font-size: smaller;
+        list-style: none;
+        color: red;
+    }
+}

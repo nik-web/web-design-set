@@ -7,7 +7,7 @@
 
 $default-border-color: silver !default;// !!! Change this variable in elements
 
-// base color combination
+// ** Start base color combination **
 $base-bg-color: $white !default; // For default <body>
 $base-color: $dim-gray !default; // For default <body>
 
@@ -19,16 +19,48 @@ $base-box-shadow-color: $gainsboro !default;
 
 $base-a-background-color: transparent !default;
 
-$base-a-color: #2070bb !default; // blue
-$base-a-visited-color: #800080 !default; // purple
-$base-a-focus-color: #00008b !default; // darkblue
+$base-a-color: #2070bb !default;
+$base-a-visited-color: #800080 !default;
+$base-a-focus-color: #00008b !default;
 $base-a-focus-outline-color: invert !default; 
-$base-a-hover-color: #00008b !default; // darkblue
-$base-a-active-color: #f00 !default; // red
+$base-a-hover-color: #00008b !default;
+$base-a-active-color: #f00 !default;
 
 $base-outline-color: invert !default;
+/// Base submit buttons
+$base-submit-success-bg-color: #28a745 !default;
+$base-submit-success-hover-bg-color: #067f22 !default;
+$base-submit-success-color: #fff !default;
+$base-submit-success-hover-color: #fff !default;
+$base-submit-success-border-color: #d8ff0d !default;
+$base-submit-success-hover-border-color: #d8ff0d !default;
+// Start base messages
+// Success messages
+$alert-success-bg-color: #dff0d8 !default;
+$alert-success-color: #3c763d !default;
+$alert-success-border-color: #d0e9c6 !default;
 
-// primary color combination
+//$alert-success-border-color: #c3e6cb !default;
+
+// Info messages
+$alert-info-bg-color: #d1ecf1 !default;
+$alert-info-color: #0c5460 !default;
+$alert-info-border-color: #bee5eb !default;
+// Warning messages
+$alert-warning-bg-color: #fff3cd !default;
+$alert-warning-color: #856404 !default;
+$alert-warning-border-color: #ffeeba !default;
+// Error messages
+$alert-error-bg-color: #f2dede !default;
+$alert-error-color: #a94442 !default;
+$alert-error-border-color: #ebcccc !default;
+// Default messages
+$alert-default-bg-color: #f5f5f5 !default;
+$alert-default-color: #212529 !default;
+$alert-default-border-color: #e9ecef !default;
+// End base messages
+//** End base color combination **
+// ** Start primary color combination **
 $primary-bg-color: $dim-gray !default;
 $primary-color: $white-smoke !default;
 
@@ -38,8 +70,8 @@ $primary-higlight-color:  $dim-gray !default;
 $primary-border-color: $silver !default;
 $primary-box-shadow-color: $gainsboro;
 $primary-outline-color: invert !default;
-
-// secondary color combination
+// ** End primary color combination **
+// ** Start secondary color combination **
 $secondary-bg-color: $gainsboro  !default;
 $secondary-color: $dim-gray !default;
 
@@ -49,6 +81,7 @@ $secondary-higlight-color: $gray-900-bost !default;
 $secondary-border-color: $gray !default;
 $secondary-box-shadow-color: $gray-800-bost !default;
 $secondary-outline-color: invert !default;
+// ** End secondary color combination **
 
 // Tertiary
 $tertiary-bg-color: $gainsboro !default;

@@ -1,0 +1,78 @@
+// This file is part of web design set.
+//
+//
+//  Created on : 27.06.2023, 09:10:57
+//  Author     : nik
+//
+
+@if $is-view-helpers-flash-messenger {
+    /*
+    Layout segment messages (from flash messenger) <aside> html element
+    */
+    .alert {
+        position: relative;
+        height: auto;
+        width: $site-content-width;
+        max-width: $site-content-max-width;
+        margin: $small-distance auto;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: $default-border-radius;
+        box-shadow: .25rem .5rem 1rem $main-header-box-shadow-color;
+        padding-bottom: $small-distance;
+    }
+    // Success messages
+    .alert-success {
+        background-color: $alert-success-bg-color;
+        color: $alert-success-color;
+        border-color: $alert-success-border-color;
+    }
+    // Info messages
+    .alert-info {
+        background-color: $alert-info-bg-color;
+        color: $alert-info-color;
+        border-color: $alert-info-border-color;
+    }
+    // Warning messages
+    .alert-warning {
+        background-color: $alert-warning-bg-color;
+        color: $alert-warning-color;
+        border-color: $alert-warning-border-color;
+    }
+    // Error messages
+    .alert-error {
+        background-color: $alert-error-bg-color;
+        color: $alert-error-color;
+        border-color: $alert-error-border-color;
+    }
+    // Default messages
+    .alert-default {
+        background-color: $alert-default-bg-color;
+        color: $alert-default-color;
+        border-color: $alert-default-border-color;
+    }
+    // Haide messages with js
+    .alert-dismissible {
+        display: none !important;
+    }
+    // <ul> html element    
+    .site-messages-list {
+        list-style: none;
+        font-style: italic;
+    }
+    // <button> html element
+    .site-messages-close {
+        display: none; // if no sj
+        position: absolute;
+        top: -0.25rem;
+        right: 0.25rem;
+        border: none;
+        font-size: 1.22rem;
+        outline: none;
+        opacity: 0.6;
+    }
+    // add this class with js
+    .site-messages-close-show {
+        display: inline-block; // if js
+    }
+}

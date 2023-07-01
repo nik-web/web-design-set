@@ -20,6 +20,10 @@ namespace Contact;
 
 use Laminas\Router\Http\Literal;
 use Laminas\ServiceManager\Factory\InvokableFactory;
+
+use Laminas\Mail\Message;
+use Laminas\Mail\Transport\Sendmail;
+
 use Contact\Controller\Factory\IndexControllerFactory;
 use Contact\Service\Factory\MailSenderFactory;
 
@@ -44,18 +48,20 @@ return [
         ],
     ],
     'navigation'   => [
-        'main_nav' => [
+        'footer_nav'  => [
             [
                 'label'         => 'Kontakt',
                 'route'         => 'contact',
                 'useRouteMatch' => true,
-                'order'         => 15,
+                'order'         => 20,
             ],
         ],
     ],
     'service_manager' => [
         'factories' => [
-            Form\ContactForm::class            => InvokableFactory::class,
+            Message::class                     => InvokableFactory::class,
+            Sendmail:: class                   => InvokableFactory::class, 
+            Form\ContactForm::class            => InvokableFactory::class,           
             Service\MailSenderInterface::class => MailSenderFactory::class,
         ],
     ],

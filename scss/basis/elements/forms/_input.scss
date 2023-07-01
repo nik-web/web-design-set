@@ -52,7 +52,11 @@
     input::-moz-focus-inner {
         border: 0;
     }
-    
+    // Add by js if input not valid
+    .not-valid-input {
+        background: seashell;
+        border-color: red; 
+    } 
 }
 
 @if $is-elements-forms-input-for-text {    
@@ -84,6 +88,7 @@
         display: inline-block;
         width: $input-checkbox-width;
         height: $input-checkbox-height;
+        vertical-align: text-bottom;
         cursor: pointer;
     }
     
@@ -109,5 +114,28 @@
         margin-right: $input-radio-margin-right;
         cursor: pointer;
         //outline: 1px solid #ced4da;
+    }
+}
+
+@if $class-captcha-input {
+    .captcha-input {    
+    // Is default enabled: false 
+        max-width: 300px;
+        text-align: center;
+        letter-spacing: 1rem;
+    }
+}
+
+@if $class-submit-success {    
+    // Is default enabled: false
+    .submit-success {
+        background-color: $base-submit-success-bg-color;
+        color: $base-submit-success-color;
+        border-color: $base-submit-success-border-color;
+    }
+    .submit-success:hover {
+        background-color: $base-submit-success-hover-bg-color;
+        color: $base-submit-success-hover-color;
+        border-color: $base-submit-success-hover-border-color;
     }
 }

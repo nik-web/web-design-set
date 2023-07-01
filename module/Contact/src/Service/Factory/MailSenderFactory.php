@@ -5,7 +5,7 @@
  * 
  * Contact module with Laninas MVC framework
  *
- * @package     Contact\Service
+ * @package     Contact\Service\Factory
  * @author      Niklaus Höpfner <editor@nik-web.net>
  * @link       https://github.com/nik-web/web-design-set
  * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
@@ -42,11 +42,9 @@ class MailSenderFactory implements FactoryInterface
         $requestedName,
         array $options = null
     ) {
-        
-        $message = new Message();
-        //$message = $container->get(Message::class);
-        $message->addTo(Provider::CONTACT_EMAIL)->setEncoding("UTF-8");
-        $transport = new Sendmail();
+        $message = $container->get(Message::class);
+        $message->addTo(Provider::CONTACT_EMAIL)->setEncoding("UTF-8");        
+        $transport = $container->get(Sendmail::class);
         
         return new MailSender($message, $transport);
     }

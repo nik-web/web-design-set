@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "652c065b6d719d103637bcd6d60a83ef",
+    "content-hash": "7b6b193c43ad41edc02c7238bcee2dc6",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -1344,6 +1344,75 @@
             "time": "2022-12-02T15:45:50+00:00"
         },
         {
+            "name": "laminas/laminas-mvc-plugin-flashmessenger",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-mvc-plugin-flashmessenger.git",
+                "reference": "dc73bb6b56a0d74f9fdc0d24ec55a5f8c87c4cfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-mvc-plugin-flashmessenger/zipball/dc73bb6b56a0d74f9fdc0d24ec55a5f8c87c4cfa",
+                "reference": "dc73bb6b56a0d74f9fdc0d24ec55a5f8c87c4cfa",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-mvc": "^3.3",
+                "laminas/laminas-session": "^2.12.0",
+                "laminas/laminas-stdlib": "^3.6.4",
+                "laminas/laminas-view": "^2.13.1",
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+            },
+            "conflict": {
+                "laminas/laminas-mvc": "<3.0.0",
+                "zendframework/zend-mvc-plugin-flashmessenger": "*"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~2.4.0",
+                "laminas/laminas-i18n": "^2.19.0",
+                "phpunit/phpunit": "^9.5.25",
+                "psalm/plugin-phpunit": "^0.17.0",
+                "vimeo/psalm": "^4.29.0"
+            },
+            "type": "library",
+            "extra": {
+                "laminas": {
+                    "component": "Laminas\\Mvc\\Plugin\\FlashMessenger"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Mvc\\Plugin\\FlashMessenger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Plugin for creating and exposing flash messages via laminas-mvc controllers",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "laminas",
+                "mvc"
+            ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-mvc-plugin-flashmessenger/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-mvc-plugin-flashmessenger/issues",
+                "rss": "https://github.com/laminas/laminas-mvc-plugin-flashmessenger/releases.atom",
+                "source": "https://github.com/laminas/laminas-mvc-plugin-flashmessenger"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2022-10-22T12:47:30+00:00"
+        },
+        {
             "name": "laminas/laminas-navigation",
             "version": "2.18.1",
             "source": {
@@ -1912,16 +1981,16 @@
         },
         {
             "name": "laminas/laminas-validator",
-            "version": "2.32.0",
+            "version": "2.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-validator.git",
-                "reference": "c5f73b1dc9b657af24736b56318bcd880d9fee94"
+                "reference": "1d82b5c0ede9316263e14d11e9284dfb3130f158"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/c5f73b1dc9b657af24736b56318bcd880d9fee94",
-                "reference": "c5f73b1dc9b657af24736b56318bcd880d9fee94",
+                "url": "https://api.github.com/repos/laminas/laminas-validator/zipball/1d82b5c0ede9316263e14d11e9284dfb3130f158",
+                "reference": "1d82b5c0ede9316263e14d11e9284dfb3130f158",
                 "shasum": ""
             },
             "require": {
@@ -1992,7 +2061,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2023-06-01T08:43:15+00:00"
+            "time": "2023-06-12T09:43:54+00:00"
         },
         {
             "name": "laminas/laminas-view",

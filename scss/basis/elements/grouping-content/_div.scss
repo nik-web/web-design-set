@@ -39,6 +39,14 @@
 
 @if $is-class-checkbox-wrapper {
     .checkbox-wrapper {
-        
+        display: flex;
+        flex-direction: row;
+        padding-top: 1rem;
+    }
+}
+
+@if $is-class-checkbox-input-mandatory-wrapper {
+    .checkbox-input-mandatory-wrapper {
+        min-width: 2.2rem;
     }
 }

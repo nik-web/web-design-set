@@ -80,6 +80,41 @@ function supportedMainNavigation() {
 }
 
 supportedMainNavigation();
+
+// Show button site messanges close
+function showButtonSiteMessagesClose() {    
+    // [object HTMLCollection]
+    let buttons =  document.getElementsByClassName('site-messages-close');
+    // If no buttons return
+    if (! buttons.length) {
+        return;
+    }
+    for (let i = 0; i < buttons.length; i++) {
+        if (! buttons[i].classList.contains('site-messages-close-show')) {
+            buttons[i].classList.add('site-messages-close-show');
+        }
+    }
+    
+}
+
+showButtonSiteMessagesClose();
+
+// Close site messages
+function closeSiteMessages() {    
+    // [object HTMLCollection]
+    let buttons =  document.getElementsByClassName('site-messages-close');
+    // If no buttons return
+    if (! buttons.length) {
+        return;
+    }
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click',  function() {
+            this.parentElement.classList.add('alert-dismissible');
+        });
+    }
+}
+
+closeSiteMessages();
     
 // Close the dropdown menu if the user clicks outside of the dropdown button
 window.onclick = function(event) {

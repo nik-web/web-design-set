@@ -19,6 +19,7 @@
  */
 
 return [
+    'Laminas\Mvc\Plugin\FlashMessenger',
     'Laminas\Mvc\I18n',
     'Laminas\I18n',
     'Laminas\Mail',
@@ -32,4 +33,5 @@ return [
     'Laminas\Validator',
     'Application',
     'Contact',
-    ];
+    'Samples',
+];

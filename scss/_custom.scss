@@ -19,7 +19,6 @@ $is-partials-nav-bar-mains-main-no-script: true;
 
 $is-elements-forms-button: true;
 
-
 $is-elements-grouping-content-figure: true;
 $is-elements-grouping-content-figure-class-card: true;
 
@@ -46,7 +45,26 @@ $is-elements-forms-input-checkbox: true;
 $is-elements-forms-input-submit: true;
 //$is-elements-forms-input-radio: true;
 
+$is-elements_text-level-semantics-abbr: true;
+$is-elements_text-level-semantics-em: true;
+
+$is-class-input-mandatory: true;
+
 $is-class-checkbox-wrapper: true;
+$is-class-checkbox-input-mandatory-wrapper: true;
+
+$is-class-input-checkbox-label: true;
+
+$class-input-input-description: true;
+
+$class-captcha-input: true;
+
+$is-class-form-errors-block: true;
+
+$class-submit-success: true;
+
+
+$is-view-helpers-flash-messenger: true;
 
 // Import basis-data
 @import "./basis-copy/index";

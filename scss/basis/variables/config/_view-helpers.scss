@@ -1,9 +1,12 @@
+// This file is part of web design set.
 //
-//
+// Import view helpers conf
+// Import the files from variables/config/view-helpers/ folder
 //
 //  Created on : 30.05.2023, 12:22:29
 //  Author     : nik
 //
 
-@import "./view-helpers/copyright-notices";
+@import "./view-helpers/copyright-notices",
+        "./view-helpers/flash-messenger";
 

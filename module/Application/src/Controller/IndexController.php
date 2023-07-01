@@ -29,7 +29,7 @@ use Application\ValueObject\Provider;
 class IndexController extends AbstractActionController
 {
     /**
-     * This action will display the imprint web page.
+     * This action is for the imprint of the website.
      * 
      * @return ViewModel
      */
@@ -41,7 +41,7 @@ class IndexController extends AbstractActionController
     }
     
     /**
-     * This action will display the privacy policy web page.
+     * This action is for the privacy policy of the website.
      * 
      * @return ViewModel
      */

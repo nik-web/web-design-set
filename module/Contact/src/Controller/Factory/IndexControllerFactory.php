@@ -5,7 +5,7 @@
  * 
  * Contact module with Laninas MVC framework
  *
- * @package    Contact\Controller  
+ * @package    Contact\Controller\Factory
  * @author     Niklaus Höpfner <editor@nik-web.net>
  * @link       https://github.com/nik-web/web-design-set
  * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
@@ -26,27 +26,17 @@ use Contact\Service\MailSenderInterface;
 /**
  * Index controller factory
  * 
- * @package Contact
- * @subpackage Contact\Controller\Factory
+ * @package Contact\Controller\Factory
  */
 class IndexControllerFactory implements FactoryInterface
 {
     /**
-     * Create the index controller
-     *
-     * @param  ContainerInterface $container
-     * @param  string             $requestedName
-     * @param  null|array         $options
-     * @return IndexController
-     * @throws ServiceNotFoundException if unable to resolve the service.
-     * @throws ServiceNotCreatedException if an exception is raised when
-     * creating a service.
-     * @throws ContainerException if any other error occurs
+     * {@inheritDoc}
      */
     public function __invoke(
         ContainerInterface $container,
         $requestedName,
-        array $options = null
+        ?array $options = null
     ) {
         $contactForm = $container->get(ContactForm::class);
         $mailSender = $container->get(MailSenderInterface::class);

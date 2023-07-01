@@ -12,7 +12,8 @@
     "autoload": {
         "psr-4": {            
             "Application\\": "module/Application/src/",
-            "Contact\\": "module/Contact/src/"
+            "Contact\\": "module/Contact/src/",
+            "Samples\\": "module/Samples/src/"
         }
     },
     "autoload-dev": {
@@ -28,7 +29,8 @@
         "laminas/laminas-form": "^3.11",
         "laminas/laminas-captcha": "^2.16",
         "laminas/laminas-mail": "^2.23",
-        "laminas/laminas-mvc-i18n": "^1.7"
+        "laminas/laminas-mvc-i18n": "^1.7",
+        "laminas/laminas-mvc-plugin-flashmessenger": "^1.9"
     },
     "require-dev": {
         "laminas/laminas-component-installer": "^3.2",

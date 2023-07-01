@@ -25,3 +25,13 @@
         font-size: $small-font-size;
     }
 }
+
+@if $class-input-input-description {
+    .input-description {
+	font-style: italic;
+    }
+    // Add by js if input not valid
+    .not-valid-input-description {
+        color: red;
+    }
+}
