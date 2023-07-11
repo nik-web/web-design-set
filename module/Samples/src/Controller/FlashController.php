@@ -2,8 +2,6 @@
 
 /**
  * This file is part of web-design-set with Laminas MVC framework
- * 
- * Samples module with Laninas MVC framework
  *
  * @package    Samples\Controller  
  * @author     Niklaus Höpfner <editor@nik-web.net>
@@ -12,7 +10,6 @@
  * @version    1.0.0
  * @since      1.0.0
  */
-
 declare(strict_types=1);
 
 namespace Samples\Controller;
@@ -21,6 +18,11 @@ use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
 use Samples\Form\FlashTestForm;
 
+/**
+ * FlashController class
+ *
+ * @package Samples\Controller
+ */
 class FlashController extends AbstractActionController
 {
     /**

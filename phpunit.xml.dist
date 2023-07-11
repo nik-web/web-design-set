@@ -8,6 +8,9 @@
     <testsuite name="Contact">
       <directory>./module/Contact/test</directory>
     </testsuite>
+    <testsuite name="Samples">
+      <directory>./module/Samples/test</directory>
+    </testsuite>
   </testsuites>
   <source>
     <include>

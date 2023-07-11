@@ -1,0 +1,47 @@
+<?php
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'samples/redirect/index'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+// Set title
+$headTitle = 'Umleitung mit Laminas MVC kann mit einem Formular.';
+$this->headTitle($headTitle);
+// Set meta description
+$metaDescription = 'Umleitung mit Laminas MVC kann mit einem Formular.';
+// Set meta keywords
+$metaKeywords = 'Umleitung, Laminas, MVC, Beispiel, Formular';
+$this->headMeta()->appendName('description', $metaDescription)
+        ->appendName('keywords', $metaKeywords)
+        ->appendName('DC.title', $headTitle);
+
+$form = $this->form;
+$csrf = $form->get('csrf');
+$submit = $form->get('submit');
+$form->prepare();
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Umleitung mit einem Formular
+        </h1>
+    </header>
+    <?= $this->form()->openTag($form) ?>
+        <fieldset>
+            <legend>
+                Umleiten zur Startseite              
+            </legend>
+            <?= $this->formElement($csrf) ?>
+            <?= $this->formSubmit($submit) ?>
+        </fieldset>
+    <?= $this->form()->closeTag() ?>
+</main>
+

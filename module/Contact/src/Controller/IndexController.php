@@ -23,10 +23,9 @@ use Contact\Form\ContactForm;
 use Contact\Service\MailSenderInterface;
 
 /**
- * IndexController
+ * IndexController class
  *
- * @package Contact
- * @subpackage Contact\Controller
+ * @package Contact\Controller
  */
 class IndexController extends AbstractActionController {
     
@@ -56,12 +55,12 @@ class IndexController extends AbstractActionController {
     /**
      * This action will display the contact web page.
      * 
-     * @return ViewModel
+     * @return ViewModel | \Laminas\Http\PhpEnvironment\Response
      */
     public function indexAction()
     {        
-        $form = $this->contactForm;        
-        if ($this->getRequest()->isPost()) {            
+        $form = $this->contactForm;
+        if ($this->getRequest()->isPost()) {
             $form->setData($this->params()->fromPost());            
             if($form->isValid()) {
                 $cleanData = $form->getData();
@@ -76,9 +75,10 @@ class IndexController extends AbstractActionController {
                 $this->mailSender->send();                
                 $message = 'Ihre E-Mail wurde gesendet!';
                 $this->flashMessenger()->addSuccessMessage($message);
+                
                 return $this->redirect()->toRoute('contact');
             }           
-        } 
+        }
         
         return new ViewModel([
             'form' => $form,

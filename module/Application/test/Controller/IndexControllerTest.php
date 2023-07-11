@@ -27,7 +27,12 @@ use Laminas\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
  * @author  Niklaus Höpfner <editor@nik-web.net>
  */
 class IndexControllerTest extends AbstractHttpControllerTestCase
-{
+{    
+    /**
+     * {@inheritDoc}
+     * 
+     * @return void
+     */
     public function setUp() : void
     {
         // The module configuration should still be applicable for tests.
@@ -43,7 +48,12 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
 
         parent::setUp();
     }
-
+    
+    /**
+     * Test whether you can access the IndexAction
+     * 
+     * @return void
+     */
     public function testIndexActionCanBeAccessed() : void
     {
         $this->dispatch('/', 'GET');
@@ -53,13 +63,28 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertControllerClass('IndexController');
         $this->assertMatchedRouteName('home');
     }
-
+    
+    /**
+     * Test whether in the application/index/index Template, the layout is rendered 
+     * with the specified CSS selectors.
+     * 
+     * @return void
+     */
     public function testIndexActionViewModelTemplateRenderedWithinLayout() : void
     {
         $this->dispatch('/', 'GET');
-        $this->assertQuery('h1, p, #main-header');
+        $this->assertQuery('h1');
+        $this->assertQuery('p');
+        $this->assertQuery('#main-header');
+        // partial/nav-bar/brand-base
+        $this->assertQuery('#main-nav-bar');
     }
-
+    
+    /**
+     * Test whether you can access the PrivacyPolicyAction
+     * 
+     * @return void
+     */
     public function testPrivacyPolicyActionCanBeAccessed() : void
     {
         $this->dispatch('/datenschutz', 'GET');
@@ -69,13 +94,25 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertControllerClass('IndexController');
         $this->assertMatchedRouteName('privacy-policy');
     }
-
+    
+    /**
+     * Test whether in the application/index/privacy-policy Template, the layout 
+     * is rendered with the specified CSS selectors.
+     * 
+     * @return void
+     */
     public function testPrivacyPolicyActionViewModelTemplateRenderedWithinLayout() : void
     {
         $this->dispatch('/privacy-policy', 'GET');
-        $this->assertQuery('h1, #main-header');
+        $this->assertQuery('h1');
+        $this->assertQuery('#main-header');
     }
     
+    /**
+     * Test whether you can access the ImprintAction
+     * 
+     * @return void
+     */
      public function testImprintActionCanBeAccessed() : void
     {
         $this->dispatch('/impressum', 'GET');
@@ -88,12 +125,24 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertArrayHasKey('TAX_ID_NUMBER', $mailer->getConstants());
     }
 
+    /**
+     * Test whether in the application/index/imprint Template, the layout 
+     * is rendered with the specified CSS selectors.
+     * 
+     * @return void
+     */
     public function testImprintActionViewModelTemplateRenderedWithinLayout() : void
     {
         $this->dispatch('/imprint', 'GET');
-        $this->assertQuery('h1, #main-header');
+        $this->assertQuery('h1');
+        $this->assertQuery('#main-header');
     }
-
+    
+    /**
+     * Test invalid route does not cause a crash
+     * 
+     * @return void
+     */
     public function testInvalidRouteDoesNotCrash() : void
     {
         $this->dispatch('/invalid/route', 'GET');

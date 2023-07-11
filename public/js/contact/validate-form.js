@@ -345,6 +345,14 @@ function validateContactForm() {
         
         return notValid;
     }
+    
+    // Remove flash messages
+    function removeFlashMessages() {
+        let messages = document.getElementsByClassName('alert');
+        for (let i = 0; i < messages.length; i++) {
+            messages[i].classList.add('alert-dismissible');
+        }
+    }
 
     contactForm.addEventListener('submit', function(evt) {
         let element = false;
@@ -387,6 +395,8 @@ function validateContactForm() {
         }
         // If element with error exist
         if (element) {
+            // remove the flashmessages if exist
+            removeFlashMessages();
             // Scroll to the first element with error
             window.scrollTo( 0, element.offsetTop );
         }

@@ -20,6 +20,7 @@
         border-radius: $default-border-radius;
         box-shadow: .25rem .5rem 1rem $main-header-box-shadow-color;
         padding-bottom: $small-distance;
+        padding-right: $distance;
     }
     // Success messages
     .alert-success {

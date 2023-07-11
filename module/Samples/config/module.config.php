@@ -21,13 +21,14 @@ use Laminas\Router\Http\Literal;
 return [
     'controllers' => [
         'factories' => [
-            Controller\FlashController::class     => Controller\Factory\FlachControllerFactory::class,
-            Controller\FlashShowController::class => InvokableFactory::class
+            Controller\FlashController::class     => Controller\Factory\FlashControllerFactory::class,
+            Controller\FlashShowController::class => InvokableFactory::class,
+            Controller\RedirectController::class  => Controller\Factory\RedirectControllerFactory::class,
         ],
     ],
     'router' => [
         'routes' => [
-            'sample-flash' => [
+            'sample-flash'     => [
                 'type'    => Literal::class,
                 'options' => [
                     'route'    => '/flash-test',
@@ -47,6 +48,16 @@ return [
                     ],
                 ],
             ],
+            'sample-redirect'  => [
+                'type'    => Literal::class,
+                'options' => [
+                    'route'    => '/umleiten-test',
+                    'defaults' => [
+                        'controller' => Controller\RedirectController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'navigation'   => [
@@ -57,11 +68,16 @@ return [
                 'uri'   => '#',
                 'order' => 15,
                 'pages' => [
-                    'flash' => [
+                    'flash'    => [
                         'label'  => 'FlashMessenger',
                         'route'  => 'sample-flash',
                         'target' => '_self',
                     ],
+                    'redirect' => [
+                        'label'  => 'Umleitung',
+                        'route'  => 'sample-redirect',
+                        'target' => '_self',
+                    ]
                 ],
             ],
         ],
@@ -70,6 +86,7 @@ return [
     'service_manager' => [
         'factories' => [
             Form\FlashTestForm::class => InvokableFactory::class,
+            Form\TestForm::class      => InvokableFactory::class,
         ],
     ],
     'view_manager' => [

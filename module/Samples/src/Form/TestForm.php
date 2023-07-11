@@ -18,13 +18,13 @@ use Laminas\Form\Element\Csrf;
 use Laminas\Form\Element\Submit;
 
 /**
- * FlashTestForm
+ * TestForm
  * 
- * This form is used to show messages
+ * This form is used to redirect
  * 
  * @package Samples\Form
  */
-class FlashTestForm extends Form
+class TestForm extends Form
 {
     /**
      * Constructor.

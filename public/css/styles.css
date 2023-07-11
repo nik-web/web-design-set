@@ -1428,6 +1428,7 @@ Layout segment messages (from flash messenger) <aside> html element
   border-radius: 0.5rem;
   box-shadow: 0.25rem 0.5rem 1rem #dcdcdc;
   padding-bottom: 0.5rem;
+  padding-right: 1rem;
 }
 
 .alert-success {

@@ -19,7 +19,8 @@
     "autoload-dev": {
         "psr-4": {
             "ApplicationTest\\": "module/Application/test/",
-            "ContactTest\\": "module/Contact/test/"
+            "ContactTest\\": "module/Contact/test/",
+            "SamplesTest\\": "moule/Samples/test/"
         }
     },
     "require": {
