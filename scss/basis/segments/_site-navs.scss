@@ -15,7 +15,14 @@ Layout segment site nav html <nav> element
         top: $id-site-nav-top;
         z-index: $id-site-nav-z-index;
         width: 100%;
+        padding-bottom: $very-small-distance;
         background-color: $id-site-nav-background-color;
         color: $id-site-nav-color;
+    }
+    
+    @media screen and (min-width: $main-nav-breakpoint) {
+        #site-nav {
+            padding-bottom: 0;
+        }
     }
 }
