@@ -168,4 +168,13 @@ class Provider {
      * @var string
      */
     const YEAR_OF_PUBLICATION = '2022';
+    
+    /**
+     * Date of last update of the privacy policy of this web application
+     * 
+     * Entry is required, cannot be empty!
+     * 
+     * @var string
+     */
+    const PRIVACY_POLICY_LAST_UPDATE = "01.01.2023";
 }

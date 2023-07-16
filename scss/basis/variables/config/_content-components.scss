@@ -1,9 +1,11 @@
+// This file is part of web design set.
 //
-//
-//
+// Import files from scss/basis/variables/config/content-components/ folder
 //
 //  Created on : 03.06.2023, 12:44:16
 //  Author     : nik
 //
 
-@import "./content-components/headers";
+@import "./content-components/cards",
+        "./content-components/headers";
+        

@@ -36,7 +36,7 @@ class IndexController extends AbstractActionController
     public function imprintAction()
     {
         return new ViewModel([
-            'taxIdNumber'       => Provider::TAX_ID_NUMBER,
+            'taxIdNumber' => Provider::TAX_ID_NUMBER,
         ]);
     }
     
@@ -47,6 +47,8 @@ class IndexController extends AbstractActionController
      */
     public function privacyPolicyAction()
     {
-        return new ViewModel([]);
+        return new ViewModel([
+            'lastUpdate' => Provider::PRIVACY_POLICY_LAST_UPDATE,
+        ]);
     }
 }

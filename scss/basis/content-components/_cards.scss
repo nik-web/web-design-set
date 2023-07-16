@@ -1,0 +1,47 @@
+//
+// This file is part of web design set.
+// 
+// Content cards
+//
+//  Created on : 15.07.2023, 18:21:14
+//  Author     : Niklaus Höpfner <editor@nik-web.net>
+//
+
+
+@if $is-content-components-cards-class-card-container {
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: $card-container-margin-top;
+    }
+    
+    @media screen and (min-width: $cards-first-breakpoint) {
+        .card-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+    }
+    .card, .two-cards {
+        width: 100%;
+        max-width: 460px;
+        @include margin($card-margin-top, $card-margin-right, $card-margin-bottom, $card-margin-left);
+        border: $card-border-width $card-border-style $card-border-color;        
+        border-radius: $card-border-radius;
+        padding: 0;
+    }
+
+    @media screen and (min-width: $cards-first-breakpoint) {
+        .card, .two-cards {
+            margin: 0.5rem 0.4rem;
+            max-width: calc(100% / 2 - 1rem);
+        }
+    }
+
+    @media screen and (min-width: $cards-second-breakpoint) {
+        .card {
+            max-width: calc(100% / 3 - 1rem);
+        }
+    }
+}

@@ -42,15 +42,3 @@
         color: $figure-color;  
     }
 }
-
-@if $is-elements-grouping-content-figure-class-card {
-    figure.card {
-        flex: 1;
-        width: 100%;
-        max-width: 460px;
-           
-        @include margin($figure-card-margin-top, $figure-card-margin-right, $figure-card-margin-bottom, $figure-card-margin-left);
-        
-        
-    }
-}
