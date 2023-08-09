@@ -13,6 +13,8 @@
  * 
  * @see        https://docs.laminas.dev/laminas-mvc/services/#default-configuration-options
  * @see        https://docs.laminas.dev/laminas-mvc-plugin-flashmessenger/cookbook/application-wide-layout/#set-formats-individually-for-namespaces
+ * @see        https://docs.laminas.dev/laminas-session/manager/
+ * @see        https://docs.laminas.dev/laminas-session/application-integration/usage-in-a-laminas-mvc-application/#set-up-configuration
  * @package    web-design-set
  * @author     Niklaus Höpfner <editor@nik-web.net>
  * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
@@ -23,8 +25,41 @@
 
 declare(strict_types=1);
 
-return [
+use Laminas\Session\Container;
+use Laminas\Session\Config\SessionConfig;
+use Laminas\Session\Storage\SessionArrayStorage;
+use Laminas\Session\Validator\RemoteAddr;
+use Laminas\Session\Validator\HttpUserAgent;
+
+return [    
+    'session_manager' => [
+        'config'    => [
+            'class'   => SessionConfig::class,
+            'options' => [
+                'name' => 'web-design-set',// Specifies the name of the session which is used as cookie name.
+            ],
+        ],
+        // Session validators (used for security).
+        'validators' => [
+            RemoteAddr::class,
+            HttpUserAgent::class,
+        ],
+    ],
+    // Session configuration
+    'session_containers' => [
+        Container::class,
+    ],
+    'session_config'  => [
+        'cookie_lifetime' => 60*60*24,// Session cookie will expire in 1 day.
+        'gc_maxlifetime'  => 60*60*24*30,// Session data will be stored on server maximum for 30 days.
+    ],
+    'session_storage' => [
+        'type' => SessionArrayStorage::class,
+    ],            
     'view_manager' => [
+        'template_map'        => [
+            'partials/nav-bars/pagination-control' => __DIR__ . '/../../module/Application/view/partial/nav-bar/pagination-control.phtml',
+        ],
     ],
     'view_helper_config' => [
         'flashmessenger' => [

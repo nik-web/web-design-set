@@ -1,0 +1,90 @@
+<?php
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'user/auth/login'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+// Set title
+$headTitle = 'Anmelden bei dieser Webanwendung';
+$this->headTitle($headTitle);
+// Set meta description
+$metaDescription = 'Als registrierter Nutzer können Sie sich hier anmelden.';
+// Set meta keywords
+$metaKeywords = 'Nutzer, Webanwendung, anmelden';
+$this->headMeta()->appendName('description', $metaDescription)
+        ->appendName('keywords', $metaKeywords)
+        ->appendName('DC.title', $headTitle);
+
+$form = $this->form;
+$log = $form->get('log');
+$logErrorBlock = $this->formElementErrors()
+    ->render($log, ['class' => 'form-errors-block']);
+$password = $form->get('password');
+$passwordErrorBlock = $this->formElementErrors()
+    ->render($password, ['class' => 'form-errors-block']);
+$rememberMe = $form->get('remember_me');
+$csrf = $form->get('csrf');
+$submit = $form->get('submit');
+$form->prepare();
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Hier anmelden
+        </h1>
+    </header>    
+    <?= $this->form()->openTag($form) ?>
+        <fieldset>
+            <legend>
+                Login-Daten                
+            </legend>
+            <?= $this->formLabel()->openTag($log) ?>
+                <?= $log->getOption('label') ?>
+                <abbr class="input-mandatory" title="Eine Eingabe ist erforderlich">*</abbr>
+            <?= $this->formLabel()->closeTag() ?>
+            <?= $this->formElement($log) ?>
+            <small id="email-description" class="input-description">
+                Ihren Nutzernamen oder E-Mail Adresse im Basisformat "local-part@hostname" eingeben.
+            </small>
+    <?php
+        if ($logErrorBlock) {
+            echo $logErrorBlock;
+        }
+    ?>
+            <?= $this->formLabel()->openTag($password) ?>
+                <?= $password->getOption('label') ?>
+                <abbr class="input-mandatory" title="Eine Eingabe ist erforderlich">*</abbr>
+            <?= $this->formLabel()->closeTag() ?>
+                    <?= $this->formElement($password) ?>
+                    <small id="password-description" class="input-description">
+                        Ihr aktuelles Passwort eingeben!
+                    </small>
+                </dd>
+    <?php
+        if ($passwordErrorBlock) {
+            echo $passwordErrorBlock;
+        }
+    ?>
+        </fieldset>
+        <div class="checkbox-wrapper">
+            <?= $this->formElement($rememberMe) ?>
+            <?= $this->formLabel($rememberMe) ?>
+        </div>
+        <?= $this->formElement($csrf) ?>
+        <p>
+            <em>
+                * Diese Angaben sind zum Anmelden erforderlich.
+            </em>
+        </p>
+        <?= $this->formSubmit($submit) ?>
+        <?php //echo $this->navigation('info_nav')->menu(); ?>
+    <?= $this->form()->closeTag() ?>
+</main>

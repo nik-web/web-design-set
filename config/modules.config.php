@@ -19,6 +19,10 @@
  */
 
 return [
+    'Laminas\Mvc\Plugin\Identity',
+    'Laminas\Paginator\Adapter\LaminasDb',
+    'Laminas\Paginator',
+    'Laminas\Db',
     'Laminas\Mvc\Plugin\FlashMessenger',
     'Laminas\Mvc\I18n',
     'Laminas\I18n',
@@ -34,4 +38,5 @@ return [
     'Application',
     'Contact',
     'Samples',
+    'User',
 ];

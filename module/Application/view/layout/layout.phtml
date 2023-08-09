@@ -30,6 +30,13 @@
         <header id="site-header">
             <div id="brand-position" class="site-width-container">
                 <?= $this->navigation('brand_nav')->menu()->setPartial('partial/nav-bar/brand-base') . PHP_EOL  ?>
+                <?php
+                    if ($this->identity()) {
+                        echo $this->navigation('account_nav')->menu()->setPartial('partials/nav-bars/account');
+                    } else {
+                        echo $this->navigation('sing_in_nav')->menu()->setPartial('partials/nav-bars/sing_in');
+                    }
+                ?>
             </div>
         </header>
         <nav id="site-nav">

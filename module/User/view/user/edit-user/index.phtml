@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'user/edit-user/index'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+$headTitle = 'Nutzer bearbeiten';
+$this->headTitle($headTitle);
+$metaDescription = 'Einen vorhandenen Nutzer diese Webanwendung durch den Betreiber bearbeiten.';
+$metaKeywords = 'ändern, bearbeiten, Nutzer';
+$this->headMeta()->appendName('description', $metaDescription)
+    ->appendName('keywords', $metaKeywords);
+
+$user = $this->user;
+
+$form = $this->form;
+$status = $form->get('status');
+$statusErrorBlock = $this->formElementErrors()
+    ->render($status, ['class' => 'form-errors-block']);
+$csrf = $form->get('csrf');
+$submit = $form->get('submit');
+$form->prepare();
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Nutzerkonto Nr.: <?= $user->getId() ?>
+        </h1>
+        <ul>
+            <li>
+                <?= $this->escapeHtml($user->getAlias()) ?>
+            </li>
+            <li>
+                <?= $this->escapeHtml($user->getEmail()) ?>
+            </li>
+        </ul>
+    </header>
+    <?= $this->form()->openTag($form) ?>
+        <fieldset>
+            <legend>
+                Koto bearbeiten                
+            </legend>
+            <?= $this->formLabel($status) ?>
+            <?= $this->formSelect($status) ?>
+            <small id="status-description" class="input-description">                    
+                Den Status des Nutzers festlegen!                    
+            </small>
+    <?php
+        if ($statusErrorBlock) {
+            echo $statusErrorBlock;
+        }
+    ?>
+        </fieldset>
+        <?= $this->formElement($csrf) ?>
+        <?= $this->formSubmit($submit) ?>
+        <a class="link-button-primary" href="<?= $this->url('user-detail', ['id' => $user->getId()]) ?>">
+            Abbrechen
+        </a>
+    <?= $this->form()->closeTag() ?>
+</main>

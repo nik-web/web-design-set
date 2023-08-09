@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'user/delete-user/index'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+$headTitle = 'Nutzer-Konto löschen';
+$this->headTitle($headTitle);
+$metaDescription = 'Einen vorhandenen Nutzer diese Webanwendung durch den Betreiber löschen.';
+$metaKeywords = 'löschen, Konto, Nutzer';
+$this->headMeta()->appendName('description', $metaDescription)
+    ->appendName('keywords', $metaKeywords);
+
+$form = $this->form;
+$csrf = $form->get('csrf');
+$submitConfirm = $form->get('confirm');
+$submitCancel = $form->get('cancel');
+$form->prepare();
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Dieses Nutzerkonto löschen
+        </h1>
+    </header>
+    <div class="container-flex-two-boxes">
+        <section>
+            <h2>
+                Konto-Daten            
+            </h2>
+            <dl>
+                <dt>
+                    Nutzername:                
+                </dt>
+                <dd>
+                    <?= $this->escapeHtml($this->user->getAlias()) . "\n" ?>
+                </dd>
+                <dt>
+                    E-Mail Adresse:
+                </dt>
+                <dd>
+                    <?= $this->escapeHtml($this->user->getEmail()) . "\n" ?>
+                </dd>
+                <dt>
+                    Passwort:
+                </dt>
+                <dd>
+                    <b>
+                        &lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&nbsp;&nbsp;
+                    </b>
+                </dd>
+                <dt>
+                    Status:
+                </dt>
+                <dd>
+                <?php
+                    if (0 === $this->user->getStatus()) {
+                ?>
+                        gesperrt
+                <?php
+                    } else {
+                ?>
+                        aktiv
+                <?php
+                    }
+                ?>
+                </dd>
+                <dt>
+                    Registriert am:
+                </dt>
+                <dd>
+                    <?= $this->dateFormat(new DateTime($this->user->getCreatedOn()), IntlDateFormatter::MEDIUM, IntlDateFormatter::MEDIUM, 'DE_de') . "\n" ?>
+                </dd>
+            <?php
+                if ($this->user->getUpdatedOn()) {
+            ?>
+                <dt>
+                    Bearbeitet am:
+                </dt>
+                <dd>
+                    <?= $this->dateFormat(new DateTime($this->user->getUpdatedOn()), IntlDateFormatter::MEDIUM, IntlDateFormatter::MEDIUM, 'DE_de') . "\n" ?>
+                </dd>
+            <?php
+                }
+            ?>
+            </dl>
+        </section>
+        <?= $this->form()->openTag($form) . "\n" ?>
+            <fieldset>
+                <legend>
+                    Konto löschen                
+                </legend>
+                <?= $this->formSubmit($submitConfirm) ?>
+                <?= $this->formSubmit($submitCancel) ?>
+            </fieldset>
+            <?= $this->formElement($csrf) ?>
+        <?= $this->form()->closeTag() ?>
+    </div>
+</main>

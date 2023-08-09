@@ -1,0 +1,50 @@
+//
+// Various templates for the pagination controls
+//
+//
+//  Created on : 19.07.2023, 08:22:26
+//  Author     : Niklaus Höpfner <editor@nik-web.net>
+//
+
+// Start pagination-control-base partial
+@if $is-partials-nav-bar-pagination-control-base {    
+    // Partial nav-bar pagination control <ul> element
+    .pagination {
+        text-align: center;
+        padding: 1.5rem 0 1.5rem 0;
+        font-size: .875rem;
+        font-weight: $font-weight-normal;
+        list-style-type: none;
+    } 
+    //Partial nav-bar pagination control <li> element
+    .pagination-item, .pagination-item-current {
+        display: inline-block;
+        min-width: 1.5rem;
+        padding: .1rem .2rem;
+        border: 1px solid silver;
+        border-radius: .2rem;
+        margin: .1rem;
+    }
+    .pagination-item-current {
+        color: black;
+        background-color: gainsboro;
+    }    
+    // Partial nav-bar pagination control <a> element
+    .page-link,
+    .page-link:link,
+    .page-link:visited,
+    .page-link:hover,
+    .page-link:focus,
+    .page-link:active {
+        text-decoration: none;
+        color: inherit;
+    }
+    /*
+        .page-link:focus {
+            //outline-offset: 0.125rem;
+            //outline-color: $meta-nav-outline-color;
+        }
+    */ 
+}
+// End pagination-control-base partial
+

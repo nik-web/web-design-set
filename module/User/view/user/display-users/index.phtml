@@ -1,0 +1,33 @@
+<?php
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'user/display-users/index'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+// Set title
+$headTitle = 'Alle Nutzer dieser Webanwendung anzeigen';
+$this->headTitle($headTitle);
+// Set meta description
+$metaDescription = 'Alle registrierten Nutzer werden nach der Kontonummer aufgelistet.';
+// Set meta keywords
+$metaKeywords = 'Nutzer, Webanwendung, anzeigen';
+$this->headMeta()->appendName('description', $metaDescription)
+        ->appendName('keywords', $metaKeywords)
+        ->appendName('DC.title', $headTitle);
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Alle registrierten Nutzer
+        </h1>
+    </header>
+<?= $this->partial('user/partial/list-entry-users', ['entries' => $this->users,]); ?>
+</main>

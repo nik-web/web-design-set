@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'partials/nav-bars/pagination_control'
+ * 
+ * @package    Application
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @copyright  Copyright (c) Niklaus Höpfner
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+?>
+<ul class="pagination">
+<!-- To first page -->
+<?php if ($this->first != $this->current): ?>
+    <li class="pagination-item">
+        <a class="page-link" href="<?= $this->url($this->route, ['page' => $this->first]); ?>" aria-label="First">
+            &lt;&lt;
+        </a>
+    </li>
+<?php else: ?>
+    <li class="pagination-item">
+        <span>
+            &lt;&lt;
+        </span>
+    </li>
+<?php endif; ?>
+<!-- Previous page link -->
+    <li class="pagination-item">
+<?php if (isset($this->previous)): ?>
+        <a class="page-link" href="<?= $this->url($this->route, ['page' => $this->previous]); ?>" aria-label="Previous">
+            &lt;
+        </a>
+<?php else: ?>
+        <span>
+            &lt;
+        </span>
+<?php endif; ?>
+    </li>
+<!-- Numbered page links -->
+<?php foreach ($this->pagesInRange as $page): ?>
+    <?php if ($page != $this->current): ?>
+    <li class="pagination-item">
+        <a class="page-link" href="<?= $this->url($this->route, ['page' => $page]); ?>">
+            <?= $page ?>
+        </a>
+    </li>
+<?php else: ?>
+    <li class="pagination-item-current">
+        <span>
+            <?= $page ?>
+        </span>
+    </li>
+<?php endif; ?>
+<?php endforeach; ?>
+<!-- Next page link -->
+    <li class="pagination-item">
+<?php if (isset($this->next)): ?>
+        <a class="page-link" href="<?= $this->url($this->route, ['page' => $this->next]); ?>" aria-label="Next">
+            &gt;
+        </a>
+<?php else: ?>
+        <span>
+            &gt;
+        </span>  
+<?php endif; ?>
+    </li>
+<!-- Last page link -->
+    <li class="pagination-item">
+<?php if ($this->last !=  $this->current): ?>
+        <a class="page-link" href="<?= $this->url($this->route, ['page' => $this->last]); ?>" aria-label="Last">            
+            &gt;&gt;
+        </a>
+<?php else: ?>
+        <span>
+            &gt;&gt;
+        </span>
+<?php endif; ?>
+    </li>
+</ul>

@@ -52,7 +52,7 @@ class ProviderTest extends TestCase
         $this->assertArrayHasKey('TAX_ID_NUMBER', $mailer->getConstants());
         $this->assertArrayHasKey('HOSTNAME', $mailer->getConstants());
         $this->assertArrayHasKey('YEAR_OF_PUBLICATION', $mailer->getConstants());
-        $this->assertArrayHasKey('PRIVACY_POLICY_Last_UPDATE', $mailer->getConstants());
+        $this->assertArrayHasKey('PRIVACY_POLICY_LAST_UPDATE', $mailer->getConstants());
     }
     
     /**
@@ -72,6 +72,6 @@ class ProviderTest extends TestCase
         $this->assertNotEmpty(Provider::CONTACT_EMAIL, 'Provider contact email address cannot be empty');
         $this->assertNotEmpty(Provider::HOSTNAME, 'Provider hostname cannot be empty');
         $this->assertNotEmpty(Provider::YEAR_OF_PUBLICATION, 'Provider year of publication cannot be empty');
-        $this->assertNotEmpty(Provider::PRIVACY_POLICY_Last_UPDATE, 'Last update of the privacy policy of publication cannot be empty');
+        $this->assertNotEmpty(Provider::PRIVACY_POLICY_LAST_UPDATE, 'Last update of the privacy policy of publication cannot be empty');
     }
 }

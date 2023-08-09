@@ -1,0 +1,117 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'user/add-user/index'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+use User\ValueObject\Data;
+
+$headTitle = 'Nutzer hinzufügen';
+$this->headTitle($headTitle);
+$metaDescription = 'Einen neuen Nutzer für diese Webanwendung erstellen.';
+$metaKeywords = 'anlegen, erstellen, Nutzer';
+$this->headMeta()->appendName('description', $metaDescription)
+    ->appendName('keywords', $metaKeywords);
+
+$form = $this->form;
+$alias = $form->get('alias');
+$aliasDescription = sprintf('Der Nutzername muss min. %d und max. %d Zeichen lang sein!', Data::ALIAS_MIN_LENGTH, Data::ALIAS_MAX_LENGTH);
+$aliasErrorBlock = $this->formElementErrors()
+    ->render($alias, ['class' => 'form-errors-block']);
+$email = $form->get('email');
+$emailErrorBlock = $this->formElementErrors()
+    ->render($email, ['class' => 'form-errors-block']);
+$password = $form->get('password');
+$passwordDescription = sprintf('Das Passwort muss min. %d und max. %d Zeichen lang sein!', Data::PASSWORD_MIN_LENGTH, Data::PASSWORD_MAX_LENGTH);
+$passwordErrorBlock = $this->formElementErrors()
+    ->render($password, ['class' => 'form-errors-block']);
+$confirmPassword = $form->get('confirm_password');
+$confirmPasswordErrorBlock = $this->formElementErrors()
+    ->render($confirmPassword, ['class' => 'form-errors-block']);
+$csrf = $form->get('login_csrf');
+$submit = $form->get('submit');
+$form->prepare();
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Neuen Nutzer anlegen
+        </h1>
+    </header>
+    <?= $this->form()->openTag($form) ?>
+        <fieldset>
+            <legend>
+                Nutzerkonto              
+            </legend>
+            <?= $this->formLabel()->openTag($alias) . "\n" ?>
+                <?= $alias->getOption('label') . "\n" ?>
+                <abbr class="input-mandatory" title="Diese Eingabe ist erforderlich">*</abbr>
+            <?= $this->formLabel()->closeTag() . "\n" ?>
+            <?= $this->formElement($alias) ?>
+            <small id="alias-description" class="input-description">
+                <?= $aliasDescription ?>                        
+            </small>
+    <?php
+        if ($aliasErrorBlock) {
+            echo $aliasErrorBlock . "\n";
+        }
+    ?>
+            <?= $this->formLabel()->openTag($email) . "\n" ?>
+                <?= $email->getOption('label') . "\n" ?>
+                <abbr class="input-mandatory" title="Diese Eingabe ist erforderlich">*</abbr>
+            <?= $this->formLabel()->closeTag() . "\n" ?>
+            <?= $this->formElement($email) ?>
+            <small id="email-description" class="input-description">
+                    Die E-Mail Adresse im Basisformat "local-part@hostname" eingeben!
+            </small>
+    <?php
+        if ($emailErrorBlock) {
+            echo $emailErrorBlock . "\n";
+        }
+    ?>
+            <?= $this->formLabel()->openTag($password) . "\n" ?>
+                <?= $password->getOption('label') . "\n" ?>
+                <abbr class="input-mandatory" title="Diese Eingabe ist erforderlich">*</abbr>
+            <?= $this->formLabel()->closeTag() . "\n" ?>
+            <?= $this->formElement($password) ?>
+            <small id="password-description" class="input-description">
+                <?= $passwordDescription ?>
+            </small>
+    <?php
+        if ($passwordErrorBlock) {
+            echo $passwordErrorBlock . "\n";
+        }
+    ?>
+            <?= $this->formLabel()->openTag($confirmPassword) . "\n" ?>
+                <?= $confirmPassword->getOption('label') . "\n" ?>
+                <abbr class="input-mandatory" title="Diese Eingabe ist erforderlich">*</abbr>
+            <?= $this->formLabel()->closeTag() . "\n" ?>
+            <?= $this->formElement($confirmPassword) ?>
+                <small id="confirm-password-description" class="input-description">
+                Die Eingabe des Passworts wiederholen!
+            </small>
+    <?php
+        if ($confirmPasswordErrorBlock) {
+            echo $confirmPasswordErrorBlock . "\n";
+        }
+    ?>
+        </fieldset>
+        <?= $this->formElement($csrf) ?>
+        <p>
+            <em>
+                * Diese Angaben sind erforderlich, um ein Nutzerkonto anzulegen.
+            </em>
+        </p>
+        <?= $this->formSubmit($submit) ?>
+    <?= $this->form()->closeTag() ?>
+</main>

@@ -25,6 +25,9 @@ use Laminas\Form\Element\Captcha;
 use Laminas\Captcha\Figlet;
 use Laminas\Form\Element\Csrf;
 use Laminas\Form\Element\Submit;
+use Laminas\Filter\StringTrim;
+use Laminas\Filter\StripTags;
+use Laminas\Filter\StripNewlines;
 use Laminas\Validator\NotEmpty;
 use Laminas\Validator\StringLength;
 use Laminas\Validator\Hostname;
@@ -289,31 +292,31 @@ class ContactForm extends Form
             'name'     => 'organization',
             'required' => false,
             'filters'  => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
-                ['name' => 'StripNewlines'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => StripNewlines::class],
             ],
         ]);
         $inputFilter->add([
             'name'     => 'title',
             'required' => false,
             'filters'  => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
-                ['name' => 'StripNewlines'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => StripNewlines::class],
             ],
         ]);
         $inputFilter->add([
             'name'     => 'forename',
             'required' => true,
             'filters'  => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
-                ['name' => 'StripNewlines'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => StripNewlines::class],
             ],                
             'validators' => [
                 [
-                    'name'    => 'NotEmpty',
+                    'name'    => NotEmpty::class,
                     'options' => [
                         'messages' => [
                             NotEmpty::IS_EMPTY => 'Dieses Feld ist ein Pflichtfeld!',
@@ -321,7 +324,7 @@ class ContactForm extends Form
                     ],
                 ],
                 [
-                    'name'    => 'StringLength',
+                    'name'    => StringLength::class,
                     'options' => [
                         'min'      => 2,
                         'max'      => 128,
@@ -337,13 +340,13 @@ class ContactForm extends Form
             'name'     => 'surname',
             'required' => true,
             'filters'  => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
-                ['name' => 'StripNewlines'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => StripNewlines::class],
             ],                
             'validators' => [
                 [
-                    'name'    => 'NotEmpty',
+                    'name'    => NotEmpty::class,
                     'options' => [
                         'messages' => [
                             NotEmpty::IS_EMPTY => 'Dieses Feld ist ein Pflichtfeld!',
@@ -351,7 +354,7 @@ class ContactForm extends Form
                     ],
                 ],
                 [
-                    'name'    => 'StringLength',
+                    'name'    => StringLength::class,
                     'options' => [
                         'min'      => 2,
                         'max'      => 128,
@@ -367,11 +370,13 @@ class ContactForm extends Form
             'name'     => 'email',
             'required' => true,
             'filters'  => [
-               ['name' => 'StringTrim'],                    
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => StripNewlines::class],                    
             ],                
             'validators' => [
                 [
-                    'name'    => 'NotEmpty',
+                    'name'    => NotEmpty::class,
                     'options' => [
                         'messages' => [
                             NotEmpty::IS_EMPTY => 'Dieses Feld ist ein Pflichtfeld!',
@@ -397,22 +402,22 @@ class ContactForm extends Form
             'name'     => 'phone',
             'required' => false,
             'filters'  => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
-                ['name' => 'StripNewlines'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => StripNewlines::class],
             ],
         ]);
         $inputFilter->add([
             'name'     => 'subject',
             'required' => true,
             'filters'  => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
-                ['name' => 'StripNewlines'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => StripNewlines::class],
             ],                
             'validators' => [
                 [
-                    'name'    => 'NotEmpty',
+                    'name'    => NotEmpty::class,
                     'options' => [
                         'messages' => [
                             NotEmpty::IS_EMPTY => 'Dieses Feld ist ein Pflichtfeld!',
@@ -420,7 +425,7 @@ class ContactForm extends Form
                     ],
                 ],
                 [
-                    'name'    => 'StringLength',
+                    'name'    => StringLength::class,
                     'options' => [
                         'min'      => 2,
                         'max'      => 128,
@@ -436,12 +441,12 @@ class ContactForm extends Form
             'name'     => 'message',
             'required' => true,
             'filters'  => [
-                ['name' => 'StringTrim'],                    
-                ['name' => 'StripTags'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
             ],                
             'validators' => [
                 [
-                    'name'    => 'NotEmpty',
+                    'name'    => NotEmpty::class,
                     'options' => [
                         'messages' => [
                             NotEmpty::IS_EMPTY => 'Dieses Feld ist ein Pflichtfeld!',
@@ -449,7 +454,7 @@ class ContactForm extends Form
                     ],
                 ],
                 [
-                    'name' => 'StringLength',
+                    'name' => StringLength::class,
                     'options' => [
                         'min'      => 3,
                         'max'      => 4096,

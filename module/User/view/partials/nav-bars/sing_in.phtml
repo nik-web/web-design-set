@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * View partial sing in navigationbar default template
+ * 
+ * Template: 'partials/nav-bars/sing_in'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+?>
+<ul id="sing-nav-bar">
+<?php
+    foreach ($this->container as $page) {
+        if ($page->isActive()) {
+?>
+    <li class="sing-nav-item-current">
+        <strong class="sing-nav-current">
+            <?= $page->getLabel() ?>
+        </strong>
+    </li>
+    <?php
+        } else {
+    ?>
+    <li class="sing-nav-item">
+        <a class="sing-nav-link" href="<?= $page->getHref() ?>">
+            <?= $page->getLabel() ?>
+        </a>
+    </li>
+<?php
+        }
+    }
+?>
+</ul>

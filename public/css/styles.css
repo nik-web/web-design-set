@@ -890,14 +890,6 @@ Layout segment site footer
   background-color: #686868;
 }
 
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
-*/
-/*
-    Created on : 29.05.2023, 12:43:26
-    Author     : nik
-*/
 #brand-wrapper {
   display: inline-block;
   margin: 0 auto;
@@ -1414,6 +1406,44 @@ input[type=checkbox]:checked ~ .check-sub-nav-label-current-nj::after {
     padding: 0.25rem 1rem;
   }
 }
+.pagination {
+  text-align: center;
+  padding: 1.5rem 0 1.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  list-style-type: none;
+}
+
+.pagination-item, .pagination-item-current {
+  display: inline-block;
+  min-width: 1.5rem;
+  padding: 0.1rem 0.2rem;
+  border: 1px solid silver;
+  border-radius: 0.2rem;
+  margin: 0.1rem;
+}
+
+.pagination-item-current {
+  color: black;
+  background-color: gainsboro;
+}
+
+.page-link,
+.page-link:link,
+.page-link:visited,
+.page-link:hover,
+.page-link:focus,
+.page-link:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+    .page-link:focus {
+        //outline-offset: 0.125rem;
+        //outline-color: $meta-nav-outline-color;
+    }
+*/
 #copyright-notice {
   display: block;
   margin-top: 0.5rem;

@@ -1,0 +1,116 @@
+<?php
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'user/display-users/detail'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+// Set title
+$headTitle = 'Nutzer Konto in dieser Webanwendung anzeigen';
+$this->headTitle($headTitle);
+// Set meta description
+$metaDescription = 'Nutzer Konto in dieser Webanwendung anzeigen.';
+// Set meta keywords
+$metaKeywords = 'Nutzer, Konto, Webanwendung, anzeigen';
+$this->headMeta()->appendName('description', $metaDescription)
+        ->appendName('keywords', $metaKeywords)
+        ->appendName('DC.title', $headTitle);
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Nutzerkonto Nr: <?= $this->user->getId(); ?>
+        </h1>
+    </header>
+    <section>
+        <h2>
+            Konto-Daten            
+        </h2>
+        <dl>
+            <dt>
+                Nutzername:                
+            </dt>
+            <dd>
+                <?= $this->escapeHtml($this->user->getAlias()) ?>
+            </dd>
+            <dt>
+                E-Mail Adresse:
+            </dt>
+            <dd>
+                <?= $this->escapeHtml($this->user->getEmail()) ?>
+            </dd>
+            <dt>
+                Passwort:
+            </dt>
+            <dd>
+                &lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&nbsp;&nbsp;
+            </dd>
+            <dt>
+                Status:
+            </dt>
+            <dd>
+            <?php
+                if (0 === $this->user->getStatus()) {
+            ?>
+                gesperrt
+            <?php
+                } else {
+            ?>
+                aktiv
+            <?php
+                }
+            ?>
+            </dd>
+            <dt>
+                Registriert am:
+            </dt>
+            <dd>
+                <time>
+                    <?= $this->dateFormat(new DateTime($this->user->getCreatedOn()), IntlDateFormatter::MEDIUM, IntlDateFormatter::MEDIUM, 'de_DE') ?>
+                </time>
+            </dd>
+        <?php
+            if ($this->user->getUpdatedOn()) {
+        ?>
+            <dt>
+                Bearbeitet am:
+            </dt>
+            <dd>
+                <time>
+                    <?= $this->dateFormat(new DateTime($this->user->getUpdatedOn()), IntlDateFormatter::MEDIUM, IntlDateFormatter::MEDIUM, 'de_DE') ?>
+                </time>
+            </dd>
+        <?php
+            }
+        ?>
+        </dl>
+    </section><section>
+        <h2>
+            Aktivitäten           
+        </h2>
+        <ul class="link-buttons-nav">
+            <li>
+                <a class="link-button-primary" href="<?= $this->url('all-users', []) ?>">
+                    Abbrechen
+                </a>
+            </li>
+            <li>
+                <a class="link-button-success" href="<?= $this->url('edit-user', ['id' => $this->user->getId()]) ?>">                    
+                    Bearbeiten
+                </a>
+            </li>
+            <li>
+                <a class="link-button-danger" href="<?= $this->url('delete-user', ['id' => $this->user->getId()]) ?>">                    
+                    Löschen
+                </a>
+            </li>
+        </ul>
+    </section>
+</main>

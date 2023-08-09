@@ -11,6 +11,9 @@
     <testsuite name="Samples">
       <directory>./module/Samples/test</directory>
     </testsuite>
+    <testsuite name="User">
+      <directory>./module/User/test</directory>
+    </testsuite>
   </testsuites>
   <source>
     <include>

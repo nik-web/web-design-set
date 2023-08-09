@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * This file is a view partial script for the account navigationbar.
+ * Use this partial with Laminas\View\Helper\Navigation\Menu.
+ * 
+ * Template: 'partials/nav-bars/account'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+?>
+<div id="account-nav-container">
+    <button id="my-account">
+        Mein Konto &darr;
+    </button>
+    <ul id="account-nav-bar" class="account-nav-bar">
+<?php
+    foreach ($container as $page) {
+        if (!$this->navigation('account_nav')->accept($page)) {
+            continue; 
+        }
+        if ($page->isActive()) {
+?>
+        <li class="account-nav-item-current">
+            <strong class="account-nav-current">
+                <?= $page ?>
+            </strong>
+        </li>
+    <?php
+        } else {
+    ?>
+        <li class="account-nav-item">
+            <a class="account-nav-link" href="<?= $page->getHref() ?>">
+                <?= $page ?>
+            </a>
+        </li>
+<?php
+        }
+    }
+?>
+    </ul>
+</div>
