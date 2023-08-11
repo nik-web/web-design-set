@@ -14,7 +14,8 @@
             "Application\\": "module/Application/src/",
             "Contact\\": "module/Contact/src/",
             "Samples\\": "module/Samples/src/",
-            "User\\": "module/User/src/"
+            "User\\": "module/User/src/",
+            "Rbac\\": "module/Rbac/src/"
         }
     },
     "autoload-dev": {
@@ -22,7 +23,8 @@
             "ApplicationTest\\": "module/Application/test/",
             "ContactTest\\": "module/Contact/test/",
             "SamplesTest\\": "module/Samples/test/",
-            "UserTest\\": "module/User/test/"
+            "UserTest\\": "module/User/test/",
+            "RbacTest\\": "module/Rbac/test"
         }
     },
     "require": {

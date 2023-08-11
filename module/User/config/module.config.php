@@ -64,6 +64,26 @@ return [
     ],
     'router'            => [
         'routes' => [
+            'user-login'          => [
+                'type'    => Literal::class,
+                'options' => [
+                    'route'    => '/anmelden',
+                    'defaults' => [
+                        'controller' => Controller\AuthController::class,
+                        'action'     => 'login',
+                    ],
+                ],
+            ],
+            'user-logout'         => [
+                'type'    => Literal::class,
+                'options' => [
+                    'route'       => '/abmelden',
+                    'defaults'    => [
+                        'controller' => Controller\AuthController::class,
+                        'action'     => 'logout',
+                    ],
+                ],
+            ],
             'all-users' => [
                 'type'    => Literal::class,
                 'options' => [
@@ -98,26 +118,6 @@ return [
                     'defaults'    => [
                         'controller' => Controller\DisplayUsersController::class,
                         'action'     => 'detail',
-                    ],
-                ],
-            ],
-            'user-login'          => [
-                'type'    => Literal::class,
-                'options' => [
-                    'route'    => '/anmelden',
-                    'defaults' => [
-                        'controller' => Controller\AuthController::class,
-                        'action'     => 'login',
-                    ],
-                ],
-            ],
-            'user-logout'         => [
-                'type'    => Literal::class,
-                'options' => [
-                    'route'       => '/abmelden',
-                    'defaults'    => [
-                        'controller' => Controller\AuthController::class,
-                        'action'     => 'logout',
                     ],
                 ],
             ],

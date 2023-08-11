@@ -39,4 +39,5 @@ return [
     'Contact',
     'Samples',
     'User',
+    'Rbac',
 ];

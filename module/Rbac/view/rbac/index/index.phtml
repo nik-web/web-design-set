@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * This file is part of web-design-set with Laminas MVC framework
+ * 
+ * Template: 'rbac/index/index'
+ * 
+ * @var Laminas\View\Renderer\PhpRenderer $this
+ * 
+ * @author     Niklaus Höpfner <editor@nik-web.net>
+ * @link       https://github.com/nik-web/web-design-set
+ * @license    https://opensource.org/licenses/BSD-3-Clause The BSD-3-Clause License
+ * @version    1.0.0
+ * @since      1.0.0
+ */
+
+$headTitle = 'Keine Berechtigung für diese Seite.';
+$this->headTitle($headTitle);
+$metaDescription = 'Sie haben eine Seite aufgerufen, für die Sie keine Berechtigung haben!';
+$metaKeywords = 'keine, Berechtigung, Seite';
+$this->headMeta()->appendName('description', $metaDescription)
+    ->appendName('keywords', $metaKeywords)
+    ->appendName('DC.title', $headTitle);
+?>
+<main>
+    <header id="main-header">
+        <h1>
+            Keine Berechtigung
+        </h1>
+        <p class="main-header-p">
+            Sie haben eine Seite aufgerufen, für die Sie keine Berechtigung haben!
+        </p>
+    </header>
+    <figure style="text-align: center;">
+        <pre role="img" aria-label="ASCII CAT">
+
+   &lt; No permission for this page. &gt;    
+               ,-""""""-.
+            /\j__/\  (  \`--.
+            \`@_@'/  _)  &gt;--.`.
+           _{.:Y:_}_{{_,'    ) )
+          {_}`-^{_} ```     (_/
+        </pre>
+    </figure>
+</main>

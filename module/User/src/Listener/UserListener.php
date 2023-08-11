@@ -62,8 +62,10 @@ class UserListener extends AbstractListenerAggregate
     public function storeLastURL(MvcEvent $e): void
     {
         $controller = $e->getTarget();                
-        if ($controller::class === 'User\Controller\AuthController') {
-            // Not set in this controller
+        if ($controller::class === 'User\Controller\AuthController'
+                || $controller::class === 'Rbac\Controller\IndexController'
+        ) {
+            // Not store in this controllers
             return;
         }
         $url = $controller->getRequest()->getUriString();
